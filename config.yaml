@@ -1,0 +1,8 @@
+mimic3_path: "/data2/lzy/MIMIC-III/1.4/physionet.org/files/mimiciii/1.4/"
+output_path: "/data2/lzylzy/mimic_feature_set_c2/"
+output_subject_path: "/data2/lzylzy/mimic_feature_set_c2/subjects/"
+dataset_output_path: "/data2/lzylzy/mimic_feature_set_c2/dataset/"
+itemids_multiple_uom: "./resources/others/itemids_uom_all.txt"
+resources_itemid_uom_map: "./resources/itemid_uom_map/"
+variable_map: "./resources/variable_map_feature_set_c/"
+event_tables: [ "inputevents_cv", "inputevents_mv", "outputevents", "chartevents", "labevents"]

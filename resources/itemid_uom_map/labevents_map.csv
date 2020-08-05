@@ -1,0 +1,33 @@
+,ITEMID,VALUEUOM,COUNT,LABEL,COEFFICIENT
+0,50889,mg/l,6600,C-Reactive Protein,10
+1,50889,mg/dl,6600,C-Reactive Protein,1
+2,50916,ug/dl,58,DHEA-Sulfate,10
+3,50916,ng/ml,58,DHEA-Sulfate,1
+4,50926,miu/ml,306,Follicle Stimulating Hormone,1000
+5,50926,miu/l,306,Follicle Stimulating Hormone,1
+6,50958,miu/ml,229,Luteinizing Hormone,1000
+7,50958,miu/l,229,Luteinizing Hormone,1
+8,50964,mosm/l,18816,"Osmolality, Measured",0
+9,50964,mosm/kg,18816,"Osmolality, Measured",0
+10,50974,ng/ml,3635,Prostate Specific Antigen,1
+11,50974,ug/l,3635,Prostate Specific Antigen,1
+12,50980,i.u.,834,Rheumatoid Factor,0
+13,50980,iu/ml,834,Rheumatoid Factor,0
+14,50989,ng/dl,421,"Testosterone, Free",1
+15,50989,pg/ml,421,"Testosterone, Free",1
+16,50993,uiu/ml,28218,Thyroid Stimulating Hormone,0
+17,50993,uu/ml,28218,Thyroid Stimulating Hormone,0
+18,51067,mg/24hours,653,24 hr Creatinine,1
+19,51067,mg/24hr,653,24 hr Creatinine,1
+20,51068,mg/24hours,225,24 hr Protein,1
+21,51068,mg/24hr,225,24 hr Protein,1
+22,51127,#/ul,3280,"RBC, Ascites",0
+23,51127,#/cu mm,3280,"RBC, Ascites",0
+24,51128,#/ul,3347,"WBC, Ascites",0
+25,51128,#/cu mm,3347,"WBC, Ascites",0
+26,51274,sec,469064,PT,1
+27,51274,seconds,469064,PT,1
+28,51464,mg/dl,99676,Bilirubin,0
+29,51464,eu/dl,99676,Bilirubin,0
+30,51514,mg/dl,101813,Urobilinogen,0
+31,51514,eu/dl,101813,Urobilinogen,0

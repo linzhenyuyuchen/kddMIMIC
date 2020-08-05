@@ -1,0 +1,1919 @@
+ICD9_CODE,SHORT_TITLE,LONG_TITLE,COUNT,USE,VARIABLE
+3893,Venous cath NEC,"Venous catheterization, not elsewhere classified",10204,1,3893
+9604,Insert endotracheal tube,Insertion of endotracheal tube,6992,1,9604
+9671,Cont inv mec ven <96 hrs,Continuous invasive mechanical ventilation for less than 96 consecutive hours,6497,1,9671
+3961,Extracorporeal circulat,Extracorporeal circulation auxiliary to open heart surgery,6092,1,3961
+966,Entral infus nutrit sub,Enteral infusion of concentrated nutritional substances,5612,1,966
+9904,Packed cell transfusion,Transfusion of packed cells,5196,1,9904
+8856,Coronar arteriogr-2 cath,Coronary arteriography using two catheters,4492,1,8856
+9672,Cont inv mec ven 96+ hrs,Continuous invasive mechanical ventilation for 96 consecutive hours or more,4410,1,9672
+3615,1 int mam-cor art bypass,Single internal mammary-coronary artery bypass,3998,1,3615
+3891,Arterial catheterization,Arterial catheterization,3513,1,3891
+3722,Left heart cardiac cath,Left heart cardiac catheterization,2798,1,3722
+8872,Dx ultrasound-heart,Diagnostic ultrasound of heart,2752,1,8872
+331,Incision of lung,Incision of lung,2650,1,331
+331,Spinal tap,Spinal tap,2650,1,331
+3324,Closed bronchial biopsy,Closed [endoscopic] biopsy of bronchus,2438,1,3324
+3723,Rt/left heart card cath,Combined right and left heart cardiac catheterization,2257,1,3723
+9915,Parent infus nutrit sub,Parenteral infusion of concentrated nutritional substances,2195,1,9915
+66,Lingual thyroid excision,Excision of lingual thyroid,2182,1,66
+66,PTCA,Percutaneous transluminal coronary angioplasty [PTCA],2182,1,66
+4513,Sm bowel endoscopy NEC,Other endoscopy of small intestine,2079,1,4513
+3995,Hemodialysis,Hemodialysis,1834,1,3995
+8853,Lt heart angiocardiogram,Angiocardiography of left heart structures,1826,1,8853
+3612,Aortocor bypas-2 cor art,(Aorto)coronary bypass of two coronary arteries,1718,1,3612
+5491,Percu abdominal drainage,Percutaneous abdominal drainage,1557,1,5491
+9907,Serum transfusion NEC,Transfusion of other serum,1524,1,9907
+9920,Inj/inf platelet inhibit,Injection or infusion of platelet inhibitor,1483,1,9920
+45,Peripheral nerve graft,Cranial or peripheral nerve graft,1480,1,45
+45,Insert 1 vascular stent,Insertion of one vascular stent,1480,1,45
+3404,Insert intercostal cath,Insertion of intercostal catheter for drainage,1376,1,3404
+3613,Aortocor bypas-3 cor art,(Aorto)coronary bypass of three coronary arteries,1366,1,3613
+311,Temporary tracheostomy,Temporary tracheostomy,1336,1,311
+8841,Contr cerebr arteriogram,Arteriography of cerebral arteries,1320,1,8841
+40,Procedure-one vessel,Procedure on single vessel,1308,1,40
+3491,Thoracentesis,Thoracentesis,1299,1,3491
+3521,Opn/oth rep aort vlv-tis,Open and other replacement of aortic valve with tissue graft,1243,1,3521
+3897,CV cath plcmt w guidance,Central venous catheter placement with guidance,1212,1,3897
+4311,Percu endosc gastrostomy,Percutaneous [endoscopic] gastrostomy [PEG],1173,1,4311
+3895,Ven cath renal dialysis,Venous catheterization for renal dialysis,1169,1,3895
+3606,Ins nondrug elut cor st,Insertion of non-drug-eluting coronary artery stent(s),1049,1,3606
+3607,Ins drug-elut coronry st,Insertion of drug-eluting coronary artery stent(s),1004,1,3607
+159,Other brain excision,Other excision or destruction of lesion or tissue of brain,960,1,159
+159,Oth extraoc mus-tend op,Other operations on extraocular muscles and tendons,960,1,159
+9905,Platelet transfusion,Transfusion of platelets,921,1,9905
+3322,Fiber-optic bronchoscopy,Fiber-optic bronchoscopy,907,1,3322
+9390,Non-invasive mech vent,Non-invasive mechanical ventilation,900,1,9390
+3761,Pulsation balloon implan,Implant of pulsation balloon,884,1,3761
+3323,Other bronchoscopy,Other bronchoscopy,856,1,3323
+3611,Aortocor bypas-1 cor art,(Aorto)coronary bypass of one coronary artery,851,1,3611
+8964,Pulmon art wedge monitor,Pulmonary artery wedge monitoring,837,1,8964
+8855,Coronar arteriogr-1 cath,Coronary arteriography using a single catheter,709,1,8855
+46,Insert 2 vascular stents,Insertion of two vascular stents,680,1,46
+46,Periph nerve transposit,Transposition of cranial and peripheral nerves,680,1,46
+8659,Skin closure NEC,Closure of skin and subcutaneous tissue of other sites,660,1,8659
+390,Systemic-pulm art shunt,Systemic to pulmonary artery shunt,658,1,390
+390,Insert spinal canal cath,Insertion of catheter into spinal canal for infusion of therapeutic or palliative substances,658,1,390
+9962,Heart countershock NEC,Other electric countershock of heart,637,1,9962
+387,Interruption vena cava,Interruption of the vena cava,620,1,387
+17,Infusion of vasopressor,Infusion of vasopressor agent,610,1,17
+8842,Contrast aortogram,Aortography,570,1,8842
+9910,Inject/inf thrombo agent,Injection or infusion of thrombolytic agent,561,1,9910
+4523,Colonoscopy,Colonoscopy,561,1,4523
+9605,Resp tract intubat NEC,Other intubation of respiratory tract,551,1,9605
+8847,Contr abd arteriogrm NEC,Arteriography of other intra-abdominal arteries,520,1,8847
+403,Regional lymph node exc,Regional lymph node excision,514,1,403
+403,Periph nerve div NEC,Division or crushing of other cranial and peripheral nerves,514,1,403
+9960,Cardiopulm resuscita NOS,"Cardiopulmonary resuscitation, not otherwise specified",508,1,9960
+8622,Exc wound debridement,"Excisional debridement of wound, infection, or burn",502,1,8622
+3950,Angio oth non-coronary,Angioplasty of other non-coronary vessel(s),496,1,3950
+5459,Oth periton adhesiolysis,Other lysis of peritoneal adhesions,485,1,5459
+4443,Endosc control gast hem,Endoscopic control of gastric or duodenal bleeding,471,1,4443
+8852,Rt heart angiocardiogram,Angiocardiography of right heart structures,467,1,8852
+14,Injection oxazolidinone,Injection or infusion of oxazolidinone class of antibiotics,455,1,14
+3721,Rt heart cardiac cath,Right heart cardiac catheterization,438,1,3721
+3845,Resect thorac ves w repl,"Resection of vessel with replacement, thoracic vessels",437,1,3845
+3522,Opn/oth rep aortic valve,Open and other replacement of aortic valve,434,1,3522
+4516,Egd with closed biopsy,Esophagogastroduodenoscopy [EGD] with closed biopsy,430,1,4516
+22,IVUS intrathoracic ves,Intravascular imaging of intrathoracic vessels,414,1,22
+5187,Endosc inser stent bile,Endoscopic insertion of stent (tube) into bile duct,411,1,5187
+9607,Insert gastric tube NEC,Insertion of other (naso-)gastric tube,407,1,9607
+8848,Contrast arteriogram-leg,Arteriography of femoral and other lower extremity arteries,403,1,8848
+309,Spinal canal explor NEC,Other exploration and decompression of spinal canal,403,1,309
+131,Incise cerebral meninges,Incision of cerebral meninges,402,1,131
+9925,Inject ca chemother NEC,Injection or infusion of cancer chemotherapeutic substance,393,1,9925
+3614,Aortcor bypas-4+ cor art,(Aorto)coronary bypass of four or more coronary arteries,382,1,3614
+93,Transplant cadaver donor,Transplant from cadaver,376,1,93
+93,Other lacrimal gland ops,Other operations on lacrimal gland,376,1,93
+3778,Inser temp pacemaker sys,Insertion of temporary transvenous pacemaker system,374,1,3778
+3772,Int inser lead atri-vent,Initial insertion of transvenous leads [electrodes] into atrium and ventricle,373,1,3772
+3783,Int insert dual-cham dev,Initial insertion of dual-chamber device,373,1,3783
+5185,Endosc sphincterotomy,Endoscopic sphincterotomy and papillotomy,372,1,5185
+3512,Opn mitral valvuloplasty,Open heart valvuloplasty of mitral valve without replacement,370,1,3512
+9929,Inject/infuse NEC,Injection or infusion of other therapeutic or prophylactic substance,358,1,9929
+4639,Enterostomy NEC,Other enterostomy,351,1,4639
+5122,Cholecystectomy,Cholecystectomy,349,1,5122
+4562,Part sm bowel resect NEC,Other partial resection of small intestine,333,1,4562
+3734,"Exc/des hrt les,endovasc","Excision or destruction of other lesion or tissue of heart, endovascular approach",331,1,3734
+8162,Fus/refus 2-3 vertebrae,Fusion or refusion of 2-3 vertebrae,329,1,8162
+370,Pericardiocentesis,Pericardiocentesis,329,1,370
+3726,Cath base invasv ep test,Catheter based invasive electrophysiologic testing,327,1,3726
+3990,Ins non-d-e non-cor stnt,Insertion of non-drug-eluting peripheral (non-coronary) vessel stent(s),326,1,3990
+3979,Oth endo proc oth vessel,Other endovascular procedures on other vessels,322,1,3979
+4131,Bone marrow biopsy,Biopsy of bone marrow,311,1,4131
+3972,Endovasc embol hd/nk ves,Endovascular (total) embolization or occlusion of head and neck vessels,302,1,3972
+8163,Fus/refus 4-8 vertebrae,Fusion or refusion of 4-8 vertebrae,301,1,8163
+3321,Bronchoscopy thru stoma,Bronchoscopy through artificial stoma,295,1,3321
+9961,Atrial cardioversion,Atrial cardioversion,292,1,9961
+7936,Op red-int fix tib/fibul,"Open reduction of fracture with internal fixation, tibia and fibula",290,1,7936
+7935,Open reduc-int fix femur,"Open reduction of fracture with internal fixation, femur",289,1,7935
+3523,Opn/oth rep mtrl vlv-tis,Open and other replacement of mitral valve with tissue graft,286,1,3523
+13,Inject/infus nesiritide,Injection or infusion of nesiritide,286,1,13
+5411,Exploratory laparotomy,Exploratory laparotomy,284,1,5411
+9359,Immobiliz/wound attn NEC,"Other immobilization, pressure, and attention to wound",283,1,9359
+8628,Nonexcis debridement wnd,"Nonexcisional debridement of wound, infection or burn",282,1,8628
+41,Procedure-two vessels,Procedure on two vessels,277,1,41
+3142,Larygnoscopy/tracheoscop,Laryngoscopy and other tracheoscopy,274,1,3142
+3964,Intraop cardiac pacemak,Intraoperative cardiac pacemaker,273,1,3964
+3409,Other pleural incision,Other incision of pleura,272,1,3409
+4223,Esophagoscopy NEC,Other esophagoscopy,264,1,4223
+4233,Endosc destruc esoph les,Endoscopic excision or destruction of lesion or tissue of esophagus,259,1,4233
+7779,Excise bone for gft NEC,"Excision of bone for graft, other bones",259,1,7779
+5412,Reopen recent lap site,Reopening of recent laparotomy site,259,1,5412
+8968,Oth cardiac mon output,Monitoring of cardiac output by other technique,256,1,8968
+353,Vertebral fx repair,Repair of vertebral fracture,252,1,353
+8960,Cnt intraart bld gas mon,Continuous intra-arterial blood gas monitoring,245,1,8960
+5011,Closed liver biopsy,Closed (percutaneous) [needle] biopsy of liver,244,1,5011
+8451,Ins spinal fusion device,Insertion of interbody spinal fusion device,244,1,8451
+8105,Drsl/dslmb fus post/post,"Dorsal and dorsolumbar fusion of the posterior column, posterior technique",240,1,8105
+9462,Alcohol detoxification,Alcohol detoxification,240,1,9462
+8611,Closed bx skin/subq tiss,Closed biopsy of skin and subcutaneous tissue,240,1,8611
+8604,Other skin & subq i & d,Other incision with drainage of skin and subcutaneous tissue,240,1,8604
+8191,Arthrocentesis,Arthrocentesis,238,1,8191
+8857,Coronary arteriogram NEC,Other and unspecified coronary arteriography,234,1,8857
+3733,Exc/dest hrt lesion open,"Excision or destruction of other lesion or tissue of heart, open approach",233,1,3733
+8345,Other myectomy,Other myectomy,232,1,8345
+212,Brain meninge repair NEC,Other repair of cerebral meninges,228,1,212
+9744,Nonop remov hrt asst sys,Nonoperative removal of heart assist system,225,1,9744
+5188,Endosc remove bile stone,Endoscopic removal of stone(s) from biliary tract,224,1,5188
+4525,Clos large bowel biopsy,Closed [endoscopic] biopsy of large intestine,221,1,4525
+4573,Opn rt hemicolectomy NEC,Open and other right hemicolectomy,219,1,4573
+4319,Other gastrostomy,Other gastrostomy,218,1,4319
+3727,Cardiac mapping,Cardiac mapping,218,1,3727
+8669,Free skin graft NEC,Other skin graft to other sites,207,1,8669
+391,Anesth inject-spin canal,Injection of anesthetic into spinal canal for analgesia,204,1,391
+391,Intra-abd venous shunt,Intra-abdominal venous shunt,204,1,391
+3929,Vasc shunt & bypass NEC,Other (peripheral) vascular shunt or bypass,204,1,3929
+3533,Annuloplasty,Annuloplasty,200,1,3533
+5198,Oth perc proc bil trct,Other percutaneous procedures on biliary tract,194,1,5198
+3844,Resect abdm aorta w repl,"Resection of vessel with replacement, aorta, abdominal",193,1,3844
+9229,Radiotherapeut proc NEC,Other radiotherapeutic procedure,192,1,9229
+4011,Lymphatic struct biopsy,Biopsy of lymphatic structure,191,1,4011
+8051,Excision intervert disc,Excision of intervertebral disc,191,1,8051
+110,Magnet removal cornea FB,Magnetic removal of embedded foreign body from cornea,190,1,110
+110,Intracran pressure montr,Intracranial pressure monitoring,190,1,110
+5110,Endosc retro cholangiopa,Endoscopic retrograde cholangiopancreatography [ERCP],189,1,5110
+3794,Implt/repl carddefib tot,"Implantation or replacement of automatic cardioverter/defibrillator, total system [AICD]",187,1,3794
+5059,Liver transplant NEC,Other transplant of liver,186,1,5059
+3524,Opn/oth rep mitral valve,Open and other replacement of mitral valve,182,1,3524
+9723,Replace trach tube,Replacement of tracheostomy tube,180,1,9723
+7966,Debrid opn fx-tibia/fib,"Debridement of open fracture site, tibia and fibula",176,1,7966
+415,Total splenectomy,Total splenectomy,175,1,415
+7932,Op red-int fix rad/ulna,"Open reduction of fracture with internal fixation, radius and ulna",173,1,7932
+3931,Suture of artery,Suture of artery,171,1,3931
+3571,Atria septa def rep NEC,Other and unspecified repair of atrial septal defect,165,1,3571
+294,Plastic op on pharynx,Plastic operation on pharynx,164,1,294
+294,Insert/replac skull tong,Insertion or replacement of skull tongs or halo traction device,164,1,294
+8452,Insert recombinant BMP,Insertion of recombinant bone morphogenetic protein,164,1,8452
+8754,Cholangiogram NEC,Other cholangiogram,160,1,8754
+239,Vent shunt extracran NEC,Ventricular shunt to extracranial site NEC,159,1,239
+3403,Reopen thoracotomy site,Reopening of recent thoracotomy site,158,1,3403
+8314,Fasciotomy,Fasciotomy,157,1,8314
+9656,Bronch/trach lavage NEC,Other lavage of bronchus and trachea,155,1,9656
+4524,Flexible sigmoidoscopy,Flexible sigmoidoscopy,155,1,4524
+8102,Oth cerv fusion ant/ant,"Other cervical fusion of the anterior column, anterior technique",152,1,8102
+61,Perc angio extracran ves,Percutaneous angioplasty of extracranial vessel(s),151,1,61
+9906,Coag factor transfusion,Transfusion of coagulation factors,150,1,9906
+7939,Opn fx red w int fix NEC,"Open reduction of fracture with internal fixation, other specified bone",149,1,7939
+139,Other brain incision,Other incision of brain,149,1,139
+8103,Ot cerv fusion post/post,"Other cervical fusion of the posterior column, posterior technique",149,1,8103
+34,Excis spinal cord lesion,Excision or destruction of lesion of spinal cord or spinal meninges,148,1,34
+34,Imageless comp asst surg,Imageless computer assisted surgery,148,1,34
+3712,Pericardiotomy,Pericardiotomy,147,1,3712
+3949,Vasc proc revision NEC,Other revision of vascular procedure,143,1,3949
+63,Perc ins carotid stent,Percutaneous insertion of carotid artery stent(s),139,1,63
+3201,Endosc destruc bronc les,Endoscopic excision or destruction of lesion or tissue of bronchus,138,1,3201
+8382,Muscle or fascia graft,Graft of muscle or fascia,138,1,8382
+8339,Exc les soft tissue NEC,Excision of lesion of other soft tissue,137,1,8339
+5732,Cystoscopy NEC,Other cystoscopy,130,1,5732
+598,Ureteral catheterization,Ureteral catheterization,129,1,598
+8851,Vena cav angiocardiogram,Angiocardiography of venae cavae,128,1,8851
+8674,Attach pedicle graft NEC,Attachment of pedicle or flap graft to other sites,127,1,8674
+544,Destruct peritoneal tiss,Excision or destruction of peritoneal tissue,125,1,544
+4576,Open sigmoidectomy NEC,Open and other sigmoidectomy,125,1,4576
+8849,Contrast arteriogram NEC,Arteriography of other specified sites,124,1,8849
+9971,Therapeu plasmapheresis,Therapeutic plasmapheresis,123,1,9971
+3963,Cardioplegia,Cardioplegia,118,1,3963
+4432,Percu gastrojejunostomy,Percutaneous [endoscopic] gastrojejunostomy,117,1,4432
+124,Other craniotomy,Other craniotomy,116,1,124
+8605,Removal fb/dev from skin,Incision with removal of foreign body or device from skin and subcutaneous tissue,116,1,8605
+9634,Gastric tube irrigat NEC,Other irrigation of (naso-)gastric tube,116,1,9634
+42,Procedure-three vessels,Procedure on three vessels,114,1,42
+42,Periph nerve destruction,Destruction of cranial and peripheral nerves,114,1,42
+5503,Percu nephrostm w/o frag,Percutaneous nephrostomy without fragmentation,114,1,5503
+9914,Injct/inf immunoglobulin,Injection or infusion of immunoglobulin,113,1,9914
+47,Insert 3 vascular stents,Insertion of three vascular stents,111,1,47
+5419,Laparotomy NEC,Other laparotomy,111,1,5419
+9705,Repl stent in bile duct,Replacement of stent (tube) in biliary or pancreatic duct,110,1,9705
+4543,Endosc destru lg int les,Endoscopic destruction of other lesion or tissue of large intestine,109,1,4543
+118,Other brain dx procedure,Other diagnostic procedures on brain and cerebral meninges,109,1,118
+3492,Inject into thorax cavit,Injection into thoracic cavity,109,1,3492
+8099,Excision of joint NEC,"Other excision of joint, other specified sites",108,1,8099
+3951,Clipping of aneurysm,Clipping of aneurysm,106,1,3951
+5101,Percutan aspiration gb,Percutaneous aspiration of gallbladder,106,1,5101
+8309,Soft tissue incision NEC,Other incision of soft tissue,106,1,8309
+2319,Surg tooth extract NEC,Other surgical extraction of tooth,106,1,2319
+8945,Pacemaker rate check,Artificial pacemaker rate check,104,1,8945
+4593,Small-to-large bowel NEC,Other small-to-large intestinal anastomosis,104,1,4593
+4823,Rigid proctosigmoidoscpy,Rigid proctosigmoidoscopy,104,1,4823
+843,Wedg resec entropion rep,Repair of entropion or ectropion with wedge resection,104,1,843
+843,Amputation stump revis,Revision of amputation stump,104,1,843
+4591,Sm-to-sm bowel anastom,Small-to-small intestinal anastomosis,104,1,4591
+4632,Percu endosc jejunostomy,Percutaneous (endoscopic) jejunostomy [PEJ],104,1,4632
+3451,Decortication of lung,Decortication of lung,103,1,3451
+151,Ex cereb meningeal les,Excision of lesion or tissue of cerebral meninges,102,1,151
+3736,"Exc,destrct,exclus LAA","Excision, destruction, or exclusion of left atrial appendage (LAA)",102,1,3736
+881,Linear rep lid lacer,Linear repair of laceration of eyelid or eyebrow,101,1,881
+8104,Drsl/drslumb fus ant/ant,"Dorsal and dorsolumbar fusion of the anterior column, anterior technique",101,1,8104
+3179,Other tracheal repair,Other repair and plastic operations on trachea,100,1,3179
+3479,Other chest wall repair,Other repair of chest wall,100,1,3479
+8845,Contrast renal arteriogr,Arteriography of renal arteries,99,1,8845
+5012,Open liver biopsy,Open biopsy of liver,97,1,5012
+9921,Inject antibiotic,Injection of antibiotic,96,1,9921
+4611,Temporary colostomy,Temporary colostomy,94,1,4611
+234,Ventricl shunt-abdomen,Ventricular shunt to abdominal cavity and organs,93,1,234
+7761,Exc chest cage bone les,"Local excision of lesion or tissue of bone, scapula, clavicle, and thorax [ribs and sternum]",93,1,7761
+3348,Bronchial repair NEC,Other repair and plastic operations on bronchus,93,1,3348
+4673,Small bowel suture NEC,"Suture of laceration of small intestine, except duodenum",93,1,4673
+5425,Peritoneal lavage,Peritoneal lavage,92,1,5425
+5551,Nephroureterectomy,Nephroureterectomy,90,1,5551
+3327,Clos endoscopic lung bx,Closed endoscopic biopsy of lung,90,1,3327
+481,Anesth injec periph nerv,Injection of anesthetic into peripheral nerve for analgesia,90,1,481
+481,Proctostomy,Proctostomy,90,1,481
+7817,Appl ext fix-tib/fibula,"Application of external fixator device, tibia and fibula",90,1,7817
+5421,Laparoscopy,Laparoscopy,90,1,5421
+8108,Lumb/lmbsac fus ant/post,"Lumbar and lumbosacral fusion of the anterior column, posterior technique",89,1,8108
+5794,Insert indwelling cath,Insertion of indwelling urinary catheter,89,1,5794
+5523,Closed renal biopsy,Closed [percutaneous] [needle] biopsy of kidney,89,1,5523
+5462,Delayed clos abd wound,Delayed closure of granulating abdominal wound,88,1,5462
+8844,Contr thor arteriogr NEC,Arteriography of other intrathoracic vessels,88,1,8844
+4439,Gastroenterostomy NEC,Other gastroenterostomy without gastrectomy,88,1,4439
+3998,Hemorrhage control NOS,"Control of hemorrhage, not otherwise specified",86,1,3998
+4542,Endo polpectomy lrge int,Endoscopic polypectomy of large intestine,86,1,4542
+3932,Suture of vein,Suture of vein,86,1,3932
+3421,Transpleura thoracoscopy,Transpleural thoracoscopy,86,1,3421
+5569,Kidney transplant NEC,Other kidney transplantation,85,1,5569
+9608,Insert intestinal tube,Insertion of (naso-)intestinal tube,85,1,9608
+3808,Lower limb artery incis,"Incision of vessel, lower limb arteries",83,1,3808
+3229,Destroy loc lung les NEC,Other local excision or destruction of lesion or tissue of lung,83,1,3229
+8365,Other muscle/fasc suture,Other suture of muscle or fascia,83,1,8365
+43,Procedure-four+ vessels,Procedure on four or more vessels,82,1,43
+43,Peripheral nerve suture,Suture of cranial and peripheral nerves,82,1,43
+9357,Dressing of wound NEC,Application of other wound dressing,82,1,9357
+6561,Oth remove ovaries/tubes,Other removal of both ovaries and tubes at same operative episode,81,1,6561
+4575,Opn lft hemicolectmy NEC,Open and other left hemicolectomy,81,1,4575
+863,Other local destruc skin,Other local excision or destruction of lesion or tissue of skin and subcutaneous tissue,80,1,863
+863,Lid reconst w hair graft,Reconstruction of eyelid with hair follicle graft,80,1,863
+8751,Perc hepat Cholangiogram,Percutaneous hepatic cholangiogram,79,1,8751
+8607,Insert vasc access dev,Insertion of totally implantable vascular access device [VAD],78,1,8607
+2309,Tooth extraction NEC,Extraction of other tooth,78,1,2309
+7749,Bone biopsy NEC,"Biopsy of bone, other bones",78,1,7749
+3956,Repair vess w tis patch,Repair of blood vessel with tissue patch graft,77,1,3956
+8106,Lumb/lmbosac fus ant/ant,"Lumbar and lumbosacral fusion of the anterior column, anterior technique",77,1,8106
+8152,Partial hip replacement,Partial hip replacement,77,1,8152
+8843,Contr pulmon arteriogram,Arteriography of pulmonary arteries,77,1,8843
+8321,Open biopsy soft tissue,Open biopsy of soft tissue,76,1,8321
+4621,Temporary ileostomy,Temporary ileostomy,76,1,4621
+7931,Open red-int fix humerus,"Open reduction of fracture with internal fixation, humerus",75,1,7931
+9969,Cardiac rhythm conv NEC,Other conversion of cardiac rhythm,73,1,9969
+3973,Endo imp grft thor aorta,Endovascular implantation of graft in thoracic aorta,73,1,3973
+3818,Lower limb endarterect,"Endarterectomy, lower limb arteries",73,1,3818
+2751,Suture of lip laceration,Suture of laceration of lip,72,1,2751
+7906,Cl fx reduc-tibia/fibula,"Closed reduction of fracture without internal fixation, tibia and fibula",72,1,7906
+9749,Remov thor ther dev NEC,Removal of other device from thorax,72,1,9749
+8919,Video/radio eeg monitor,Video and radio-telemetered electroencephalographic monitoring,72,1,8919
+3199,Other tracheal operation,Other operations on trachea,71,1,3199
+9977,App adhesion barrier sub,Application or administration of an adhesion barrier substance,70,1,9977
+3812,Head & neck endarter NEC,"Endarterectomy, other vessels of head and neck",70,1,3812
+113,Closed brain biopsy,Closed [percutaneous] [needle] biopsy of brain,69,1,113
+7915,Closed red-int fix femur,"Closed reduction of fracture with internal fixation, femur",69,1,7915
+3959,Repair of vessel NEC,Other repair of vessel,69,1,3959
+527,Rad pancreaticoduodenect,Radical pancreaticoduodenectomy,69,1,527
+202,Elevate skull fx fragmnt,Elevation of skull fracture fragments,69,1,202
+9755,Remov biliary/liver tube,"Removal of T-tube, other bile duct tube, or liver tube",69,1,9755
+5123,Laparoscopic cholecystec,Laparoscopic cholecystectomy,68,1,5123
+7902,Cl fx reduc-radius/ulna,"Closed reduction of fracture without internal fixation, radius and ulna",68,1,7902
+8415,Below knee amputat NEC,Other amputation below knee,67,1,8415
+5361,Open incis hern-grft NEC,Other open incisional hernia repair with graft or prosthesis,67,1,5361
+5498,Peritoneal dialysis,Peritoneal dialysis,66,1,5498
+3596,Perc balloon valvuplasty,Percutaneous balloon valvuloplasty,65,1,3596
+3391,Bronchial dilation,Bronchial dilation,65,1,3391
+4241,Partial esophagectomy,Partial esophagectomy,65,1,4241
+44,Proc-vessel bifurcation,Procedure on vessel bifurcation,64,1,44
+4399,Total gastrectomy NEC,Other total gastrectomy,64,1,4399
+540,Abdominal wall incision,Incision of abdominal wall,63,1,540
+9815,Remov intralum trach FB,Removal of intraluminal foreign body from trachea and bronchus without incision,63,1,9815
+4444,Transcath embo gast hem,Transcatheter embolization for gastric or duodenal bleeding,63,1,4444
+7789,Partial ostectomy NEC,"Other partial ostectomy, other bones",62,1,7789
+8164,Fus/refus 9 vertebrae,Fusion or refusion of 9 or more vertebrae,62,1,8164
+153,Temp detach >1 xtroc mus,"Operations on two or more extraocular muscles involving temporary detachment from globe, one or both eyes",62,1,153
+153,Brain lobectomy,Lobectomy of brain,62,1,153
+5349,Open rep umbil hern NEC,Other open umbilical herniorrhaphy,62,1,5349
+7962,Debrid opn fx-radius/uln,"Debridement of open fracture site, radius and ulna",61,1,7962
+7676,Open reduct mandible fx,Open reduction of mandibular fracture,60,1,7676
+11,Infus drotrecogin alfa,Infusion of drotrecogin alfa (activated),60,1,11
+9633,Gastric lavage,Gastric lavage,60,1,9633
+8703,C.A.T. scan of head,Computerized axial tomography of head,59,1,8703
+8914,Electroencephalogram,Electroencephalogram,59,1,8914
+5472,Abdomen wall repair NEC,Other repair of abdominal wall,59,1,5472
+7965,Debrid opn fx-femur,"Debridement of open fracture site, femur",59,1,7965
+48,Insert 4+ vasculr stents,Insertion of four or more vascular stents,59,1,48
+5351,Incisional hernia repair,Incisional hernia repair,59,1,5351
+359,Spinal struct repair NEC,Other repair and plastic operations on spinal cord structures,59,1,359
+3749,Heart/pericard repr NEC,Other repair of heart and pericardium,59,1,3749
+4610,Colostomy NOS,"Colostomy, not otherwise specified",59,1,4610
+8864,Portal contr phlebogram,Phlebography of the portal venous system using contrast material,58,1,8864
+4675,Suture lg bowel lacerat,Suture of laceration of large intestine,58,1,4675
+4579,Prt lg intes exc NEC/NOS,Other and unspecified partial excision of large intestine,58,1,4579
+9356,Pressure dressing applic,Application of pressure dressing,58,1,9356
+9928,Immunotherapy as antineo,Injection or infusion of biological response modifier [BRM] as an antineoplastic agent,58,1,9928
+9659,Wound irrigation NEC,Other irrigation of wound,58,1,9659
+8961,Arterial pressure monit,Systemic arterial pressure monitoring,58,1,8961
+9702,Replace gastrostomy tube,Replacement of gastrostomy tube,57,1,9702
+7769,Loc exc bone lesion NEC,"Local excision of lesion or tissue of bone, other bones",57,1,7769
+7679,Open reduct face fx NEC,Other open reduction of facial fracture,56,1,7679
+741,Adrenal incision,Incision of adrenal gland,56,1,741
+5022,Partial hepatectomy,Partial hepatectomy,56,1,5022
+3971,Endo imp oth grf abd aor,Endovascular implantation of other graft in abdominal aorta,56,1,3971
+741,Low cervical c-section,Low cervical cesarean section,56,1,741
+3422,Mediastinoscopy,Mediastinoscopy,55,1,3422
+503,Hepatic lobectomy,Lobectomy of liver,55,1,503
+5061,Closure liver lacerat,Closure of laceration of liver,55,1,5061
+8609,Skin & subq incision NEC,Other incision of skin and subcutaneous tissue,55,1,8609
+9802,Remov intralum esoph FB,Removal of intraluminal foreign body from esophagus without incision,54,1,9802
+3764,Remve ext hrt assist sys,Removal of external heart assist system(s) or device(s),54,1,3764
+3975,"Endo emb hd/nk,bare coil",Endovascular embolization or occlusion of vessel(s) of head or neck using bare coils,54,1,3975
+125,Other craniectomy,Other craniectomy,54,1,125
+5114,Clo endosc bx bile duct,Other closed [endoscopic] biopsy of biliary duct or sphincter of Oddi,54,1,5114
+4623,Permanent ileostomy NEC,Other permanent ileostomy,53,1,4623
+315,Local destruc trach les,Local excision or destruction of lesion or tissue of trachea,52,1,315
+4620,Ileostomy NOS,"Ileostomy, not otherwise specified",52,1,4620
+613,Parathyroid biopsy,Biopsy of parathyroid gland,52,1,613
+613,Scrotal les destruction,Excision or destruction of lesion or tissue of scrotum,52,1,613
+8411,Toe amputation,Amputation of toe,52,1,8411
+3511,Opn aortic valvuloplasty,Open heart valvuloplasty of aortic valve without replacement,52,1,3511
+4601,Sm bowel exteriorization,Exteriorization of small intestine,52,1,4601
+5137,Hepatic duct-gi anastom,Anastomosis of hepatic duct to gastrointestinal tract,52,1,5137
+3957,Rep vess w synth patch,Repair of blood vessel with synthetic patch graft,52,1,3957
+341,Incision of mediastinum,Incision of mediastinum,51,1,341
+9341,Spine tract w skull dev,Spinal traction using skull device,51,1,9341
+8949,AICD check,Automatic implantable cardioverter/defibrillator (AICD) check,51,1,8949
+3539,Tiss adj to valv ops NEC,Operations on other structures adjacent to valves of heart,51,1,3539
+2101,Ant nasal pack for epist,Control of epistaxis by anterior nasal packing,51,1,2101
+242,Replace ventricle shunt,Replacement of ventricular shunt,50,1,242
+3514,Opn tricus valvuloplasty,Open heart valvuloplasty of tricuspid valve without replacement,50,1,3514
+4413,Gastroscopy NEC,Other gastroscopy,50,1,4413
+4242,Total esophagectomy,Total esophagectomy,50,1,4242
+242,Gingivoplasty,Gingivoplasty,50,1,242
+3616,2 int mam-cor art bypass,Double internal mammary-coronary artery bypass,50,1,3616
+64,Perc ins extracran stent,Percutaneous insertion of other extracranial artery stent(s),50,1,64
+3799,Other heart/pericard ops,Other operations on heart and pericardium,50,1,3799
+206,Cranial osteoplasty NEC,Other cranial osteoplasty,50,1,206
+64,Complete thyroidectomy,Complete thyroidectomy,50,1,64
+8873,Dx ultrasound-thorax NEC,Diagnostic ultrasound of other sites of thorax,49,1,8873
+7674,Open reduct maxillary fx,Open reduction of maxillary fracture,49,1,7674
+51,Impl CRT defibrillat sys,"Implantation of cardiac resynchronization defibrillator, total system [CRT-D]",49,1,51
+8774,Retrograde pyelogram,Retrograde pyelogram,48,1,8774
+543,Destruct abd wall lesion,Excision or destruction of lesion or tissue of abdominal wall or umbilicus,48,1,543
+4252,Thorac esophagogastrost,Intrathoracic esophagogastrostomy,48,1,4252
+3925,Aorta-iliac-femor bypass,Aorta-iliac-femoral bypass,48,1,3925
+3452,Thoracoscopc decort lung,Thoracoscopic decortication of lung,48,1,3452
+3731,Pericardiectomy,Pericardiectomy,47,1,3731
+3249,Lobectomy of lung NEC,Other lobectomy of lung,47,1,3249
+5651,Form cutan ileoureterost,Formation of cutaneous uretero-ileostomy,47,1,5651
+3814,Endarterectomy of aorta,"Endarterectomy, aorta",47,1,3814
+3974,Endo rem obs hd/neck ves,Endovascular removal of obstruction from head and neck vessel(s),47,1,3974
+437,Part gastrec w jej anast,Partial gastrectomy with anastomosis to jejunum,47,1,437
+7867,Remov imp dev-tib/fibula,"Removal of implanted devices from bone, tibia and fibula",46,1,7867
+2171,Clos reduction nasal fx,Closed reduction of nasal fracture,45,1,2171
+3771,Int insert lead in vent,Initial insertion of transvenous lead [electrode] into ventricle,45,1,3771
+8154,Total knee replacement,Total knee replacement,45,1,8154
+4824,Closed rectal biopsy,Closed [endoscopic] biopsy of rectum,45,1,4824
+3886,Occlude abd artery NEC,"Other surgical occlusion of vessels, abdominal arteries",45,1,3886
+5771,Radical cystectomy,Radical cystectomy,45,1,5771
+7869,Remove impl device NEC,"Removal of implanted devices from bone, other bones",45,1,7869
+8417,Above knee amputation,Amputation above knee,45,1,8417
+8332,Excis lesion of muscle,Excision of lesion of muscle,44,1,8332
+3699,Heart vessel op NEC,Other operations on vessels of heart,44,1,3699
+5423,Peritoneal biopsy,Biopsy of peritoneum,44,1,5423
+5091,Percutan liver aspirat,Percutaneous aspiration of liver,44,1,5091
+7692,Syn implant to face bone,Insertion of synthetic implant in facial bone,44,1,7692
+9354,Application of splint,Application of splint,43,1,9354
+7865,Remove imp device-femur,"Removal of implanted devices from bone, femur",43,1,7865
+3228,Endosc destruc lung les,Endoscopic excision or destruction of lesion or tissue of lung,43,1,3228
+4442,Suture duoden ulcer site,Suture of duodenal ulcer site,42,1,4442
+539,Sympath nerve inject NEC,Other injection into sympathetic nerve or ganglion,42,1,539
+539,Other hernia repair,Other hernia repair,42,1,539
+7905,Cl fx reduc-femur,"Closed reduction of fracture without internal fixation, femur",42,1,7905
+8891,Mri of brain & brainstem,Magnetic resonance imaging of brain and brain stem,41,1,8891
+221,Insert/replace EVD,Insertion or replacement of external ventricular drain [EVD],41,1,221
+8753,Intraoper cholangiogram,Intraoperative cholangiogram,41,1,8753
+4029,Simp exc lymph struc NEC,Simple excision of other lymphatic structure,41,1,4029
+3774,Int or repl lead epicar,Insertion or replacement of epicardial lead [electrode] into epicardium,40,1,3774
+3328,Open lung biopsy,Open biopsy of lung,40,1,3328
+7909,Closed fx reduction NEC,"Closed reduction of fracture without internal fixation, other specified bone",39,1,7909
+7672,Opn reduct malar/zygo fx,Open reduction of malar and zygomatic fracture,39,1,7672
+762,Exc pituit les-transphen,"Partial excision of pituitary gland, transsphenoidal approach",38,1,762
+762,Destruct facial bone les,Local excision or destruction of lesion of facial bone,38,1,762
+9912,Allergy immunization,Immunization for allergy,38,1,9912
+3424,Pleural biopsy NEC,Other pleural biopsy,38,1,3424
+3482,Suture diaphragm lacerat,Suture of laceration of diaphragm,37,1,3482
+4719,Other incid appendectomy,Other incidental appendectomy,37,1,4719
+4594,Lg-to-lg bowel anastom,Large-to-large intestinal anastomosis,37,1,4594
+8151,Total hip replacement,Total hip replacement,37,1,8151
+3326,Closed lung biopsy,Closed [percutaneous] [needle] biopsy of lung,36,1,3326
+443,Carpal tunnel release,Release of carpal tunnel,36,1,443
+4709,Other appendectomy,Other appendectomy,36,1,4709
+8874,Dx ultrasound-digestive,Diagnostic ultrasound of digestive system,36,1,8874
+62,Perc angio intracran ves,Percutaneous angioplasty of intracranial vessel(s),36,1,62
+3777,Removal of lead w/o repl,Removal of lead(s) [electrode] without replacement,36,1,3777
+62,Unilat thyroid lobectomy,Unilateral thyroid lobectomy,36,1,62
+5593,Replace nephrostomy tube,Replacement of nephrostomy tube,35,1,5593
+4685,Dilation of intestine,Dilation of intestine,35,1,4685
+392,Spinal canal inject NEC,Injection of other agent into spinal canal,35,1,392
+8962,Cvp monitoring,Central venous pressure monitoring,35,1,8962
+8854,Rt & lt heart angiocard,Combined right and left heart angiocardiography,35,1,8854
+5463,Abd wall suture NEC,Other suture of abdominal wall,34,1,5463
+8775,Percutaneous pyelogram,Percutaneous pyelogram,34,1,8775
+5359,Abd wall hern repair NEC,Repair of other hernia of anterior abdominal wall,34,1,5359
+3174,Revision of tracheostomy,Revision of tracheostomy,34,1,3174
+4603,Lg bowel exteriorization,Exteriorization of large intestine,33,1,4603
+3791,Opn chest cardiac massag,Open chest cardiac massage,33,1,3791
+4341,Endosc destr stomach les,Endoscopic excision or destruction of lesion or tissue of stomach,33,1,4341
+7937,Op red-int fix metat/tar,"Open reduction of fracture with internal fixation, tarsals and metatarsals",33,1,7937
+9465,Drug detoxification,Drug detoxification,33,1,9465
+3952,Aneurysm repair NEC,Other repair of aneurysm,32,1,3952
+211,Incision of nose,Incision of nose,32,1,211
+6849,Total abd hyst NEC/NOS,Other and unspecified total abdominal hysterectomy,32,1,6849
+3803,Upper limb vessel incis,"Incision of vessel, upper limb vessels",32,1,3803
+9900,Periop aut trans hol bld,Perioperative autologous transfusion of whole blood or blood components,32,1,9900
+4574,Opn transv colon res NEC,Open and other resection of transverse colon,32,1,4574
+8601,Aspiration skin & subq,Aspiration of skin and subcutaneous tissue,32,1,8601
+4561,Mult seg sm bowel excis,Multiple segmental resection of small intestine,32,1,4561
+211,Simple suture of dura,Simple suture of dura mater of brain,32,1,211
+2911,Pharyngoscopy,Pharyngoscopy,32,1,2911
+3965,Extracorporeal memb oxy,Extracorporeal membrane oxygenation [ECMO],32,1,3965
+7675,Cl reduct mandible fx,Closed reduction of mandibular fracture,32,1,7675
+8472,App ext fix dev-ring sys,"Application of external fixator device, ring system",32,1,8472
+5461,Reclose post op disrupt,Reclosure of postoperative disruption of abdominal wall,32,1,5461
+8412,Amputation through foot,Amputation through foot,32,1,8412
+3329,Bronch/lung dx proc NEC,Other diagnostic procedures on lung or bronchus,32,1,3329
+8456,Ins or rep cement spacer,Insertion or replacement of (cement) spacer,31,1,8456
+184,Suture ext ear lac,Suture of laceration of external ear,31,1,184
+109,Cranial puncture NEC,Other cranial puncture,31,1,109
+7819,Applic ext fix dev NEC,"Application of external fixator device, other bones",31,1,7819
+8107,Lmb/lmbsac fus post/post,"Lumbar and lumbosacral fusion of the posterior column, posterior technique",31,1,8107
+6549,Oth uni salpingo-oophor,Other unilateral salpingo-oophorectomy,31,1,6549
+9609,Insert rectal tube,Insertion of rectal tube,31,1,9609
+8395,Soft tissue aspirat NEC,Aspiration of other soft tissue,31,1,8395
+8627,Debridement of nail,"Debridement of nail, nail bed, or nail fold",30,1,8627
+7933,Op red-int fix metac/car,"Open reduction of fracture with internal fixation, carpals and metacarpals",30,1,7933
+3782,"Int insert 1-cham, rate","Initial insertion of single-chamber device, rate responsive",30,1,3782
+435,Proximal gastrectomy,Partial gastrectomy with anastomosis to esophagus,30,1,435
+16,Excise skull lesion,Excision of lesion of skull,30,1,16
+16,Pressurized treat graft,Pressurized treatment of venous bypass graft [conduit] with pharmaceutical substance,30,1,16
+2181,Nasal laceration suture,Suture of laceration of nose,30,1,2181
+4041,Unilat rad neck dissect,"Radical neck dissection, unilateral",29,1,4041
+3728,Intracardiac echocardio,Intracardiac echocardiography,29,1,3728
+7975,Cl reduc disloc-hip,Closed reduction of dislocation of hip,29,1,7975
+9923,Inject steroid,Injection of steroid,29,1,9923
+3406,Thorac drain pleurl cav,Thoracoscopic drainage of pleural cavity,29,1,3406
+9741,Remov thoracotomy tube,Removal of thoracotomy tube or pleural cavity drain,29,1,9741
+7855,Internal fixation-femur,"Internal fixation of bone without fracture reduction, femur",29,1,7855
+7815,Applic ext fix dev-femur,"Application of external fixator device, femur",29,1,7815
+4292,Esophageal dilation,Dilation of esophagus,29,1,4292
+59,Intravasc msmnt cor art,Intravascular pressure measurement of coronary arteries,28,1,59
+9919,Inject anticoagulant,Injection of anticoagulant,28,1,9919
+59,Other nervous system ops,Other operations on nervous system,28,1,59
+8101,Atlas-axis fusion,Atlas-axis spinal fusion,28,1,8101
+15,High-dose infusion IL-2,High-dose infusion interleukin-2 [IL-2],28,1,15
+4461,Suture gastric lacerat,Suture of laceration of stomach,27,1,4461
+4652,Lg bowel stoma closure,Closure of stoma of large intestine,27,1,4652
+114,Open brain biopsy,Open biopsy of brain,27,1,114
+7901,Closed fx reduct humerus,"Closed reduction of fracture without internal fixation, humerus",27,1,7901
+3787,Repl pacem w dual-cham,Replacement of any type pacemaker device with dual-chamber device,27,1,3787
+3807,Abdominal vein incision,"Incision of vessel, abdominal veins",27,1,3807
+3401,Incision of chest wall,Incision of chest wall,27,1,3401
+8076,Knee synovectomy,"Synovectomy, knee",27,1,8076
+7967,Debrid opn fx-metat/tar,"Debridement of open fracture site, tarsals and metatarsals",27,1,7967
+4582,Op tot intr-abd colectmy,Open total intra-abdominal colectomy,27,1,4582
+4519,Sm bowel dx proc NEC,Other diagnostic procedures on small intestine,27,1,4519
+9737,Remove tracheostomy tube,Removal of tracheostomy tube,27,1,9737
+4641,Sm bowel stoma revision,Revision of stoma of small intestine,26,1,4641
+50,Sympath nerve division,Division of sympathetic nerve or ganglion,26,1,50
+4429,Other pyloroplasty,Other pyloroplasty,26,1,4429
+7768,Loc exc les metatar/tar,"Local excision of lesion or tissue of bone, tarsals and metatarsals",26,1,7768
+9981,Hypothermia,Hypothermia (central) (local),26,1,9981
+50,Impl CRT pacemaker sys,"Implantation of cardiac resynchronization pacemaker without mention of defibrillation, total system [CRT-P]",26,1,50
+5222,Other destru pancrea les,Other excision or destruction of lesion or tissue of pancreas or pancreatic duct,26,1,5222
+689,Hysterectomy NEC/NOS,Other and unspecified hysterectomy,26,1,689
+689,Other parathyroidectomy,Other parathyroidectomy,26,1,689
+8364,Other suture of tendon,Other suture of tendon,26,1,8364
+6839,Subtotl abd hyst NEC/NOS,Other and unspecified subtotal abdominal hysterectomy,26,1,6839
+205,Skull plate insertion,Insertion of skull plate,26,1,205
+7961,Debrid open fx-humerus,"Debridement of open fracture site, humerus",25,1,7961
+243,Remove ventricle shunt,Removal of ventricular shunt,25,1,243
+7919,Cl fx reduc-int fix NEC,"Closed reduction of fracture with internal fixation, other specified bone",25,1,7919
+3129,Other perm tracheostomy,Other permanent tracheostomy,25,1,3129
+33,CAS w fluoroscopy,Computer assisted surgery with fluoroscopy,25,1,33
+9344,Other skeletal traction,Other skeletal traction,25,1,9344
+7813,Appl ext fix-radius/ulna,"Application of external fixator device, radius and ulna",25,1,7813
+4595,Anal anastomosis,Anastomosis to anus,25,1,4595
+5013,Transjugular liver bx,Transjugular liver biopsy,25,1,5013
+8867,Contrast phlebogram NEC,Phlebography of other specified sites using contrast material,25,1,8867
+5184,Endosc dilation ampulla,Endoscopic dilation of ampulla and biliary duct,25,1,5184
+9909,Transfusion NEC,Transfusion of other substance,25,1,9909
+560,Tu remov ureter obstruct,Transurethral removal of obstruction from ureter and renal pelvis,25,1,560
+3259,Other pneumonectomy NOS,Other and unspecified pneumonectomy,24,1,3259
+3378,Endo rem bronch devc/sub,Endoscopic removal of bronchial device(s) or substances,24,1,3378
+4693,Revise sm bowel anastom,Revision of anastomosis of small intestine,24,1,4693
+3619,Hrt revas byps anas NEC,Other bypass anastomosis for heart revascularization,24,1,3619
+5293,Endosc inser panc stent,Endoscopic insertion of stent (tube) into pancreatic duct,24,1,5293
+3779,Rev/reloc card dev pockt,Revision or relocation of cardiac device pocket,24,1,3779
+412,Open periph nerve biopsy,Open biopsy of cranial or peripheral nerve or ganglion,24,1,412
+4863,Anterior rect resect NEC,Other anterior resection of rectum,24,1,4863
+412,Splenotomy,Splenotomy,24,1,412
+570,Tu bladder clearance,Transurethral clearance of bladder,23,1,570
+2242,Frontal sinusectomy,Frontal sinusectomy,23,1,2242
+4389,Opn/oth part gastrectomy,Open and other partial gastrectomy,23,1,4389
+12,Adm inhal nitric oxide,Administration of inhaled nitric oxide,23,1,12
+7859,Int fix-no fx reduct NEC,"Internal fixation of bone without fracture reduction, other bones",23,1,7859
+5369,Opn hern ant abd-grf NEC,Other and open repair of other hernia of anterior abdominal wall with graft or prosthesis,23,1,5369
+3922,Aorta-subclv-carot bypas,Aorta-subclavian-carotid bypass,23,1,3922
+3775,Revision of lead,Revision of lead [electrode],23,1,3775
+3532,Chordae tendineae ops,Operations on chordae tendineae,23,1,3532
+3420,Thoracoscopic pleural bx,Thoracoscopic pleural biopsy,23,1,3420
+5029,Destruc hepatic les NEC,Other destruction of lesion of liver,23,1,5029
+8016,Oth arthrotomy-knee,"Other arthrotomy, knee",23,1,8016
+8086,Destruct-knee lesion NEC,"Other local excision or destruction of lesion of joint, knee",22,1,8086
+5252,Distal pancreatectomy,Distal pancreatectomy,22,1,5252
+9468,Comb alcohol/drug detox,Combined alcohol and drug detoxification,22,1,9468
+3768,Percutan hrt assist syst,Insertion of percutaneous external heart assist device,22,1,3768
+123,Reopen craniotomy site,Reopening of craniotomy site,22,1,123
+722,Unilateral adrenalectomy,Unilateral adrenalectomy,22,1,722
+3942,Revis ren dialysis shunt,Revision of arteriovenous shunt for renal dialysis,22,1,3942
+3806,Abdomen artery incision,"Incision of vessel, abdominal arteries",22,1,3806
+4467,Lap creat esoph sphinct,Laparoscopic procedures for creation of esophagogastric sphincteric competence,21,1,4467
+4674,Close sm bowel fist NEC,"Closure of fistula of small intestine, except duodenum",21,1,4674
+8741,C.A.T. scan of thorax,Computerized axial tomography of thorax,21,1,8741
+3725,Cardiac biopsy,Biopsy of heart,21,1,3725
+7971,Cl reduc disloc-shoulder,Closed reduction of dislocation of shoulder,21,1,7971
+4651,Sm bowel stoma closure,Closure of stoma of small intestine,21,1,4651
+4502,Small bowel incision NEC,Other incision of small intestine,21,1,4502
+9227,Radioactive elem implant,Implantation or insertion of radioactive elements,21,1,9227
+4869,Rectal resection NEC,Other resection of rectum,21,1,4869
+8401,Finger amputation,Amputation and disarticulation of finger,21,1,8401
+4572,Open cecectomy NEC,Open and other cecectomy,21,1,4572
+9606,Insert sengstaken tube,Insertion of Sengstaken tube,21,1,9606
+7857,Int fixation-tibia/fibul,"Internal fixation of bone without fracture reduction, tibia and fibula",21,1,7857
+8344,Other fasciectomy,Other fasciectomy,21,1,8344
+851,Canthotomy,Canthotomy,20,1,851
+9902,Transfus prev auto blood,Transfusion of previously collected autologous blood,20,1,9902
+8801,C.A.T. scan of abdomen,Computerized axial tomography of abdomen,20,1,8801
+5103,Cholecystostomy NEC,Other cholecystostomy,20,1,5103
+5102,Trocar cholecystostomy,Trocar cholecystostomy,20,1,5102
+4105,Allo hem stem ct w/o pur,Allogeneic hematopoietic stem cell transpant without purging,20,1,4105
+3220,Thorac exc lung lesion,Thoracoscopic excision of lesion or tissue of lung,20,1,3220
+344,Destruct chest wall les,Excision or destruction of lesion of chest wall,20,1,344
+7767,Loc exc les tibia/fibula,"Local excision of lesion or tissue of bone, tibia and fibula",20,1,7767
+9648,Indwell cath irrig NEC,Irrigation of other indwelling urinary catheter,20,1,9648
+8683,Size reduct plastic op,Size reduction plastic operation,20,1,8683
+586,Urethral dilation,Dilation of urethra,20,1,586
+4281,Insert perm tube esophag,Insertion of permanent tube into esophagus,20,1,4281
+92,Trnsplnt live nonrel don,Transplant from live non-related donor,20,1,92
+2759,Mouth repair NEC,Other plastic repair of mouth,20,1,2759
+343,Destruct mediastin les,Excision or destruction of lesion or tissue of mediastinum,20,1,343
+8302,Myotomy,Myotomy,20,1,8302
+204,Bone graft to skull,Bone graft to skull,20,1,204
+5451,Lap periton adhesiolysis,Laparoscopic lysis of peritoneal adhesions,20,1,5451
+609,Incis thyroid field NEC,Other incision of thyroid field,19,1,609
+9355,Dental wiring,Dental wiring,19,1,9355
+554,Partial nephrectomy,Partial nephrectomy,19,1,554
+5795,Replace indwelling cath,Replacement of indwelling urinary catheter,19,1,5795
+5424,Closed intra-abd mass bx,Closed [percutaneous] [needle] biopsy of intra-abdominal mass,19,1,5424
+5781,Suture bladder lacerat,Suture of laceration of bladder,19,1,5781
+4671,Duodenal lacerat suture,Suture of laceration of duodenum,19,1,4671
+270,Drain face & mouth floor,Drainage of face and floor of mouth,19,1,270
+5371,Lap abd rep-diaphr hern,"Laparoscopic repair of diaphragmatic hernia, abdominal approach",19,1,5371
+3505,Endovas repl aortc valve,Endovascular replacement of aortic valve,19,1,3505
+3885,Occlude thoracic ves NEC,"Other surgical occlusion of vessels, thoracic vessels",19,1,3885
+7788,Part ostect-metatar/tar,"Other partial ostectomy, tarsals and metatarsals",19,1,7788
+8876,Dx ultrasound-abdomen,Diagnostic ultrasound of abdomen and retroperitoneum,19,1,8876
+4921,Anoscopy,Anoscopy,19,1,4921
+3527,Opn/oth rep tcspd vlv-ts,Open and other replacement of tricuspid valve with tissue graft,19,1,3527
+91,Trnsplnt live rel donor,Transplant from live related donor,18,1,91
+8689,Skin repair & plasty NEC,Other repair and reconstruction of skin and subcutaneous tissue,18,1,8689
+4431,High gastric bypass,High gastric bypass,18,1,4431
+4613,Permanent colostomy,Permanent colostomy,18,1,4613
+222,Intranasal antrotomy,Intranasal antrotomy,18,1,222
+9703,Replace small bowel tube,Replacement of tube or enterostomy device of small intestine,18,1,9703
+3781,"Int insert 1-cham, non","Initial insertion of single-chamber device, not specified as rate responsive",18,1,3781
+24,IVUS coronary vessels,Intravascular imaging of coronary vessels,18,1,24
+222,Intrcran vent shunt/anas,Intracranial ventricular shunt or anastomosis,18,1,222
+4514,Clos small bowel biopsy,Closed [endoscopic] biopsy of small intestine,18,1,4514
+3776,Repl tv atri-vent lead,Replacement of transvenous atrial and/or ventricular lead(s) [electrode],18,1,3776
+9972,Therapeutc leukopheresis,Therapeutic leukopheresis,18,1,9972
+8959,Nonop cardiac/vasc exam,Other nonoperative cardiac and vascular measurements,17,1,8959
+5112,Percu bx gb/bile duct,Percutaneous biopsy of gallbladder or bile ducts,17,1,5112
+7969,Open fx site debride NEC,"Debridement of open fracture site, other specified bone",17,1,7969
+8015,Oth arthrotomy-hip,"Other arthrotomy, hip",17,1,8015
+3846,Abd artery resec w repla,"Resection of vessel with replacement, abdominal arteries",17,1,3846
+605,Radical prostatectomy,Radical prostatectomy,17,1,605
+3732,Heart aneurysm excision,Excision of aneurysm of heart,17,1,3732
+5749,Tu destruc bladd les NEC,Other transurethral excision or destruction of lesion or tissue of bladder,17,1,5749
+3343,Lung laceration closure,Closure of laceration of lung,17,1,3343
+7781,Oth chest cage ostectomy,"Other partial ostectomy, scapula, clavicle, and thorax [ribs and sternum]",17,1,7781
+4282,Suture esophageal lacer,Suture of laceration of esophagus,17,1,4282
+4679,Repair of intestine NEC,Other repair of intestine,17,1,4679
+280,Peritonsillar i & d,Incision and drainage of tonsil and peritonsillar structures,16,1,280
+2219,Nasal sinus dx proc NEC,Other diagnostic procedures on nasal sinuses,16,1,2219
+864,Lid recon-tarsoconj flap,Reconstruction of eyelid with tarsoconjunctival flap,16,1,864
+864,Radical excis skin les,Radical excision of skin lesion,16,1,864
+5136,Choledochoenterostomy,Choledochoenterostomy,16,1,5136
+3789,Revise or remove pacemak,Revision or removal of pacemaker device,16,1,3789
+524,Int drain pancreat cyst,Internal drainage of pancreatic cyst,16,1,524
+7907,Cl fx reduc-metatar/tar,"Closed reduction of fracture without internal fixation, tarsals and metatarsals",16,1,7907
+8192,Injection into joint,Injection of therapeutic substance into joint or ligament,16,1,8192
+524,Presacral sympathectomy,Presacral sympathectomy,16,1,524
+3976,"Endo em hd/nk,bioac coil",Endovascular embolization or occlusion of vessel(s) of head or neck using bioactive coils,16,1,3976
+203,Skull flap formation,Formation of cranial bone flap,16,1,203
+5211,Closed pancreatic biopsy,Closed [aspiration] [needle] [percutaneous] biopsy of pancreas,16,1,5211
+2102,Post nasal pac for epist,Control of epistaxis by posterior (and anterior) packing,16,1,2102
+8721,Contrast myelogram,Contrast myelogram,16,1,8721
+4694,Revise lg bowel anastom,Revision of anastomosis of large intestine,15,1,4694
+3926,Intra-abdomin shunt NEC,Other intra-abdominal vascular shunt or bypass,15,1,3926
+7818,Appl ext fix-metatar/tar,"Application of external fixator device, tarsals and metatarsals",15,1,7818
+8343,Musc/fasc excis for grft,Excision of muscle or fascia for graft,15,1,8343
+3724,Pericardial biopsy,Biopsy of pericardium,15,1,3724
+8244,Sutur flex tend hand NEC,Other suture of flexor tendon of hand,15,1,8244
+3816,Abdominal endarterectomy,"Endarterectomy, abdominal arteries",15,1,3816
+3399,Lung operation NEC,Other operations on lung,15,1,3399
+4469,Gastric repair NEC,Other repair of stomach,15,1,4469
+346,Scarification of pleura,Scarification of pleura,15,1,346
+8675,Revision of pedicle grft,Revision of pedicle or flap graft,15,1,8675
+302,Reopen laminectomy site,Reopening of laminectomy site,15,1,302
+2551,Suture of tongue lacerat,Suture of laceration of tongue,15,1,2551
+5201,Cath drain-pancreat cyst,Drainage of pancreatic cyst by catheter,15,1,5201
+3402,Exploratory thoracotomy,Exploratory thoracotomy,15,1,3402
+2912,Pharyngeal biopsy,Pharyngeal biopsy,15,1,2912
+3561,Graft repair atrial def,Repair of atrial septal defect with tissue graft,15,1,3561
+5282,Pancreatic homotransplan,Homotransplant of pancreas,15,1,5282
+6902,D & C post delivery,Dilation and curettage following delivery or abortion,14,1,6902
+7841,Oth chest cage rep/plast,"Other repair or plastic operations on bone, scapula, clavicle, and thorax [ribs and sternum]",14,1,7841
+9917,Inject insulin,Injection of insulin,14,1,9917
+5474,Omental repair NEC,Other repair of omentum,14,1,5474
+4836,Polypectomy of rectum,[Endoscopic] polypectomy of rectum,14,1,4836
+9396,Oxygen enrichment NEC,Other oxygen enrichment,14,1,9396
+5902,Periren adhesiolys NEC,Other lysis of perirenal or periureteral adhesions,14,1,5902
+4289,Esophageal repair NEC,Other repair of esophagus,14,1,4289
+8777,Cystogram NEC,Other cystogram,14,1,8777
+3927,Dialysis arteriovenostom,Arteriovenostomy for renal dialysis,14,1,3927
+4642,Pericolost hernia repair,Repair of pericolostomy hernia,14,1,4642
+3551,Pros rep atrial def-opn,"Repair of atrial septal defect with prosthesis, open technique",14,1,3551
+5380,Thor rep-diaph hern NOS,"Repair of diaphragmatic hernia with thoracic approach, not otherwise specified",14,1,5380
+2103,Cautery to stop epistax,Control of epistaxis by cauterization (and packing),14,1,2103
+5475,Mesenteric repair NEC,Other repair of mesentery,14,1,5475
+9756,Remov pancreatic tube,Removal of pancreatic tube or drain,14,1,9756
+9729,Non-op replacement NEC,Other nonoperative replacements,14,1,9729
+7765,Loc exc bone les femur,"Local excision of lesion or tissue of bone, femur",14,1,7765
+7934,Open red-int fix finger,"Open reduction of fracture with internal fixation, phalanges of hand",14,1,7934
+102,Ventricl shunt tube punc,Ventriculopuncture through previously implanted catheter,14,1,102
+4466,Creat esophagastr sphinc,Other procedures for creation of esophagogastric sphincteric competence,13,1,4466
+5492,Remove FB from periton,Removal of foreign body from peritoneal cavity,13,1,5492
+2172,Open reduction nasal fx,Open reduction of nasal fracture,13,1,2172
+4530,Endosc destru duoden les,Endoscopic excision or destruction of lesion of duodenum,13,1,4530
+7745,Femoral biopsy,"Biopsy of bone, femur",13,1,7745
+445,Revision gastric anastom,Revision of gastric anastomosis,13,1,445
+5495,Peritoneal incision,Incision of peritoneum,13,1,5495
+4195,Repair of spleen,Repair and plastic operations on spleen,13,1,4195
+7771,Ex chest cage bone-gft,"Excision of bone for graft, scapula, clavicle, and thorax [ribs and sternum]",13,1,7771
+4438,Lap gastroenterostomy,Laparoscopic gastroenterostomy,13,1,4438
+4441,Sut gastric ulcer site,Suture of gastric ulcer site,13,1,4441
+8673,Attach pedicle to hand,Attachment of pedicle or flap graft to hand,13,1,8673
+39,Other CAS,Other computer assisted surgery,13,1,39
+3525,Opn/oth rep pulm vlv-tis,Open and other replacement of pulmonary valve with tissue graft,13,1,3525
+9638,Impacted feces removal,Removal of impacted feces,13,1,9638
+3499,Thoracic operation NEC,Other operations on thorax,13,1,3499
+5717,Percutaneous cystostomy,Percutaneous cystostomy,13,1,5717
+7785,Part ostectomy-femur,"Other partial ostectomy, femur",13,1,7785
+9788,Remov ext immobilization,Removal of external immobilization device,13,1,9788
+9649,Other gu instillation,Other genitourinary instillation,13,1,9649
+4342,Local gastr excision NEC,Local excision of other lesion or tissue of stomach,13,1,4342
+3604,Intrcoronry thromb infus,Intracoronary artery thrombolytic infusion,13,1,3604
+6829,Uterine les destruct NEC,Other excision or destruction of lesion of uterus,13,1,6829
+3882,Occlus head/neck ves NEC,"Other surgical occlusion of vessels, other vessels of head and neck",13,1,3882
+5151,Common duct exploration,Exploration of common duct,13,1,5151
+3425,Clos mediastinal biopsy,Closed [percutaneous] [needle] biopsy of mediastinum,12,1,3425
+782,Oth totl excision thymus,Other total excision of thymus,12,1,782
+2263,Ethmoidectomy,Ethmoidectomy,12,1,2263
+2749,Excision of mouth NEC,Other excision of mouth,12,1,2749
+4681,Intra-abd sm bowel manip,Intra-abdominal manipulation of small intestine,12,1,4681
+8135,Refus drs/drslmb pst/pst,"Refusion of dorsal and dorsolumbar spine, posterior column, posterior technique",12,1,8135
+8319,Soft tissue division NEC,Other division of soft tissue,12,1,8319
+7964,Debrid opn fx-finger,"Debridement of open fracture site, phalanges of hand",12,1,7964
+3552,Pros repair atria def-cl,"Repair of atrial septal defect with prosthesis, closed technique",12,1,3552
+3888,Occlude leg artery NEC,"Other surgical occlusion of vessels, lower limb arteries",12,1,3888
+4881,Perirectal incision,Incision of perirectal tissue,12,1,4881
+3894,Venous cutdown,Venous cutdown,12,1,3894
+2757,Pedicle attach to mouth,Attachment of pedicle or flap graft to lip and mouth,12,1,2757
+9979,Other therapeu apheresis,Other therapeutic apheresis,12,1,9979
+8663,Full-thick skin grft NEC,Full-thickness skin graft to other sites,12,1,8663
+9224,Teleradio using photons,Teleradiotherapy using photons,12,1,9224
+3887,Occlude abd vein NEC,"Other surgical occlusion of vessels, abdominal veins",12,1,3887
+8471,App ext fix dev-monoplan,"Application of external fixator device, monoplanar system",12,1,8471
+5169,Bile duct excision NEC,Excision of other bile duct,11,1,5169
+4862,Ant rect resect w colost,Anterior resection of rectum with synchronous colostomy,11,1,4862
+610,Scrotum & tunica i & d,Incision and drainage of scrotum and tunica vaginalis,11,1,610
+9955,Vaccination NEC,Prophylactic administration of vaccine against other diseases,11,1,9955
+5493,Create cutanperiton fist,Creation of cutaneoperitoneal fistula,11,1,5493
+9762,Remov ureteral drain,Removal of ureterostomy tube and ureteral catheter,11,1,9762
+8543,Unilat exten simp mastec,Unilateral extended simple mastectomy,11,1,8543
+5141,Cde for calculus remov,Common duct exploration for removal of calculus,11,1,5141
+504,Total hepatectomy,Total hepatectomy,11,1,504
+8589,Mammoplasty NEC,Other mammoplasty,11,1,8589
+9782,Remov peritoneal drain,Removal of peritoneal drainage device,11,1,9782
+5164,Endosc destru bile les,Endoscopic excision or destruction of lesion of biliary ducts or sphincter of Oddi,11,1,5164
+4042,Bilat rad neck dissect,"Radical neck dissection, bilateral",11,1,4042
+7926,Open reduc-tibia/fib fx,"Open reduction of fracture without internal fixation, tibia and fibula",11,1,7926
+3765,Imp vent ext hrt ast sys,Implant of single ventricular (extracorporeal) external heart assist system,11,1,3765
+3962,Hypothermia w open heart,Hypothermia (systemic) incidental to open heart surgery,11,1,3962
+4512,Endosc sm bowel thru st,Endoscopy of small intestine through artificial stoma,11,1,4512
+3572,Ventr septa def rep NEC,Other and unspecified repair of ventricular septal defect,11,1,3572
+8006,Arth/pros rem wo re-knee,"Arthrotomy for removal of prosthesis without replacement, knee",11,1,8006
+3484,Other diaphragm repair,Other repair of diaphragm,11,1,3484
+7799,Total ostectomy NEC,"Total ostectomy, other bones",11,1,7799
+4224,Closed bx of esophagus,Closed [endoscopic] biopsy of esophagus,11,1,4224
+3143,Closed biopsy larynx,Closed [endoscopic] biopsy of larynx,11,1,3143
+3481,Excise diaphragm lesion,Excision of lesion or tissue of diaphragm,11,1,3481
+8153,Revise hip replacemt NOS,"Revision of hip replacement, not otherwise specified",11,1,8153
+6909,D & C NEC,Other dilation and curettage,11,1,6909
+8421,Thumb reattachment,Thumb reattachment,10,1,8421
+6029,Oth transureth prostatec,Other transurethral prostatectomy,10,1,6029
+765,Tot exc pituit-transphen,"Total excision of pituitary gland, transsphenoidal approach",10,1,765
+3999,Vessel operation NEC,Other operations on vessels,10,1,3999
+310,Injection of larynx,Injection of larynx,10,1,310
+8147,Other repair of knee,Other repair of knee,10,1,8147
+8877,Dx ultrasound-vascular,Diagnostic ultrasound of peripheral vascular system,10,1,8877
+3766,Implantable hrt assist,Insertion of implantable heart assist system,10,1,3766
+765,Temporomand arthroplasty,Temporomandibular arthroplasty,10,1,765
+9353,Other cast application,Application of other cast,10,1,9353
+8005,Arth/pros rem wo rep-hip,"Arthrotomy for removal of prosthesis without replacement, hip",10,1,8005
+407,Periph nerv excision NEC,Other excision or avulsion of cranial and peripheral nerves,10,1,407
+611,Closed thyroid gland bx,Closed [percutaneous] [needle] biopsy of thyroid gland,10,1,611
+8385,Musc/tend lng change NEC,Other change in muscle or tendon length,10,1,8385
+4643,Lg bowel stoma revis NEC,Other revision of stoma of large intestine,10,1,4643
+713,Transfront pituitary bx,"Biopsy of pituitary gland, transfrontal approach",10,1,713
+3459,Other pleural excision,Other excision of pleura,10,1,3459
+5718,Other suprapu cystostomy,Other suprapubic cystostomy,10,1,5718
+713,Local vulvar excis NEC,Other local excision or destruction of vulva and perineum,10,1,713
+9701,Replace gast/esoph tube,Replacement of (naso-)gastric or esophagostomy tube,10,1,9701
+7903,Cl fx reduc-metacar/car,"Closed reduction of fracture without internal fixation, carpals and metacarpals",10,1,7903
+5372,Opn abd diaphrm hern NEC,"Other and open repair of diaphragmatic hernia, abdominal approach",10,1,5372
+321,Percutaneous chordotomy,Percutaneous chordotomy,10,1,321
+6952,Aspirat curet-post deliv,Aspiration curettage following delivery or abortion,10,1,6952
+449,Per nerve adhesiolys NEC,Other peripheral nerve or ganglion decompression or lysis of adhesions,10,1,449
+500,Hepatotomy,Hepatotomy,10,1,500
+8388,Other plastic ops tendon,Other plastic operations on tendon,10,1,8388
+526,Total pancreatectomy,Total pancreatectomy,10,1,526
+3924,Aorta-renal bypass,Aorta-renal bypass,10,1,3924
+321,Other bronchial excision,Other excision of bronchus,10,1,321
+7770,Excise bone for grft NOS,"Excision of bone for graft, unspecified site",10,1,7770
+4023,Excise axillary node,Excision of axillary lymph node,10,1,4023
+8866,Contrast phlebogram-leg,Phlebography of femoral and other lower extremity veins using contrast material,10,1,8866
+8814,Retroperiton fistulogram,Retroperitoneal fistulogram,10,1,8814
+8672,Pedicle graft advancemen,Advancement of pedicle graft,10,1,8672
+4103,Allogrft bone marrow NOS,Allogeneic bone marrow transplant without purging,9,1,4103
+7963,Debrid opn fx-metac/car,"Debridement of open fracture site, carpals and metacarpals",9,1,7963
+602,Reopen thyroid field wnd,Reopening of wound of thyroid field,9,1,602
+3711,Cardiotomy,Cardiotomy,9,1,3711
+479,Other neuroplasty,Other neuroplasty,9,1,479
+8667,Dermal regener graft,Dermal regenerative graft,9,1,8667
+8081,Destruc-shoulder les NEC,"Other local excision or destruction of lesion of joint, shoulder",9,1,8081
+3805,Thoracic vessel inc NEC,"Incision of vessel, other thoracic vessels",9,1,3805
+4422,Endoscop dilate pylorus,Endoscopic dilation of pylorus,9,1,4422
+52,Imp/rep lead lf ven sys,Implantation or replacement of transvenous lead [electrode] into left ventricular coronary venous system,9,1,52
+5121,Oth part cholecystectomy,Other partial cholecystectomy,9,1,5121
+7631,Partial mandibulectomy,Partial mandibulectomy,9,1,7631
+5143,Choledochohepat intubat,Insertion of choledochohepatic tube for decompression,9,1,5143
+7807,Bone graft-tibia/fibula,"Bone graft, tibia and fibula",9,1,7807
+3802,Head/neck ves incis NEC,"Incision of vessel, other vessels of head and neck",9,1,3802
+5014,Laparoscopic liver bx,Laparoscopic liver biopsy,9,1,5014
+8085,Destruct-hip lesion NEC,"Other local excision or destruction of lesion of joint, hip",9,1,8085
+5069,Liver repair NEC,Other repair of liver,9,1,5069
+8245,Suture hand tendon NEC,Other suture of other tendon of hand,9,1,8245
+94,Intra-op neurophys montr,Intra-operative neurophysiologic monitoring,9,1,94
+8236,Other myectomy of hand,Other myectomy of hand,9,1,8236
+3941,Postop vasc op hem contr,Control of hemorrhage following vascular surgery,9,1,3941
+395,Spinal patch,Spinal blood patch,9,1,395
+404,Periph nerve incis NEC,Other incision of cranial and peripheral nerves,9,1,404
+7639,Part facial ostectom NEC,Partial ostectomy of other facial bone,9,1,7639
+5209,Pancreatotomy NEC,Other pancreatotomy,9,1,5209
+4064,Ligate thoracic duct,Ligation of thoracic duct,9,1,4064
+8457,Removal of cement spacer,Removal of (cement) spacer,9,1,8457
+3144,Closed biopsy trachea,Closed [endoscopic] biopsy of trachea,9,1,3144
+3809,Lower limb vein incision,"Incision of vessel, lower limb veins",9,1,3809
+9803,Remov intralum gastr FB,Removal of intraluminal foreign body from stomach and small intestine without incision,9,1,9803
+8865,Abd contr phlebogram NEC,Phlebography of other Intra-Abdominal veins using contrast material,9,1,8865
+65,Perc ins intracran stent,Percutaneous insertion of intracranial vascular stent(s),9,1,65
+3804,Incision of aorta,"Incision of vessel, aorta",9,1,3804
+3943,Remov ren dialysis shunt,Removal of arteriovenous shunt for renal dialysis,9,1,3943
+3241,Thorac lobectomy lung,Thoracoscopic lobectomy of lung,9,1,3241
+4104,Auto hem stem ct w/o pur,Autologous hematopoietic stem cell transplant without purging,9,1,4104
+5296,Pancreatic anastomosis,Anastomosis of pancreas,9,1,5296
+8542,Bilat simple mastectomy,Bilateral simple mastectomy,8,1,8542
+5111,Endosc retro cholangio,Endoscopic retrograde cholangiography [ERC],8,1,5111
+132,Lobotomy & tractotomy,Lobotomy and tractotomy,8,1,132
+852,Blepharorrhaphy,Blepharorrhaphy,8,1,852
+291,Lysis cortical adhesion,Lysis of cortical adhesions,8,1,291
+132,Linear extracap lens ext,Extracapsular extraction of lens by linear extraction technique,8,1,132
+7974,Cl reduc disloc-hand/fng,Closed reduction of dislocation of hand and finger,8,1,7974
+7912,Cl red-int fix rad/ulna,"Closed reduction of fracture with internal fixation, radius and ulna",8,1,7912
+293,Imp/repl brain stim lead,Implantation or replacement of intracranial neurostimulator lead(s),8,1,293
+9963,Closed chest card massag,Closed chest cardiac massage,8,1,9963
+2211,Closed nasal sinus bx,Closed [endoscopic] [needle] biopsy of nasal sinus,8,1,2211
+7914,Close red-int fix finger,"Closed reduction of fracture with internal fixation, phalanges of hand",8,1,7914
+2756,Skin graft to mouth NEC,Other skin graft to lip and mouth,8,1,2756
+3239,Oth seg lung resect NOS,Other and unspecified segmental resection of lung,8,1,3239
+3953,Arterioven fistula rep,Repair of arteriovenous fistula,8,1,3953
+8761,Barium swallow,Barium swallow,8,1,8761
+5631,Ureteroscopy,Ureteroscopy,8,1,5631
+2632,Complete sialoadenectomy,Complete sialoadenectomy,8,1,2632
+7077,Vaginal suspens & fixat,Vaginal suspension and fixation,8,1,7077
+9911,Inject rh immune globul,Injection of Rh immune globulin,8,1,9911
+8861,Contr phlebogram-hd/neck,Phlebography of veins of head and neck using contrast material,8,1,8861
+5464,Peritoneal suture,Suture of peritoneum,8,1,5464
+7868,Remove imp dev-metat/tar,"Removal of implanted devices from bone, tarsals and metatarsals",8,1,7868
+5994,Replace cystostomy tube,Replacement of cystostomy tube,8,1,5994
+3822,Percutaneous angioscopy,Percutaneous angioscopy,8,1,3822
+7747,Tibia & fibula biopsy,"Biopsy of bone, tibia and fibula",8,1,7747
+740,Classical c-section,Classical cesarean section,8,1,740
+7643,Mandibular reconst NEC,Other reconstruction of mandible,8,1,7643
+3797,Repl cardiodefib leads,Replacement of automatic cardioverter/defibrillator lead(s) only,8,1,3797
+1755,Translum cor atherectomy,Transluminal coronary atherectomy,8,1,1755
+8422,Finger reattachment,Finger reattachment,8,1,8422
+4463,Close gastric fistul NEC,Closure of other gastric fistula,8,1,4463
+3393,Puncture of lung,Puncture of lung,8,1,3393
+5259,Partial pancreatect NEC,Other partial pancreatectomy,8,1,5259
+7972,Cl reduc disloc-elbow,Closed reduction of dislocation of elbow,8,1,7972
+5524,Open renal biopsy,Open biopsy of kidney,8,1,5524
+9952,Influenza vaccination,Prophylactic vaccination against influenza,7,1,9952
+8363,Rotator cuff repair,Rotator cuff repair,7,1,8363
+7569,Repair ob laceration NEC,Repair of other current obstetric laceration,7,1,7569
+4901,Incis perianal abscess,Incision of perianal abscess,7,1,4901
+9999,Miscellaneous proc NEC,Other miscellaneous procedures,7,1,9999
+4021,Excis deep cervical node,Excision of deep cervical lymph node,7,1,4021
+7851,Int fixation-chest cage,"Internal fixation of bone without fracture reduction, scapula, clavicle, and thorax [ribs and sternum]",7,1,7851
+3863,Arm vessel excision,"Other excision of vessels, upper limb vessels",7,1,3863
+7847,Oth tib/fib repair/plast,"Other repair or plastic operations on bone, tibia and fibula",7,1,7847
+6816,Closed uterine biopsy,Closed biopsy of uterus,7,1,6816
+7809,Bone graft NEC,"Bone graft, other bones",7,1,7809
+4534,Destr sm bowel les NEC,"Other destruction of lesion of small intestine, except duodenum",7,1,4534
+5132,Gb-to-intestine anastom,Anastomosis of gallbladder to intestine,7,1,5132
+3899,Venous puncture NEC,Other puncture of vein,7,1,3899
+8879,Dx ultrasound NEC,Other diagnostic ultrasound,7,1,8879
+623,Unilateral orchiectomy,Unilateral orchiectomy,7,1,623
+5792,Bladder neck dilation,Dilation of bladder neck,7,1,5792
+430,Gastrotomy,Gastrotomy,7,1,430
+84,Rev knee repl-tibia lin,"Revision of total knee replacement, tibial insert (liner)",7,1,84
+7777,Excise tib/fib for graft,"Excision of bone for graft, tibia and fibula",7,1,7777
+5671,Urin diversion to bowel,Urinary diversion to intestine,7,1,5671
+3339,Surg collaps of lung NEC,Other surgical collapse of lung,7,1,3339
+8838,Other C.A.T. scan,Other computerized axial tomography,7,1,8838
+3821,Blood vessel biopsy,Biopsy of blood vessel,7,1,3821
+2121,Rhinoscopy,Rhinoscopy,7,1,2121
+3848,Leg artery resec w repla,"Resection of vessel with replacement, lower limb arteries",7,1,3848
+3193,Replace trac/laryn stent,Replacement of laryngeal or tracheal stent,7,1,3193
+9789,Remov therapeut dev NEC,Removal of other therapeutic device,7,1,9789
+5783,Enterovesico fist repair,Repair of fistula involving bladder and intestine,7,1,5783
+7849,Oth bone repa/plast NEC,"Other repair or plastic operations on bone, other bones",7,1,7849
+8662,Hand skin graft NEC,Other skin graft to hand,7,1,8662
+6951,Aspirat curet-preg termi,Aspiration curettage of uterus for termination of pregnancy,7,1,6951
+126,Ins cath cranial cav/tis,Insertion of catheter(s) into cranial cavity or tissue,7,1,126
+3009,Destruct larynx les NEC,Other excision or destruction of lesion or tissue of larynx,7,1,3009
+6539,Oth unilat oophorectomy,Other unilateral oophorectomy,7,1,6539
+4462,Gastrostomy closure,Closure of gastrostomy,7,1,4462
+7976,Cl reduc disloc-knee,Closed reduction of dislocation of knee,7,1,7976
+3834,Aorta resection & anast,"Resection of vessel with anastomosis, aorta",7,1,3834
+32,CAS w MR/MRA,Computer assisted surgery with MR/MRA,7,1,32
+8137,Refus lmb/lmbsac pst/pst,"Refusion of lumbar and lumbosacral spine, posterior column, posterior technique",7,1,8137
+4939,Other destruc anus les,Other local excision or destruction of lesion or tissue of anus,7,1,4939
+4701,Lap appendectomy,Laparoscopic appendectomy,7,1,4701
+441,Decompress trigem root,Decompression of trigeminal nerve root,7,1,441
+5499,Abdomen region ops NEC,Other operations of abdominal region,7,1,5499
+7916,Cl red-int fix tib/fibu,"Closed reduction of fracture with internal fixation, tibia and fibula",7,1,7916
+5300,Unilat ing hern rep NOS,"Unilateral repair of inguinal hernia, not otherwise specified",7,1,5300
+3473,Clos thoracic fistul NEC,Closure of other fistula of thorax,6,1,3473
+304,Radical laryngectomy,Radical laryngectomy,6,1,304
+4511,Transab sm bowel endosc,Transabdominal endoscopy of small intestine,6,1,4511
+4945,Hemorrhoid ligation,Ligation of hemorrhoids,6,1,4945
+295,Remove skull tongs,Removal of skull tongs or halo traction device,6,1,295
+5553,Rejected kidney nephrect,Removal of transplanted or rejected kidney,6,1,5553
+122,Removal brain stim lead,Removal of intracranial neurostimulator lead(s),6,1,122
+576,Partial cystectomy,Partial cystectomy,6,1,576
+715,Pituitary biopsy NOS,"Biopsy of pituitary gland, unspecified approach",6,1,715
+4541,Excise lg intestine les,Excision of lesion or tissue of large intestine,6,1,4541
+9425,Psychiat drug therap NEC,Other psychiatric drug therapy,6,1,9425
+69,Intravs msmt ves NEC/NOS,"Intravascular pressure measurement, other specified and unspecified vessels",6,1,69
+3867,Abdominal vein excision,"Other excision of vessels, abdominal veins",6,1,3867
+7917,Cl red-int fix metat/tar,"Closed reduction of fracture with internal fixation, tarsals and metatarsals",6,1,7917
+5183,Pancreat sphincteroplas,Pancreatic sphincteroplasty,6,1,5183
+4686,Endo insrt colonic stent,Endoscopic insertion of colonic stent(s),6,1,4686
+715,Radical vulvectomy,Radical vulvectomy,6,1,715
+292,Exc branchial cleft cyst,Excision of branchial cleft cyst or vestige,6,1,292
+8313,Other tenotomy,Other tenotomy,6,1,8313
+8087,Destruc-ankle lesion NEC,"Other local excision or destruction of lesion of joint, ankle",6,1,8087
+411,Clos periph nerve biopsy,Closed [percutaneous] [needle] biopsy of cranial or peripheral nerve or ganglion,6,1,411
+411,Puncture of spleen,Puncture of spleen,6,1,411
+7863,Remov imp dev-radius/uln,"Removal of implanted devices from bone, radius and ulna",6,1,7863
+1742,Lap robotic assist proc,Laparoscopic robotic assisted procedure,6,1,1742
+8418,Disarticulation of hip,Disarticulation of hip,6,1,8418
+7534,Other fetal monitoring,Other fetal monitoring,6,1,7534
+4522,Endosc lg bowel thru st,Endoscopy of large intestine through artificial stoma,6,1,4522
+3562,Graft repair ventric def,Repair of ventricular septal defect with tissue graft,6,1,3562
+1736,Lap sigmoidectomy,Laparoscopic sigmoidectomy,6,1,1736
+252,Partial glossectomy,Partial glossectomy,6,1,252
+734,Medical induction labor,Medical induction of labor,6,1,734
+292,Brain repair,Repair of brain,6,1,292
+3798,Repl cardiodefib genratr,Replacement of automatic cardioverter/defibrillator pulse generator only,6,1,3798
+9657,Vascular cath irrigation,Irrigation of vascular catheter,6,1,9657
+5502,Nephrostomy,Nephrostomy,6,1,5502
+5501,Nephrotomy,Nephrotomy,6,1,5501
+3141,Tracheoscopy thru stoma,Tracheoscopy through artificial stoma,6,1,3141
+72,Rev hip repl-fem comp,"Revision of hip replacement, femoral component",6,1,72
+7050,Cystocel/rectocel repair,Repair of cystocele and rectocele,6,1,7050
+7673,Cl reduct maxillary fx,Closed reduction of maxillary fracture,6,1,7673
+7731,Chest cage bone div NEC,"Other division of bone, scapula, clavicle, and thorax [ribs and sternum]",6,1,7731
+3966,Per cardiopulmon bypass,Percutaneous cardiopulmonary bypass,6,1,3966
+835,Ptos rep-tarsal techniq,Repair of blepharoptosis by tarsal technique,6,1,835
+7812,Applic ext fix-humerus,"Application of external fixator device, humerus",6,1,7812
+5212,Open pancreatic biopsy,Open biopsy of pancreas,6,1,5212
+7805,Bone graft to femur,"Bone graft, femur",6,1,7805
+4287,Esophageal graft NEC,Other graft of esophagus,6,1,4287
+4533,Local excis sm bowel NEC,"Local excision of lesion or tissue of small intestine, except duodenum",6,1,4533
+9761,Remov pyelos/nephros tub,Removal of pyelostomy and nephrostomy tube,6,1,9761
+695,Parathyroid reimplant,Parathyroid tissue reimplantation,6,1,695
+3471,Suture chest wall lacer,Suture of laceration of chest wall,6,1,3471
+282,Tonsillectomy,Tonsillectomy without adenoidectomy,6,1,282
+3883,Occlude arm vessel NEC,"Other surgical occlusion of vessels, upper limb vessels",6,1,3883
+7803,Bone graft-radius/ulna,"Bone graft, radius and ulna",6,1,7803
+8181,Partial shoulder replace,Partial shoulder replacement,6,1,8181
+7904,Cl fx reduc-finger,"Closed reduction of fracture without internal fixation, phalanges of hand",6,1,7904
+7913,Cl red-int fix metac/car,"Closed reduction of fracture with internal fixation, carpals and metacarpals",6,1,7913
+4571,Opn mul seg lg intes NEC,Open and other multiple segmental resection of large intestine,6,1,4571
+2264,Sphenoidectomy,Sphenoidectomy,6,1,2264
+8349,Other soft tissue excis,Other excision of soft tissue,6,1,8349
+835,Bursectomy,Bursectomy,6,1,835
+8623,Nail removal,"Removal of nail, nail bed, or nail fold",6,1,8623
+7911,Clos red-int fix humerus,"Closed reduction of fracture with internal fixation, humerus",6,1,7911
+8229,Exc les sft tiss hnd NEC,Excision of other lesion of soft tissue of hand,5,1,8229
+8021,Shoulder arthroscopy,"Arthroscopy, shoulder",5,1,8021
+7691,Bone graft to face bone,Bone graft to facial bone,5,1,7691
+2631,Partial sialoadenectomy,Partial sialoadenectomy,5,1,2631
+5341,Opn rep umb hrn-grft NEC,Other and open repair of umbilical hernia with graft or prosthesis,5,1,5341
+8661,Full-thick hand skin grf,Full-thickness skin graft to hand,5,1,8661
+8585,Breast muscle flap graft,Muscle flap graft to breast,5,1,8585
+2752,Suture of mouth lac NEC,Suture of laceration of other part of mouth,5,1,2752
+3868,Leg artery excision,"Other excision of vessels, lower limb arteries",5,1,3868
+7766,Loc exc bone les patella,"Local excision of lesion or tissue of bone, patella",5,1,7766
+4852,Opn abdperneal resc rec,Open abdominoperineal resection of the rectum,5,1,4852
+3865,Thoracic vessel excision,"Other excision of vessels, thoracic vessels",5,1,3865
+5051,Auxiliary liver transpl,Auxiliary liver transplant,5,1,5051
+5179,Bile duct repair NEC,Repair of other bile ducts,5,1,5179
+5381,Diaphragmatic plication,Plication of the diaphragm,5,1,5381
+7861,Remov imp dev-chest cage,"Removal of implanted devices from bone, scapula, clavicle, and thorax [ribs and sternum]",5,1,7861
+2501,Closed biopsy of tongue,Closed [needle] biopsy of tongue,5,1,2501
+245,Alveoloplasty,Alveoloplasty,5,1,245
+8541,Unilat simple mastectomy,Unilateral simple mastectomy,5,1,8541
+3599,Other heart valve ops,Other operations on valves of heart,5,1,3599
+7764,Loc exc les metacar/car,"Local excision of lesion or tissue of bone, carpals and metacarpals",5,1,7764
+5682,Suture ureteral lacerat,Suture of laceration of ureter,5,1,5682
+71,Rev hip repl-acetab comp,"Revision of hip replacement, acetabular component",5,1,71
+3631,Open chest trans revasc,Open chest transmyocardial revascularization,5,1,3631
+128,Intracereb cth-burr hole,Placement of intracerebral catheter(s) via burr hole(s),5,1,128
+3889,Occlude leg vein NEC,"Other surgical occlusion of vessels, lower limb veins",5,1,3889
+7762,Loc exc bone les humerus,"Local excision of lesion or tissue of bone, humerus",5,1,7762
+2262,Exc max sinus lesion NEC,Excision of lesion of maxillary sinus with other approach,5,1,2262
+8133,Refus oth cerv post/post,"Refusion of other cervical spine, posterior column, posterior technique",5,1,8133
+9627,Manual reduction hernia,Manual reduction of hernia,5,1,9627
+5196,Perc extrac com duc calc,Percutaneous extraction of common duct stones,5,1,5196
+7678,Cl reduct facial fx NEC,Other closed reduction of facial fracture,5,1,7678
+6449,Penile repair NEC,Other repair of penis,5,1,6449
+8776,Retrogr cystourethrogram,Retrograde cystourethrogram,5,1,8776
+8138,Refus lmb/lmbsc ant/post,"Refusion of lumbar and lumbosacral spine, anterior column, posterior technique",5,1,8138
+4495,Lap gastric restric proc,Laparoscopic gastric restrictive procedure,5,1,4495
+6859,Vag hysterectomy NEC/NOS,Other and unspecified vaginal hysterectomy,5,1,6859
+1879,Plastic rep ext ear NEC,Other plastic repair of external ear,5,1,1879
+3955,Reimplan aberr renal ves,Reimplantation of aberrant renal vessel,5,1,3955
+4531,Oth excise duodenum les,Other local excision of lesion of duodenum,5,1,4531
+1733,Lap right hemicolectomy,Laparoscopic right hemicolectomy,5,1,1733
+303,Complete laryngectomy,Complete laryngectomy,5,1,303
+5321,Unil femor hrn rep-grft,Unilateral repair of femoral hernia with graft or prosthesis,5,1,5321
+5641,Partial ureterectomy,Partial ureterectomy,5,1,5641
+2009,Myringotomy NEC,Other myringotomy,5,1,2009
+4414,Closed gastric biopsy,Closed [endoscopic] biopsy of stomach,5,1,4414
+127,Rem cath cranial cav/tis,Removal of catheter(s) from cranial cavity or tissue,5,1,127
+9814,Remov intralum laryn FB,Removal of intraluminal foreign body from larynx without incision,5,1,9814
+2252,Sphenoidotomy,Sphenoidotomy,5,1,2252
+2279,Nasal sinus repair NEC,Other repair of nasal sinus,5,1,2279
+859,Adjust lid position NEC,Other adjustment of lid position,5,1,859
+5329,Unil femor hern rep NEC,Other unilateral femoral herniorrhaphy,5,1,5329
+9751,Remov gastrostomy tube,Removal of gastrostomy tube,5,1,9751
+3320,Thoracoscopc lung biopsy,Thoracoscopic lung biopsy,5,1,3320
+3555,Pros rep ventrc def-clos,"Repair of ventricular septal defect with prosthesis, closed technique",5,1,3555
+8407,Amputation thru humerus,Amputation through humerus,5,1,8407
+688,Pelvic evisceration,Pelvic evisceration,5,1,688
+8013,Oth arthrotomy-wrist,"Other arthrotomy, wrist",5,1,8013
+5104,Cholecystotomy NEC,Other cholecystotomy,5,1,5104
+8146,Collaterl lig repair NEC,Other repair of the collateral ligaments,5,1,8146
+5789,Bladder repair NEC,Other repair of bladder,5,1,5789
+3930,Suture of vessel NOS,Suture of unspecified blood vessel,5,1,3930
+7791,Tot chest cage ostectomy,"Total ostectomy, scapula, clavicle, and thorax [ribs and sternum]",5,1,7791
+427,Esophagomyotomy,Esophagomyotomy,5,1,427
+1682,Repair eyeball rupture,Repair of rupture of eyeball,5,1,1682
+379,Oth spinal thecal shunt,Other shunt of spinal theca,5,1,379
+3762,Insrt non-impl circ dev,Insertion of temporary non-implantable extracorporeal circulatory assist device,5,1,3762
+4024,Excise inguinal node,Excision of inguinal lymph node,5,1,4024
+2109,Epistaxis control NEC,Control of epistaxis by other means,5,1,2109
+8773,Intravenous pyelogram,Intravenous pyelogram,5,1,8773
+5194,Revis bile tract anastom,Revision of anastomosis of biliary tract,5,1,5194
+3171,Suture of tracheal lacer,Suture of laceration of trachea,5,1,3171
+3164,Laryngeal fx repair,Repair of laryngeal fracture,5,1,3164
+7309,Artif rupt membranes NEC,Other artificial rupture of membranes,5,1,7309
+8897,Magnetic res image unsp,Magnetic resonance imaging of other and unspecified sites,5,1,8897
+5652,Revis cutan ileoureteros,Revision of cutaneous uretero-ileostomy,5,1,5652
+4059,Rad node dissection NEC,Radical excision of other lymph nodes,5,1,4059
+8011,Oth arthrotomy-shoulder,"Other arthrotomy, shoulder",5,1,8011
+3493,Repair of pleura,Repair of pleura,5,1,3493
+7024,Vaginal biopsy,Vaginal biopsy,5,1,7024
+6632,Bilat tubal division NEC,Other bilateral ligation and division of fallopian tubes,4,1,6632
+7929,Open fx reduction NEC,"Open reduction of fracture without internal fixation, other specified bone",4,1,7929
+489,Periph nerve inject NEC,"Injection of other agent, except neurolytic",4,1,489
+8939,Nonoperative exams NEC,Other nonoperative measurements and examinations,4,1,8939
+8212,Fasciotomy of hand,Fasciotomy of hand,4,1,8212
+7973,Cl reduc disloc-wrist,Closed reduction of dislocation of wrist,4,1,7973
+4995,Control anal hemorrhage,Control of (postoperative) hemorrhage of anus,4,1,4995
+8113,Subtalar fusion,Subtalar fusion,4,1,8113
+5979,Urin incontin repair NEC,Other repair of urinary stress incontinence,4,1,5979
+8893,Mri spinal canal,Magnetic resonance imaging of spinal canal,4,1,8893
+5733,Clos transureth bladd bx,Closed [transurethral] biopsy of bladder,4,1,5733
+101,Cisternal puncture,Cisternal puncture,4,1,101
+101,Conjunctiva incision NEC,Other incision of conjunctiva,4,1,101
+700,Adrenal exploration NOS,"Exploration of adrenal field, not otherwise specified",4,1,700
+7987,Open reduc-ankle disloc,Open reduction of dislocation of ankle,4,1,7987
+9601,Insert nasopharyn airway,Insertion of nasopharyngeal airway,4,1,9601
+4412,Gastroscopy thru stoma,Gastroscopy through artificial stoma,4,1,4412
+700,Culdocentesis,Culdocentesis,4,1,700
+7985,Open reduc-hip dislocat,Open reduction of dislocation of hip,4,1,7985
+4210,Esophagostomy NOS,"Esophagostomy, not otherwise specified",4,1,4210
+3472,Thoracostomy closure,Closure of thoracostomy,4,1,3472
+7739,Bone division NEC,"Other division of bone, other bones",4,1,7739
+5362,Lap incis hern repr-grft,Laparoscopic incisional hernia repair with graft or prosthesis,4,1,5362
+3582,Total repair of tapvc,Total repair of total anomalous pulmonary venous connection,4,1,3582
+5674,Ureteroneocystostomy,Ureteroneocystostomy,4,1,5674
+8132,Refus oth cervcl ant/ant,"Refusion of other cervical spine, anterior column, anterior technique",4,1,8132
+3426,Open mediastinal biopsy,Open mediastinal biopsy,4,1,3426
+9230,Stereo radiosurgery NOS,"Stereotactic radiosurgery, not otherwise specified",4,1,9230
+2241,Frontal sinusotomy,Frontal sinusotomy,4,1,2241
+7109,Incis vulva/perineum NEC,Other incision of vulva and perineum,4,1,7109
+4232,Local excis esophag NEC,Local excision of other lesion or tissue of esophagus,4,1,4232
+8256,Transplant hand tend NEC,Other hand tendon transfer or transplantation,4,1,8256
+8591,Aspiration of breast,Aspiration of breast,4,1,8591
+3838,Leg artery resect/anast,"Resection of vessel with anastomosis, lower limb arteries",4,1,3838
+4672,Duodenal fistula closure,Closure of fistula of duodenum,4,1,4672
+8606,Insert infusion pump,Insertion of totally implantable infusion pump,4,1,8606
+8246,Suture hand muscle/fasc,Suture of muscle or fascia of hand,4,1,8246
+4879,Repair of rectum NEC,Other repair of rectum,4,1,4879
+3691,Coron vess aneurysm rep,Repair of aneurysm of coronary vessel,4,1,3691
+3862,Head/neck vessel excis,"Other excision of vessels, other vessels of head and neck",4,1,3862
+7171,Suture vulvar laceration,Suture of laceration of vulva or perineum,4,1,7171
+4258,Thorac interposition NEC,Intrathoracic esophageal anastomosis with other interposition,4,1,4258
+5163,Common duct excis NEC,Other excision of common duct,4,1,5163
+3427,Biopsy of diaphragm,Biopsy of diaphragm,4,1,3427
+3591,Interat ven retrn transp,Interatrial transposition of venous return,4,1,3591
+5302,Opn rep ind ing hern NEC,Other and open repair of indirect inguinal hernia,4,1,5302
+6529,Local destr ova les NEC,Other local excision or destruction of ovary,4,1,6529
+529,Other sympathectomy,Other sympathectomy and ganglionectomy,4,1,529
+3847,Abd vein resect w replac,"Resection of vessel with replacement, abdominal veins",4,1,3847
+8969,Coronary bld flow monit,Monitoring of coronary blood flow,4,1,8969
+743,Adrenal vessel ligation,Ligation of adrenal vessels,4,1,743
+8803,Abdominal wall sinogram,Sinogram of abdominal wall,4,1,8803
+4515,Open small bowel biopsy,Open biopsy of small intestine,4,1,4515
+214,Resection of nose,Resection of nose,4,1,214
+214,Choroid plexectomy,Choroid plexectomy,4,1,214
+7938,Open reduct-int fix toe,"Open reduction of fracture with internal fixation, phalanges of foot",4,1,7938
+7853,Int fixation-radius/ulna,"Internal fixation of bone without fracture reduction, radius and ulna",4,1,7853
+4499,Gastric operation NEC,Other operations on stomach,4,1,4499
+781,Oth part excision thymus,Other partial excision of thymus,4,1,781
+8375,Tendon trnsfr/transplant,Tendon transfer or transplantation,4,1,8375
+480,Proctotomy,Proctotomy,4,1,480
+480,Periph nerve inject NOS,"Peripheral nerve injection, not otherwise specified",4,1,480
+743,Rem extratub ectop preg,Removal of extratubal ectopic pregnancy,4,1,743
+5280,Pancreat transplant NOS,"Pancreatic transplant, not otherwise specified",4,1,5280
+9903,Whole blood transfus NEC,Other transfusion of whole blood,4,1,9903
+8342,Other tenonectomy,Other tenonectomy,4,1,8342
+5675,Transureteroureterostomy,Transureteroureterostomy,4,1,5675
+4676,Close lg bowel fistula,Closure of fistula of large intestine,4,1,4676
+31,Intraspin nerve root div,Division of intraspinal nerve root,4,1,31
+8036,Knee joint biopsy,"Biopsy of joint structure, knee",4,1,8036
+31,CAS w CT/CTA,Computer assisted surgery with CT/CTA,4,1,31
+8128,Interphalangeal fusion,Interphalangeal fusion,4,1,8128
+4054,Radical groin dissection,Radical groin dissection,4,1,4054
+8778,Ileal conduitogram,Ileal conduitogram,4,1,8778
+1474,Mech vitrectomy NEC,Other mechanical vitrectomy,4,1,1474
+401,Excision acoustc neuroma,Excision of acoustic neuroma,4,1,401
+73,Rev hip repl-liner/head,"Revision of hip replacement, acetabular liner and/or femoral head only",4,1,73
+73,Bilateral adrenalectomy,Bilateral adrenalectomy,4,1,73
+8394,Aspiration of bursa,Aspiration of bursa,4,1,8394
+7699,Facial bone/jnt op NEC,Other operations on facial bones and joints,4,1,7699
+9670,Con inv mec ven-unsp dur,Continuous invasive mechanical ventilation of unspecified duration,4,1,9670
+8521,Local excis breast les,Local excision of lesion of breast,4,1,8521
+4106,Cord bld stem cell trans,Cord blood stem cell transplant,4,1,4106
+2811,Tonsil&adenoid biopsy,Biopsy of tonsils and adenoids,4,1,2811
+6563,Lap remove ovaries/tubes,Laparoscopic removal of both ovaries and tubes at same operative episode,4,1,6563
+3423,Chest wall biopsy,Biopsy of chest wall,4,1,3423
+5839,Other destru urethra les,Other local excision or destruction of lesion or tissue of urethra,4,1,5839
+4401,Truncal vagotomy,Truncal vagotomy,4,1,4401
+8012,Oth arthrotomy-elbow,"Other arthrotomy, elbow",4,1,8012
+2260,Sinusectomy NOS,"Sinusectomy, not otherwise specified",4,1,2260
+886,Lower lid rhytidectomy,Lower eyelid rhytidectomy,4,1,886
+887,Upper lid rhytidectomy,Upper eyelid rhytidectomy,4,1,887
+6149,Scrotum/tunic repair NEC,Other repair of scrotum and tunica vaginalis,4,1,6149
+332,Spinal cord/meninges bx,Biopsy of spinal cord or spinal meninges,4,1,332
+8145,Cruciate lig repair NEC,Other repair of the cruciate ligaments,4,1,8145
+8379,Other muscle transposit,Other muscle transposition,4,1,8379
+8209,Inc soft tissue hand NEC,Other incision of soft tissue of hand,4,1,8209
+761,Exc pituit les-transfron,"Partial excision of pituitary gland, transfrontal approach",4,1,761
+4682,Intra-abd lg bowel manip,Intra-abdominal manipulation of large intestine,4,1,4682
+8850,Angiocardiography NOS,"Angiocardiography, not otherwise specified",4,1,8850
+9901,Exchange transfusion,Exchange transfusion,4,1,9901
+6141,Suture scrotal lacerat,Suture of laceration of scrotum and tunica vaginalis,4,1,6141
+9239,Stereo radiosurgery NEC,"Stereotactic radiosurgery, not elsewhere classified",4,1,9239
+639,Part thyroidectomy NEC,Other partial thyroidectomy,4,1,639
+744,Cesarean section NEC,Cesarean section of other specified type,4,1,744
+744,Adrenal repair,Repair of adrenal gland,4,1,744
+5159,Bile duct incision NEC,Other incision of other bile duct,4,1,5159
+7763,Loc exc les radius/ulna,"Local excision of lesion or tissue of bone, radius and ulna",4,1,7763
+8083,Destruc-wrist lesion NEC,"Other local excision or destruction of lesion of joint, wrist",4,1,8083
+2792,Mouth incision NOS,"Incision of mouth, unspecified structure",4,1,2792
+4022,Excise int mammary node,Excision of internal mammary lymph node,4,1,4022
+3553,Pros rep ventric def-opn,"Repair of ventricular septal defect with prosthesis, open technique",4,1,3553
+54,Imp/rep CRT defib genat,Implantation or replacement of cardiac resynchronization defibrillator pulse generator only [CRT-D],4,1,54
+729,Instrument delivery NOS,Unspecified instrumental delivery,4,1,729
+7787,Part ostect-tibia/fibula,"Other partial ostectomy, tibia and fibula",4,1,7787
+8536,Bilat subq mammectom NEC,Other bilateral subcutaneous mammectomy,4,1,8536
+3198,Oth laryngeal operation,Other operations on larynx,4,1,3198
+9739,Remove head/neck dev NEC,Removal of other therapeutic device from head and neck,4,1,9739
+6011,Closed prostatic biopsy,Closed [percutaneous] [needle] biopsy of prostate,4,1,6011
+7908,Cl fx reduc-toe,"Closed reduction of fracture without internal fixation, phalanges of foot",4,1,7908
+3570,Heart septa repair NOS,Other and unspecified repair of unspecified septal defect of heart,4,1,3570
+442,Cran nerv root decom NEC,Other cranial nerve decompression,4,1,442
+729,Part adrenalectomy NEC,Other partial adrenalectomy,4,1,729
+2188,Septoplasty NEC,Other septoplasty,4,1,2188
+313,Incis larynx trachea NEC,Other incision of larynx or trachea,4,1,313
+9712,Replace lower limb cast,Replacement of cast on lower limb,4,1,9712
+8088,Destruc-foot jt les NEC,"Other local excision or destruction of lesion of joint, foot and toe",3,1,8088
+6591,Aspiration of ovary,Aspiration of ovary,3,1,6591
+3866,Abdominal artery excis,"Other excision of vessels, abdominal arteries",3,1,3866
+3603,Open coronry angioplasty,Open chest coronary artery angioplasty,3,1,3603
+3528,Opn/oth repl tcspd valve,Open and other replacement of tricuspid valve,3,1,3528
+3833,Arm vessel resect/anast,"Resection of vessel with anastomosis, upper limb vessels",3,1,3833
+3991,Freeing of vessel,Freeing of vessel,3,1,3991
+8183,Shoulder arthroplast NEC,Other repair of shoulder,3,1,8183
+3379,Endo insrt bronc def/sub,Endoscopic insertion of other bronchial device or substances,3,1,3379
+4254,Thorac esophagoenter NEC,Other intrathoracic esophagoenterostomy,3,1,4254
+3954,Re-entry operation,Re-entry operation (aorta),3,1,3954
+3786,"Repl pacem 1-cham, rate","Replacement of any type of pacemaker device with single-chamber device, rate responsive",3,1,3786
+6491,Dorsal/lat slit prepuce,Dorsal or lateral slit of prepuce,3,1,6491
+4551,Sm bowel segment isolat,Isolation of segment of small intestine,3,1,4551
+562,Ureterotomy,Ureterotomy,3,1,562
+5787,Bladder reconstruction,Reconstruction of urinary bladder,3,1,5787
+8871,Dx ultrasound-head/neck,Diagnostic ultrasound of head and neck,3,1,8871
+3224,Perc abltn lung les/tiss,Percutaneous ablation of lung lesion or tissue,3,1,3224
+7952,Op red-radius/uln epiphy,"Open reduction of separated epiphysis, radius and ulna",3,1,7952
+8166,Percut vertebral augment,Percutaneous vertebral augmentation,3,1,8166
+8201,Explor tend sheath-hand,Exploration of tendon sheath of hand,3,1,8201
+4240,Esophagectomy NOS,"Esophagectomy, not otherwise specified",3,1,4240
+9957,Botulism antitoxin admin,Administration of botulism antitoxin,3,1,9957
+5384,Opn thorc diaph hern NEC,"Other and open repair of diaphragmatic hernia, with thoracic approach",3,1,5384
+2301,Deciduous tooth extract,Extraction of deciduous tooth,3,1,2301
+4592,Sm bowel-rect stump anas,Anastomosis of small intestine to rectal stump,3,1,4592
+4904,Perianal excision NEC,Other excision of perianal tissue,3,1,4904
+3993,Insert ves-to-ves cannul,Insertion of vessel-to-vessel cannula,3,1,3993
+18,Infus immunosup antibody,Infusion of immunosuppressive antibody therapy,3,1,18
+2724,Mouth biopsy NOS,"Biopsy of mouth, unspecified structure",3,1,2724
+5024,Perc abltn liver les/tis,Percutaneous ablation of liver lesion or tissue,3,1,5024
+652,Tot substern thyroidect,Complete substernal thyroidectomy,3,1,652
+7816,Appl ext fix dev-patella,"Application of external fixator device, patella",3,1,7816
+9771,Removal iud,Removal of intrauterine contraceptive device,3,1,9771
+585,Ureth stricture release,Release of urethral stricture,3,1,585
+7071,Suture vagina laceration,Suture of laceration of vagina,3,1,7071
+4942,Hemorrhoid injection,Injection of hemorrhoids,3,1,4942
+8361,Tendon sheath suture,Suture of tendon sheath,3,1,8361
+704,Vaginal obliteration,Obliteration and total excision of vagina,3,1,704
+7179,Vulvar/perin repair NEC,Other repair of vulva and perineum,3,1,7179
+3958,Repair vess w patch NOS,Repair of blood vessel with unspecified type of patch graft,3,1,3958
+8926,Gynecologic examination,Gynecological examination,3,1,8926
+8039,Joint biopsy NEC,"Biopsy of joint structure, other specified sites",3,1,8039
+5592,Percutan renal aspirat,Percutaneous aspiration of kidney (pelvis),3,1,5592
+3175,Tracheal reconstruction,Reconstruction of trachea and construction of artificial larynx,3,1,3175
+8098,Excision foot joint NEC,"Other excision of joint, foot and toe",3,1,8098
+625,Orchiopexy,Orchiopexy,3,1,625
+3609,Rem of cor art obstr NEC,Other removal of coronary artery obstruction,3,1,3609
+9978,Aquapheresis,Aquapheresis,3,1,9978
+3169,Other laryngeal repair,Other repair of larynx,3,1,3169
+229,Other nasal sinus ops,Other operations on nasal sinuses,3,1,229
+8050,Exc/dest intvrt disc NOS,"Excision or destruction of intervertebral disc, unspecified",3,1,8050
+8938,Respiratory measure NEC,Other nonoperative respiratory measurements,3,1,8938
+7773,Excis radius/ulna-graft,"Excision of bone for graft, radius and ulna",3,1,7773
+5719,Cystotomy NEC,Other cystotomy,3,1,5719
+6823,Endometrial ablation,Endometrial ablation,3,1,6823
+5023,Opn abltn liver les/tiss,Open ablation of liver lesion or tissue,3,1,5023
+9316,Other joint mobilization,Mobilization of other joints,3,1,9316
+9449,Other counselling,Other counseling,3,1,9449
+3836,Abd vessel resect/anast,"Resection of vessel with anastomosis, abdominal arteries",3,1,3836
+8686,Onychoplasty,Onychoplasty,3,1,8686
+5304,Opn ind ing hern-gft NEC,Other and open repair of indirect inguinal hernia with graft or prosthesis,3,1,5304
+362,Arterial implant revasc,Heart revascularization by arterial implant,3,1,362
+8963,Pulmon art press monitor,Pulmonary artery pressure monitoring,3,1,8963
+5891,Periurethral incision,Incision of periurethral tissue,3,1,5891
+8165,Percutan vertebroplasty,Percutaneous vertebroplasty,3,1,8165
+5162,Excis ampulla of vater,Excision of ampulla of Vater (with reimplantation of common duct),3,1,5162
+6841,Lap total abdominal hyst,Laparoscopic total abdominal hysterectomy,3,1,6841
+7359,Manual assist deliv NEC,Other manually assisted delivery,3,1,7359
+8744,Routine chest x-ray,"Routine chest x-ray, so described",3,1,8744
+7012,Culdotomy,Culdotomy,3,1,7012
+6589,Adhesiolysis ovary/tube,Other lysis of adhesions of ovary and fallopian tube,3,1,6589
+5193,Clos biliary fistul NEC,Closure of other biliary fistula,3,1,5193
+531,Anesth inject symp nerve,Injection of anesthetic into sympathetic nerve for analgesia,3,1,531
+7748,Metatarsal/tarsal biopsy,"Biopsy of bone, tarsals and metatarsals",3,1,7748
+5581,Suture kidney laceration,Suture of laceration of kidney,3,1,5581
+7927,Open reduc-metat/tars fx,"Open reduction of fracture without internal fixation, tarsals and metatarsals",3,1,7927
+5383,Lap thorc app-diaph hern,"Laparoscopic repair of diaphragmatic hernia, with thoracic approach",3,1,5383
+402,Trigeminal nerv division,Division of trigeminal nerve,3,1,402
+7852,Int fixation-humerus,"Internal fixation of bone without fracture reduction, humerus",3,1,7852
+7988,Opn reduc disloc-ft/toe,Open reduction of dislocation of foot and toe,3,1,7988
+3843,Arm ves resect w replace,"Resection of vessel with replacement, upper limb vessels",3,1,3843
+326,Rad dissec thorac struct,Radical dissection of thoracic structures,3,1,326
+5301,Opn rep dir ing hern NEC,Other and open repair of direct inguinal hernia,3,1,5301
+7561,Repair ob lac blad/ureth,Repair of current obstetric laceration of bladder and urethra,3,1,7561
+2731,Loc exc bony palate les,Local excision or destruction of lesion or tissue of bony palate,3,1,2731
+70,Rev hip repl-acetab/fem,"Revision of hip replacement, both acetabular and femoral components",3,1,70
+4501,Duodenal incision,Incision of duodenum,3,1,4501
+7760,Loc exc bone lesion NOS,"Local excision of lesion or tissue of bone, unspecified site",3,1,7760
+9655,Tracheostomy toilette,Tracheostomy toilette,3,1,9655
+2432,Suture of gum laceration,Suture of laceration of gum,3,1,2432
+3334,Thoracoplasty,Thoracoplasty,3,1,3334
+5303,Opn dir ing hern-gft NEC,Other and open repair of direct inguinal hernia with graft or prosthesis,3,1,5303
+8594,Breast implant removal,Removal of implant of breast,3,1,8594
+8241,Suture tendn sheath hand,Suture of tendon sheath of hand,3,1,8241
+3227,"Brnc thrmplsty,ablt mscl","Bronchoscopic bronchial thermoplasty, ablation of airway smooth muscle",3,1,3227
+1735,Lap left hemicolectomy,Laparoscopic left hemicolectomy,3,1,1735
+3923,Intrathoracic shunt NEC,Other intrathoracic vascular shunt or bypass,3,1,3923
+287,Hemorr contrl post T & A,Control of hemorrhage after tonsillectomy and adenoidectomy,3,1,287
+2951,Suture of pharyngeal lac,Suture of laceration of pharynx,3,1,2951
+8682,Facial rhytidectomy,Facial rhytidectomy,3,1,8682
+8473,App hybrid ext fix dev,Application of hybrid external fixator device,3,1,8473
+8136,Refus lmb/lmbsac ant/ant,"Refusion of lumbar and lumbosacral spine, anterior column, anterior technique",3,1,8136
+9851,Eswl kid/ureter/bladder,"Extracorporeal shockwave lithotripsy [ESWL] of the kidney, ureter and/or bladder",3,1,9851
+8193,Sutur capsul/ligamen arm,Suture of capsule or ligament of upper extremity,3,1,8193
+6094,Control prostate hemorr,Control of (postoperative) hemorrhage of prostate,3,1,6094
+5305,Ing hernia rep-graft NOS,"Repair of inguinal hernia with graft or prosthesis, not otherwise specified",3,1,5305
+8896,Oth intraop mag res imag,Other intraoperative magnetic resonance imaging,3,1,8896
+8892,Mri chest & heart,Magnetic resonance imaging of chest and myocardium,3,1,8892
+1809,External ear incis NEC,Other incision of external ear,3,1,1809
+5822,Urethroscopy NEC,Other urethroscopy,3,1,5822
+8377,Muscle trnsfr/transplant,Muscle transfer or transplantation,3,1,8377
+3029,Other part laryngectomy,Other partial laryngectomy,3,1,3029
+850,Mastotomy,Mastotomy,3,1,850
+8944,Cardiac stress test NEC,Other cardiovascular stress test,3,1,8944
+8112,Triple arthrodesis,Triple arthrodesis,3,1,8112
+2742,Wide excision of lip les,Wide excision of lesion of lip,3,1,2742
+2100,Control of epistaxis NOS,"Control of epistaxis, not otherwise specified",3,1,2100
+4403,Selective vagotomy NEC,Other selective vagotomy,3,1,4403
+6812,Hysteroscopy,Hysteroscopy,3,1,6812
+7552,Repair ob lac corp uteri,Repair of current obstetric laceration of corpus uteri,3,1,7552
+8082,Destruc-elbow lesion NEC,"Other local excision or destruction of lesion of joint, elbow",3,1,8082
+9976,Extracorp immunoabsorpt,Extracorporeal immunoadsorption,3,1,9976
+7719,Bone incis w/o div NEC,"Other incision of bone without division, other bones",3,1,7719
+394,Removal spine stim lead,Removal of spinal neurostimulator lead(s),3,1,394
+6901,D & C for preg terminat,Dilation and curettage for termination of pregnancy,3,1,6901
+4493,Insert gastric bubble,Insertion of gastric bubble (balloon),3,1,4493
+3884,Occlude aorta NEC,"Other surgical occlusion of vessels, aorta, abdominal",3,1,3884
+8095,Excision of hip NEC,"Other excision of joint, hip",3,1,8095
+8195,Sutur capsul/lig leg NEC,Suture of capsule or ligament of other lower extremity,3,1,8195
+251,Destruction tongue les,Excision or destruction of lesion or tissue of tongue,3,1,251
+2049,Mastoidectomy NEC,Other mastoidectomy,3,1,2049
+5504,Percu nephrostmy w frag,Percutaneous nephrostomy with fragmentation,3,1,5504
+8584,Breast pedicle graft,Pedicle graft to breast,3,1,8584
+8544,Bilat extend simp mastec,Bilateral extended simple mastectomy,3,1,8544
+9623,Dilation anal sphincter,Dilation of anal sphincter,3,1,9623
+4492,Intraop gastric manipul,Intraoperative manipulation of stomach,3,1,4492
+8772,Nephrotomogram NEC,Other nephrotomogram,3,1,8772
+1151,Suture cornea laceration,Suture of corneal laceration,3,1,1151
+4871,Suture of rectal lacer,Suture of laceration of rectum,3,1,4871
+3880,Surg vessel occlus NEC,"Other surgical occlusion of vessels, unspecified site",3,1,3880
+55,Ins d-e stent oth periph,Insertion of drug-eluting stent(s) of other peripheral vessel(s),3,1,55
+4449,Other control gast hem,Other control of hemorrhage of stomach or duodenum,3,1,4449
+806,Excis knee semilun cartl,Excision of semilunar cartilage of knee,3,1,806
+9626,Manual reduc rect prolap,Manual reduction of rectal prolapse,3,1,9626
+6662,Remov tube & ectop preg,Salpingectomy with removal of tubal pregnancy,2,1,6662
+8554,Bilateral breast implant,Bilateral breast implant,2,1,8554
+6712,Cervical biopsy NEC,Other cervical biopsy,2,1,6712
+6411,Penile biopsy,Biopsy of penis,2,1,6411
+6498,Penile operation NEC,Other operations on penis,2,1,6498
+7955,Opn red-sep epiphy-femur,"Open reduction of separated epiphysis, femur",2,1,7955
+7921,Open reduc-humerus fx,"Open reduction of fracture without internal fixation, humerus",2,1,7921
+9342,Other spinal traction,Other spinal traction,2,1,9342
+754,Total pinealectomy,Total excision of pineal gland,2,1,754
+736,Episiotomy,Episiotomy,2,1,736
+5734,Open bladder biopsy,Open biopsy of bladder,2,1,5734
+7968,Debrid opn fx-toe,"Debridement of open fracture site, phalanges of foot",2,1,7968
+4923,Anal biopsy,Biopsy of anus,2,1,4923
+6269,Testicular repair NEC,Other repair of testis,2,1,6269
+8075,Hip synovectomy,"Synovectomy, hip",2,1,8075
+9759,Remov other GI device,Removal of other device from digestive system,2,1,9759
+754,Manual removal-placenta,Manual removal of retained placenta,2,1,754
+1475,Vitreous substitut injec,Injection of vitreous substitute,2,1,1475
+82,Rev knee repl-femur comp,"Revision of knee replacement, femoral component",2,1,82
+631,Exc spermatic varicocele,Excision of varicocele and hydrocele of spermatic cord,2,1,631
+631,Excision thyroid lesion,Excision of lesion of thyroid,2,1,631
+8534,Unilat subq mammect NEC,Other unilateral subcutaneous mammectomy,2,1,8534
+4491,Ligate gastric varices,Ligation of gastric varices,2,1,4491
+2162,Turbinate fracture,Fracture of the turbinates,2,1,2162
+5893,Implt artf urin sphinct,Implantation of artificial urinary sphincter [AUS],2,1,5893
+472,Drain appendiceal absc,Drainage of appendiceal abscess,2,1,472
+472,Accessory-facial anastom,Accessory-facial anastomosis,2,1,472
+77,"Hip surface, cermc/poly","Hip bearing surface, ceramic-on-polyethylene",2,1,77
+74,"Hip surface, metal/poly","Hip bearing surface, metal-on-polyethylene",2,1,74
+9205,C-vasc scan/isotop funct,Cardiovascular and hematopoietic scan and radioisotope function study,2,1,9205
+856,Mastopexy,Mastopexy,2,1,856
+8511,Closed breast biopsy,Closed [percutaneous] [needle] biopsy of breast,2,1,8511
+8665,Heterograft to skin,Heterograft to skin,2,1,8665
+5586,Renal anastomosis,Anastomosis of kidney,2,1,5586
+889,Eyelid repair NEC,Other eyelid repair,2,1,889
+5831,Endosc destr urethra les,Endoscopic excision or destruction of lesion or tissue of urethra,2,1,5831
+4255,Thorac lg bowel interpos,Intrathoracic esophageal anastomosis with interposition of colon,2,1,4255
+1292,Anterior chamber inject,Injection into anterior chamber,2,1,1292
+5539,Loc destr renal les NEC,Other local destruction or excision of renal lesion or tissue,2,1,5539
+4832,Electrocoag rect les NEC,Other electrocoagulation of rectal lesion or tissue,2,1,4832
+8091,Excision of shoulder NEC,"Other excision of joint, shoulder",2,1,8091
+7989,Open reduc-dislocat NEC,Open reduction of dislocation of other specified sites,2,1,7989
+9652,Irrigation of ear,Irrigation of ear,2,1,9652
+4949,Hemorrhoid procedure NEC,Other procedures on hemorrhoids,2,1,4949
+80,Rev knee replacemt-total,"Revision of knee replacement, total (all components)",2,1,80
+6959,Aspir curett uterus NEC,Other aspiration curettage of uterus,2,1,6959
+5784,Vesic fistula repair NEC,Repair of other fistula of bladder,2,1,5784
+8073,Wrist synovectomy,"Synovectomy, wrist",2,1,8073
+7161,Unilateral vulvectomy,Unilateral vulvectomy,2,1,7161
+3928,Extracran-intracr bypass,Extracranial-intracranial (EC-IC) vascular bypass,2,1,3928
+7984,Opn reduc disloc-hand,Open reduction of dislocation of hand and finger,2,1,7984
+9308,Electromyography,Electromyography,2,1,9308
+492,Imp/repl peri stim lead,Implantation or replacement of peripheral neurostimulator lead(s),2,1,492
+5554,Bilateral nephrectomy,Bilateral nephrectomy,2,1,5554
+6669,Partial salpingectom NEC,Other partial salpingectomy,2,1,6669
+3773,Int inser lead in atrium,Initial insertion of transvenous lead [electrode] into atrium,2,1,3773
+633,Excise cord/epid les NEC,Excision of other lesion or tissue of spermatic cord and epididymis,2,1,633
+811,Eyelid biopsy,Biopsy of eyelid,2,1,811
+8403,Amputation through hand,Amputation through hand,2,1,8403
+8281,Transfer of finger,"Transfer of finger, except thumb",2,1,8281
+8932,Esophageal manometry,Esophageal manometry,2,1,8932
+4382,Lap vertical gastrectomy,Laparoscopic vertical (sleeve) gastrectomy,2,1,4382
+7804,Bone grft to metacar/car,"Bone graft, carpals and metacarpals",2,1,7804
+3796,Implt cardiodefib genatr,Implantation of automatic cardioverter/defibrillator pulse generator only,2,1,3796
+3785,"Repl pacem w 1-cham, non","Replacement of any type pacemaker device with single-chamber device, not specified as rate responsive",2,1,3785
+9820,Removal of FB NOS,"Removal of foreign body, not otherwise specified",2,1,9820
+5199,Biliary tract op NEC,Other operations on biliary tract,2,1,5199
+409,Lymph structure op NEC,Other operations on lymphatic structures,2,1,409
+9804,Remov intralum colon FB,Removal of intraluminal foreign body from large intestine without incision,2,1,9804
+4259,Thorac esophag anast NEC,Other intrathoracic anastomosis of esophagus,2,1,4259
+4497,Lap rem gast restric dev,Laparoscopic removal of gastric restrictive device(s),2,1,4497
+9146,Cell blk/pap-female gen,"Microscopic examination of specimen from female genital tract, cell block and Papanicolaou smear",2,1,9146
+5343,Lap umbilical hernia NEC,Other laparoscopic umbilical herniorrhaphy,2,1,5343
+4581,Lap tot intr-ab colectmy,Laparoscopic total intra-abdominal colectomy,2,1,4581
+3842,Head/neck ves resec-repl,"Resection of vessel with replacement, other vessels of head and neck",2,1,3842
+3531,Papillary muscle ops,Operations on papillary muscle,2,1,3531
+1839,Excis external ear NEC,Other excision of external ear,2,1,1839
+7052,Rectocele repair,Repair of rectocele,2,1,7052
+9326,Manual rupt joint adhes,Manual rupture of joint adhesions,2,1,9326
+3593,Conduit left ventr-aorta,Creation of conduit between left ventricle and aorta,2,1,3593
+5124,Lap part cholecystectomy,Laparoscopic partial cholecystectomy,2,1,5124
+8950,Ambu cardiac monitoring,Ambulatory cardiac monitoring,2,1,8950
+8272,Plast op hnd-mus/fas grf,Plastic operation on hand with graft of muscle or fascia,2,1,8272
+693,Thyroid suture,Suture of thyroid gland,2,1,693
+4529,Bowel diagnost proc NEC,"Other diagnostic procedures on intestine, site unspecified",2,1,4529
+8494,Ins strn fix w rgd plate,Insertion of sternal fixation device with rigid plates,2,1,8494
+3161,Suture of laryngeal lac,Suture of laceration of larynx,2,1,3161
+4468,Laparoscop gastroplasty,Laparoscopic gastroplasty,2,1,4468
+2502,Open biopsy of tongue,Open biopsy of tongue,2,1,2502
+8573,"TRAM flap, free","Transverse rectus abdominis myocutaneous (TRAM) flap, free",2,1,8573
+8041,Shoulder struct division,"Division of joint capsule, ligament, or cartilage, shoulder",2,1,8041
+3978,Endovas impln grft aorta,Endovascular implantation of branching or fenestrated graft(s) in aorta,2,1,3978
+398,Remove spine theca shunt,Removal of spinal thecal shunt,2,1,398
+8531,Unilat reduct mammoplast,Unilateral reduction mammoplasty,2,1,8531
+8405,Amputation thru forearm,Amputation through forearm,2,1,8405
+5993,Replace ureterost tube,Replacement of ureterostomy tube,2,1,5993
+6941,Suture uterine lacerat,Suture of laceration of uterus,2,1,6941
+1756,Ather oth non-cor vessel,Atherectomy of other non-coronary vessel(s),2,1,1756
+339,Other spinal dx proc,Other diagnostic procedures on spinal cord and spinal canal structures,2,1,339
+8581,Suture breast laceration,Suture of laceration of breast,2,1,8581
+8547,Unil ext rad mastectomy,Unilateral extended radical mastectomy,2,1,8547
+4946,Hemorrhoidectomy,Excision of hemorrhoids,2,1,4946
+7829,Limb shorten proc NEC,"Limb shortening procedures, other bones",2,1,7829
+693,Paracerv uterine denerv,Paracervical uterine denervation,2,1,693
+9995,Stretching of foreskin,Stretching of foreskin,2,1,9995
+253,Complete glossectomy,Complete glossectomy,2,1,253
+8419,Hindquarter amputation,Abdominopelvic amputation,2,1,8419
+8235,Hand fasciectomy NEC,Other fasciectomy of hand,2,1,8235
+4882,Perirectal excision,Excision of perirectal tissue,2,1,4882
+8026,Knee arthroscopy,"Arthroscopy, knee",2,1,8026
+8582,Breast split-thick graft,Split-thickness graft to breast,2,1,8582
+8179,Oth repair han/fin/wris,"Other repair of hand, fingers, and wrist",2,1,8179
+763,Part excis pituitary NOS,"Partial excision of pituitary gland, unspecified approach",2,1,763
+7856,Internal fix-patella,"Internal fixation of bone without fracture reduction, patella",2,1,7856
+7862,Remove impl dev-humerus,"Removal of implanted devices from bone, humerus",2,1,7862
+651,Part substern thyroidect,Partial substernal thyroidectomy,2,1,651
+260,Incis salivary glnd/duct,Incision of salivary gland or duct,2,1,260
+5019,Hepatic dx proc NEC,Other diagnostic procedures on liver,2,1,5019
+8071,Shoulder synovectomy,"Synovectomy, shoulder",2,1,8071
+8031,Shoulder joint biopsy,"Biopsy of joint structure, shoulder",2,1,8031
+9427,Electroshock therapy NEC,Other electroshock therapy,2,1,9427
+751,Diagnostic amniocentesis,Diagnostic amniocentesis,2,1,751
+751,Pineal field exploration,Exploration of pineal field,2,1,751
+8863,Thorac contr phlebog NEC,Phlebography of other intrathoracic veins using contrast material,2,1,8863
+612,Excision of hydrocele,Excision of hydrocele (of tunica vaginalis),2,1,612
+2169,Turbinectomy NEC,Other turbinectomy,2,1,2169
+612,Open thyroid gland bx,Open biopsy of thyroid gland,2,1,612
+7986,Open reduc-knee dislocat,Open reduction of dislocation of knee,2,1,7986
+8211,Tenotomy of hand,Tenotomy of hand,2,1,8211
+207,Skull plate removal,Removal of skull plate,2,1,207
+8303,Bursotomy,Bursotomy,2,1,8303
+9636,GI ostomy irrigation,Irrigation of gastrostomy or enterostomy,2,1,9636
+53,Imp/rep CRT pacemakr gen,Implantation or replacement of cardiac resynchronization pacemaker pulse generator only [CRT-P],2,1,53
+5793,Control bladd hemorrhage,Control of (postoperative) hemorrhage of bladder,2,1,5793
+8197,Rev jt repl upper extrem,Revision of joint replacement of upper extremity,2,1,8197
+8769,Digestive tract xray NEC,Other digestive tract x-ray,2,1,8769
+81,Rev knee repl-tibia comp,"Revision of knee replacement, tibial component",2,1,81
+9346,Limb skin traction NEC,Other skin traction of limbs,2,1,9346
+8172,Arthroplasty metacar w/o,Arthroplasty of metacarpophalangeal and interphalangeal joint without implant,2,1,8172
+7833,Limb length-radius/ulna,"Limb lengthening procedures, radius and ulna",2,1,7833
+8941,Treadmill stress test,Cardiovascular stress test using treadmill,2,1,8941
+9618,Oth vagin pessary insert,Insertion of other vaginal pessary,2,1,9618
+8134,Refus drs/drslmb ant/ant,"Refusion of dorsal and dorsolumbar spine, anterior column, anterior technique",2,1,8134
+244,Exc of dental les of jaw,Excision of dental lesion of jaw,2,1,244
+8759,Biliary tract x-ray NEC,Other biliary tract x-ray,2,1,8759
+600,Incision of prostate,Incision of prostate,2,1,600
+4415,Open gastric biopsy,Open biopsy of stomach,2,1,4415
+4199,Spleen operation NEC,Other operations on spleen,2,1,4199
+8017,Oth arthrotomy-ankle,"Other arthrotomy, ankle",2,1,8017
+7956,Op red-tibia/fib epiphys,"Open reduction of separated epiphysis, tibia and fibula",2,1,7956
+2201,Sinus punct for lavage,Puncture of nasal sinus for aspiration or lavage,2,1,2201
+8084,Destruc-hand jt les NEC,"Other local excision or destruction of lesion of joint, hand and finger",2,1,8084
+2933,Pharyngectomy,Pharyngectomy (partial),2,1,2933
+9813,Remov intralum pharyn FB,Removal of intraluminal foreign body from pharynx without incision,2,1,9813
+7814,Appl ext fix-metacar/car,"Application of external fixator device, carpals and metacarpals",2,1,7814
+1659,Orbital exenteration NEC,Other exenteration of orbit,2,1,1659
+1291,Therapeut evac ant chamb,Therapeutic evacuation of anterior chamber,2,1,1291
+9821,Removal superfic FB eye,Removal of superficial foreign body from eye without incision,2,1,9821
+4211,Cervical esophagostomy,Cervical esophagostomy,2,1,4211
+3342,Bronchial fistula clos,Closure of bronchial fistula,2,1,3342
+9352,Neck support application,Application of neck support,2,1,9352
+4052,Rad dissec periaort node,Radical excision of periaortic lymph nodes,2,1,4052
+6661,Destroy fallop tube les,Excision or destruction of lesion of fallopian tube,2,1,6661
+8049,Jt structur division NEC,"Division of joint capsule, ligament, or cartilage, other specified sites",2,1,8049
+4222,Esophagoscopy thru stoma,Esophagoscopy through artificial stoma,2,1,4222
+3881,Occlus intracran ves NEC,"Other surgical occlusion of vessels, intracranial vessels",2,1,3881
+3729,Hrt/pericar dx proc NEC,Other diagnostic procedures on heart and pericardium,2,1,3729
+3898,Arterial puncture NEC,Other puncture of artery,2,1,3898
+642,Local excis penile les,Local excision or destruction of lesion of penis,2,1,642
+9988,Therapeutc photopheresis,Therapeutic photopheresis,2,1,9988
+8455,Ins bone void filler,Insertion of bone void filler,2,1,8455
+8014,Oth arthrotomy-hand/fngr,"Other arthrotomy, hand and finger",2,1,8014
+75,"Hip surface, metal/metal","Hip bearing surface, metal-on-metal",2,1,75
+436,Distal gastrectomy,Partial gastrectomy with anastomosis to duodenum,2,1,436
+9738,Remove head/neck sutures,Removal of sutures from head and neck,2,1,9738
+2939,Excis/destr les phar NEC,Other excision or destruction of lesion or tissue of pharynx,2,1,2939
+9785,Remov trunk packing NEC,"Removal of packing from trunk, not elsewhere classified",2,1,9785
+4400,Vagotomy NOS,"Vagotomy, not otherwise specified",2,1,4400
+8965,Arterial bld gas measure,Measurement of systemic arterial blood gases,2,1,8965
+2559,Repair of tongue NEC,Other repair and plastic operations on tongue,2,1,2559
+4947,Hemorrhoid evacuation,Evacuation of thrombosed hemorrhoids,2,1,4947
+1609,Orbitotomy NEC,Other orbitotomy,2,1,1609
+7845,Oth femur repair/plastic,"Other repair or plastic operations on bone, femur",2,1,7845
+9399,Other resp procedures,Other respiratory procedures,2,1,9399
+7111,Vulvar biopsy,Biopsy of vulva,2,1,7111
+2161,Diather/cryo turbinectom,Turbinectomy by diathermy or cryosurgery,2,1,2161
+2041,Simple mastoidectomy,Simple mastoidectomy,2,1,2041
+8414,Amputat through malleoli,Amputation of ankle through malleoli of tibia and fibula,2,1,8414
+5113,Open biliary tract bx,Open biopsy of gallbladder or bile ducts,2,1,5113
+7711,Other chest cage incis,"Other incision of bone without division, scapula, clavicle, and thorax [ribs and sternum]",2,1,7711
+8937,Vital capacity determin,Vital capacity determination,2,1,8937
+7733,Radius/ulna division NEC,"Other division of bone, radius and ulna",2,1,7733
+4284,Esoph fistula repair NEC,"Repair of esophageal fistula, not elsewhere classified",2,1,4284
+4971,Suture anal laceration,Suture of laceration of anus,2,1,4971
+4069,Thoracic duct op NEC,Other operations on thoracic duct,2,1,4069
+7925,Open reduction-femur fx,"Open reduction of fracture without internal fixation, femur",2,1,7925
+6996,Remove cervical cerclage,Removal of cerclage material from cervix,2,1,6996
+8402,Thumb amputation,Amputation and disarticulation of thumb,2,1,8402
+7072,Repair colovagin fistula,Repair of colovaginal fistula,2,1,7072
+711,Closed adrenal gland bx,Closed [percutaneous] [needle] biopsy of adrenal gland,2,1,711
+7532,Fetal ekg,Fetal EKG (scalp),2,1,7532
+8387,Other plastic ops muscle,Other plastic operations on muscle,2,1,8387
+7677,Open reduct alveolar fx,Open reduction of alveolar fracture,2,1,7677
+8301,Tendon sheath explorat,Exploration of tendon sheath,2,1,8301
+7946,Cls red-tibia/fib epiphy,"Closed reduction of separated epiphysis, tibia and fibula",2,1,7946
+8221,Exc les tend sheath hand,Excision of lesion of tendon sheath of hand,2,1,8221
+3795,Implt cardiodefib leads,Implantation of automatic cardioverter/defibrillator lead(s) only,2,1,3795
+5253,Rad subtot pancreatectom,Radical subtotal pancreatectomy,2,1,5253
+2630,Sialoadenectomy NOS,"Sialoadenectomy, not otherwise specified",2,1,2630
+8175,Arthroplasty carpal w/o,Arthroplasty of carpocarpal or carpometacarpal joint without implant,2,1,8175
+3230,Thorac seg lung resect,Thoracoscopic segmental resection of lung,2,1,3230
+4835,Local excis rectal les,Local excision of rectal lesion or tissue,2,1,4835
+8423,Forearm/wrist/hand reatt,"Forearm, wrist, or hand reattachment",2,1,8423
+7784,Part ostect-metacar/car,"Other partial ostectomy, carpals and metacarpals",2,1,7784
+4251,Thorac esophagoesophagos,Intrathoracic esophagoesophagostomy,2,1,4251
+9215,Pulmonary scan,Pulmonary scan,2,1,9215
+4411,Transabdomin gastroscopy,Transabdominal gastroscopy,2,1,4411
+7742,Humerus biopsy,"Biopsy of bone, humerus",2,1,7742
+8257,Transposit hand tend NEC,Other hand tendon transposition,2,1,8257
+8404,Disarticulation of wrist,Disarticulation of wrist,2,1,8404
+9619,Rectal packing,Rectal packing,2,1,9619
+4132,Closed spleen biopsy,Closed [aspiration] [percutaneous] biopsy of spleen,2,1,4132
+7922,Open reduc-radius/uln fx,"Open reduction of fracture without internal fixation, radius and ulna",2,1,7922
+3992,Vein inject-scleros agnt,Injection of sclerosing agent into vein,2,1,3992
+4849,Pull-thru rect resec NEC,Other pull-through resection of rectum,2,1,4849
+8690,Ext fat for grft/banking,Extraction of fat for graft or banking,1,1,8690
+1649,Eyeball enucleation NEC,Other enucleation of eyeball,1,1,1649
+3195,Tracheoesoph fistulizat,Tracheoesophageal fistulization,1,1,3195
+4528,Lg bowel dx proced NEC,Other diagnostic procedures on large intestine,1,1,4528
+9658,Wound catheter irrigat,Irrigation of wound catheter,1,1,9658
+5911,Oth lys perives adhesio,Other lysis of perivesical adhesions,1,1,5911
+9351,Plaster jacket applicat,Application of plaster jacket,1,1,9351
+2186,Limited rhinoplasty,Limited rhinoplasty,1,1,2186
+7808,Bone graft-metatar/tar,"Bone graft, tarsals and metatarsals",1,1,7808
+3149,Oth trachea dx procedure,Other diagnostic procedures on trachea,1,1,3149
+4640,Intest stoma revis NOS,"Revision of intestinal stoma, not otherwise specified",1,1,4640
+8875,Dx ultrasound-urinary,Diagnostic ultrasound of urinary system,1,1,8875
+60,Ins d-e stnt sup fem art,Insertion of drug-eluting stent(s) of superficial femoral artery,1,1,60
+9805,Remov intralum rect FB,Removal of intraluminal foreign body from rectum and anus without incision,1,1,9805
+3989,Oth cartd body/sinus op,"Other operations on carotid body, carotid sinus and other vascular bodies",1,1,3989
+76,"Hip surface, cermc/cermc","Hip bearing surface, ceramic-on-ceramic",1,1,76
+7645,Tot face bone ostect NEC,Other total ostectomy of other facial bone,1,1,7645
+3341,Bronchial lacerat suture,Suture of laceration of bronchus,1,1,3341
+9924,Inject hormone NEC,Injection of other hormone,1,1,9924
+8144,Patellar stabilization,Patellar stabilization,1,1,8144
+8819,Abdominal x-ray NEC,Other x-ray of abdomen,1,1,8819
+2699,Salivary operation NEC,Other operations on salivary gland or duct,1,1,2699
+7866,Remov imp device-patella,"Removal of implanted devices from bone, patella",1,1,7866
+764,Tot exc pituit-transfron,"Total excision of pituitary gland, transfrontal approach",1,1,764
+8054,Rep anuls fibros NEC/NOS,Other and unspecified repair of the anulus fibrosus,1,1,8054
+8695,Ins/re pls gn no rechrg,"Insertion or replacement of multiple array neurostimulator pulse generator, not specified as rechargeable",1,1,8695
+9754,Remov cholecystost tube,Removal of cholecystostomy tube,1,1,9754
+3763,Repair heart assist sys,Repair of heart assist system,1,1,3763
+3541,Enlarge existing sep def,Enlargement of existing atrial septal defect,1,1,3541
+8114,Midtarsal fusion,Midtarsal fusion,1,1,8114
+1479,Vitreous operation NEC,Other operations on vitreous,1,1,1479
+6929,Uterus/adnexa repair NEC,Other repair of uterus and supporting structures,1,1,6929
+9163,C & s-integument,"Microscopic examination of specimen from skin and other integument, culture and sensitivity",1,1,9163
+8619,Skin & subq dx proc NEC,Other diagnostic procedures on skin and subcutaneous tissue,1,1,8619
+697,Insertion of iud,Insertion of intrauterine contraceptive device,1,1,697
+7758,"Oth exc, fus, repair toe","Other excision, fusion and repair of toes",1,1,7758
+7759,Bunionectomy NEC,Other bunionectomy,1,1,7759
+3371,"Endo ins/re bron val,one","Endoscopic insertion or replacement of bronchial valve(s), single lobe",1,1,3371
+2061,Inner ear fenestration,Fenestration of inner ear (initial),1,1,2061
+1829,Destruct ext ear les NEC,Excision or destruction of other lesion of external ear,1,1,1829
+6091,Percut prostatic aspirat,Percutaneous aspiration of prostate,1,1,6091
+8289,Hand plastic op NEC,Other plastic operations on hand,1,1,8289
+7983,Open reduc-wrist disloc,Open reduction of dislocation of wrist,1,1,7983
+6551,Oth remove both ovaries,Other removal of both ovaries at same operative episode,1,1,6551
+8199,Joint structure op NEC,Other operations on joint structures,1,1,8199
+8696,Insert/repl oth neurost,Insertion or replacement of other neurostimulator pulse generator,1,1,8696
+7664,Mand orthognathic op NEC,Other orthognathic surgery on mandible,1,1,7664
+3792,Injection into heart,Injection of therapeutic substance into heart,1,1,3792
+9525,Electromyogram of eye,Electromyogram of eye [EMG],1,1,9525
+8545,Unilat radical mastectom,Unilateral radical mastectomy,1,1,8545
+3145,Opn bx larynx or trachea,Open biopsy of larynx or trachea,1,1,3145
+9635,Gastric gavage,Gastric gavage,1,1,9635
+6949,Uterine repair NEC,Other repair of uterus,1,1,6949
+2189,Nasal repair NEC,Other repair and plastic operations on nose,1,1,2189
+8331,Excis les tendon sheath,Excision of lesion of tendon sheath,1,1,8331
+5512,Pyelostomy,Pyelostomy,1,1,5512
+1441,Scleral buckle w implant,Scleral buckling with implant,1,1,1441
+6261,Suture testicular lacer,Suture of laceration of testis,1,1,6261
+5221,Endosc destr pancrea les,Endoscopic excision or destruction of lesion or tissue of pancreatic duct,1,1,5221
+7942,Cls red-radius/ul epiphy,"Closed reduction of separated epiphysis, radius and ulna",1,1,7942
+199,Middle ear repair NEC,Other repair of middle ear,1,1,199
+680,Hysterotomy,Hysterotomy,1,1,680
+21,IVUS extracran cereb ves,Intravascular imaging of extracranial cerebral vessels,1,1,21
+3857,Abd varicos v liga-strip,"Ligation and stripping of varicose veins, abdominal veins",1,1,3857
+1770,IV infusion clofarabine,Intravenous infusion of clofarabine,1,1,1770
+8079,Synovectomy-site NEC,"Synovectomy, other specified sites",1,1,8079
+6831,Lap scervic hysterectomy,Laparoscopic supracervical hysterectomy [LSH],1,1,6831
+8835,Up limb sft tis xray NEC,Other soft tissue x-ray of upper limb,1,1,8835
+8723,Thoracic spine x-ray NEC,Other x-ray of thoracic spine,1,1,8723
+944,Nasolac duct intubat,Intubation of nasolacrimal duct,1,1,944
+5995,Ultrason fragment-stone,Ultrasonic fragmentation of urinary stones,1,1,5995
+6739,Cervical les destruc NEC,Other excision or destruction of lesion or tissue of cervix,1,1,6739
+8180,Oth totl shouldr replace,Other total shoulder replacement,1,1,8180
+5691,Ureteral meatus dilation,Dilation of ureteral meatus,1,1,5691
+2755,Full-thick grft to mouth,Full-thickness skin graft to lip and mouth,1,1,2755
+9232,Multisource radiosurgery,Multi-source photon radiosurgery,1,1,9232
+6761,Suture cervical lacerat,Suture of laceration of cervix,1,1,6761
+296,Insert sphenoid electrod,Insertion of sphenoidal electrodes,1,1,296
+8532,Bilat reduct mammoplasty,Bilateral reduction mammoplasty,1,1,8532
+6099,Prostatic operation NEC,Other operations on prostate,1,1,6099
+120,Imp/repl brain pulse gen,Cranial implantation or replacement of neurostimulator pulse generator,1,1,120
+2691,Salivary duct probing,Probing of salivary duct,1,1,2691
+6601,Salpingotomy,Salpingotomy,1,1,6601
+299,Skull & brain op NEC,"Other operations on skull, brain, and cerebral meninges",1,1,299
+2611,Clos bx saliv gland/duct,Closed [needle] biopsy of salivary gland or duct,1,1,2611
+9826,Removal FB from hand,Removal of foreign body from hand without incision,1,1,9826
+7697,Remove int fix face bone,Removal of internal fixation device from facial bone,1,1,7697
+2769,Oth plastic repair palat,Other plastic repair of palate,1,1,2769
+2130,Nasal lesion excis NOS,"Excision or destruction of lesion of nose, not otherwise specified",1,1,2130
+215,Submuc nasal sept resect,Submucous resection of nasal septum,1,1,215
+5342,Lap umbil hernia-graft,Laparoscopic repair of umbilical hernia with graft or prosthesis,1,1,5342
+7051,Cystocele repair,Repair of cystocele,1,1,7051
+771,Pituitary fossa explorat,Exploration of pituitary fossa,1,1,771
+7823,Limb shorten-radius/ulna,"Limb shortening procedures, radius and ulna",1,1,7823
+1821,Preauricular sinus excis,Excision of preauricular sinus,1,1,1821
+8125,Carporadial fusion,Carporadial fusion,1,1,8125
+9715,Replace wound catheter,Replacement of wound catheter,1,1,9715
+6021,Transureth prostatectomy,Transurethral (ultrasound) guided laser induced prostatectomy (TULIP),1,1,6021
+115,Skull biopsy,Biopsy of skull,1,1,115
+4139,Spleen diagnost proc NEC,Other diagnostic procedures on spleen,1,1,4139
+2059,Middle ear excision NEC,Other excision of middle ear,1,1,2059
+1264,Trabeculectom ab externo,Trabeculectomy ab externo,1,1,1264
+1371,Insert lens at catar ext,"Insertion of intraocular lens prosthesis at time of cataract extraction, one-stage",1,1,1371
+1341,Catarac phacoemuls/aspir,Phacoemulsification and aspiration of cataract,1,1,1341
+7854,Int fixation-metacar/car,"Internal fixation of bone without fracture reduction, carpals and metacarpals",1,1,7854
+5900,Retroperit dissect NOS,"Retroperitoneal dissection, not otherwise specified",1,1,5900
+7551,Repair ob lacerat cervix,Repair of current obstetric laceration of cervix,1,1,7551
+8548,Bil exten rad mastectomy,Bilateral extended radical mastectomy,1,1,8548
+8826,Skel xray-pelvis/hip NEC,Other skeletal x-ray of pelvis and hip,1,1,8826
+9775,Remov vag/vulv packing,Removal of vaginal or vulvar packing,1,1,9775
+2772,Excision of uvula,Excision of uvula,1,1,2772
+622,Testicular les destruct,Excision or destruction of testicular lesion,1,1,622
+5186,Endosc inser nasobil tub,Endoscopic insertion of nasobiliary drainage tube,1,1,5186
+2761,Suture of palate lacerat,Suture of laceration of palate,1,1,2761
+6531,Lap unilat oophorectomy,Laparoscopic unilateral oophorectomy,1,1,6531
+603,Suprapubic prostatectomy,Suprapubic prostatectomy,1,1,603
+8279,Plast op hand w grft NEC,Plastic operation on hand with other graft or implant,1,1,8279
+8233,Hand tenonectomy NEC,Other tenonectomy of hand,1,1,8233
+8934,Digital rectal exam,Digital examination of rectum,1,1,8934
+4143,Partial splenectomy,Partial splenectomy,1,1,4143
+1281,Suture scleral lacer,Suture of laceration of sclera,1,1,1281
+9391,Ippb,Intermittent positive pressure breathing [IPPB],1,1,9391
+7599,Obstetric operation NEC,Other obstetric operations,1,1,7599
+8948,Pacemaker volt threshold,Artificial pacemaker voltage or amperage threshold check,1,1,8948
+4664,Large bowel fixation NEC,Other fixation of large intestine,1,1,4664
+2132,Nasal les destruct NEC,Local excision or destruction of other lesion of nose,1,1,2132
+6825,Uterine art emb w/o coil,Uterine artery embolization [UAE] without coils,1,1,6825
+106,Repair conjunct lacerat,Repair of laceration of conjunctiva,1,1,106
+9711,Replace upper limb cast,Replacement of cast on upper limb,1,1,9711
+231,Ventricl shunt-head/neck,Ventricular shunt to structure in head and neck,1,1,231
+9653,Irrigation of nasal pass,Irrigation of nasal passages,1,1,9653
+83,Rev knee replace-patella,"Revision of knee replacement, patellar component",1,1,83
+7609,Facial bone incision NEC,Other incision of facial bone,1,1,7609
+750,Intra-amnion inj for ab,Intra-amniotic injection for abortion,1,1,750
+6562,Oth remove rem ova/tube,Other removal of remaining ovary and tube,1,1,6562
+9335,Other heat therapy,Other heat therapy,1,1,9335
+8671,Cut & prep pedicle graft,Cutting and preparation of pedicle grafts or flaps,1,1,8671
+351,Spine meningocele repair,Repair of spinal meningocele,1,1,351
+8408,Shoulder disarticulation,Disarticulation of shoulder,1,1,8408
+8286,Other tenoplasty of hand,Other tenoplasty of hand,1,1,8286
+3835,Thor vessel resect/anast,"Resection of vessel with anastomosis, other thoracic vessels",1,1,3835
+1663,Revis enuc socket w grft,Revision of enucleation socket with graft,1,1,1663
+2183,Tot nasal reconstruction,Total nasal reconstruction,1,1,2183
+9822,Removal head/neck FB,Removal of other foreign body without incision from head and neck,1,1,9822
+9714,Replac m/s immob dev NEC,Replacement of other device for musculoskeletal immobilization,1,1,9714
+758,Ob tamponade uterus/vag,Obstetric tamponade of uterus or vagina,1,1,758
+371,Subarach-periton shunt,Spinal subarachnoid-peritoneal shunt,1,1,371
+8116,Metatarsophalangeal fus,Metatarsophalangeal fusion,1,1,8116
+7663,Osteoplasty mandible bdy,Osteoplasty [osteotomy] of body of mandible,1,1,7663
+1771,Non-coronary IFVA,Non-coronary intra-operative fluorescence vascular angiography [IFVA],1,1,1771
+8243,Delay sut hand tend NEC,Delayed suture of other tendon of hand,1,1,8243
+8362,Delayed tendon suture,Delayed suture of tendon,1,1,8362
+247,Orthodon applianc applic,Application of orthodontic appliance,1,1,247
+7802,Bone graft to humerus,"Bone graft, humerus",1,1,7802
+6441,Suture penile laceration,Suture of laceration of penis,1,1,6441
+474,Periph nerv anastom NEC,Other anastomosis of cranial or peripheral nerve,1,1,474
+8251,Hand tendon advancement,Advancement of tendon of hand,1,1,8251
+8185,Elbow arthroplasty NEC,Other repair of elbow,1,1,8185
+7712,Other humerus incision,"Other incision of bone without division, humerus",1,1,7712
+7775,Excise femur for graft,"Excision of bone for graft, femur",1,1,7775
+9321,Manual & mechan traction,Manual and mechanical traction,1,1,9321
+7837,Limb lengthen-tib/fibula,"Limb lengthening procedures, tibia and fibula",1,1,7837
+8117,Other fusion of foot,Other fusion of foot,1,1,8117
+8386,Quadricepsplasty,Quadricepsplasty,1,1,8386
+6851,Lap ast vag hysterectomy,Laparoscopically assisted vaginal hysterectomy (LAVH),1,1,6851
+4198,Bone marrow ops NEC,Other operations on bone marrow,1,1,4198
+5672,Revis ureteroenterostomy,Revision of ureterointestinal anastomosis,1,1,5672
+4101,Auto bone mt w/o purg,Autologous bone marrow transplant without purging,1,1,4101
+8448,Implant leg prosthesis,Implantation of prosthetic device of leg,1,1,8448
+8096,Excision of knee NEC,"Other excision of joint, knee",1,1,8096
+4349,Local gastr destruct NEC,Other destruction of lesion or tissue of stomach,1,1,4349
+8122,Arthrodesis of knee,Arthrodesis of knee,1,1,8122
+1681,Repair of orbital wound,Repair of wound of orbit,1,1,1681
+9974,Therapeu plateltpheresis,Therapeutic plateletpheresis,1,1,9974
+8140,"Repair of hip, NEC","Repair of hip, not elsewhere classified",1,1,8140
+7979,Cl reduc dislocation NEC,Closed reduction of dislocation of other specified sites,1,1,7979
+4979,Anal sphinct repair NEC,Other repair of anal sphincter,1,1,4979
+9639,Other transanal enema,Other transanal enema,1,1,9639
+2959,Pharyngeal repair NEC,Other repair of pharynx,1,1,2959
+9463,Alcohol rehab/detox,Alcohol rehabilitation and detoxification,1,1,9463
+3815,Thoracic endarterectomy,"Endarterectomy, other thoracic vessels",1,1,3815
+7735,Femoral division NEC,"Other division of bone, femur",1,1,7735
+9733,Remove dental wiring,Removal of dental wiring,1,1,9733
+7023,Cul-de-sac biopsy,Biopsy of cul-de-sac,1,1,7023
+8115,Tarsometatarsal fusion,Tarsometatarsal fusion,1,1,8115
+9984,Isolation,Isolation,1,1,9984
+9753,Remov large bowel tube,Removal of tube from large intestine or appendix,1,1,9753
+8047,Ankle structure division,"Division of joint capsule, ligament, or cartilage, ankle",1,1,8047
+8149,Other repair of ankle,Other repair of ankle,1,1,8149
+6552,Oth remove remain ovary,Other removal of remaining ovary,1,1,6552
+9622,Dilation of rectum,Dilation of rectum,1,1,9622
+3977,Temp endovsc occls vessl,Temporary (partial) therapeutic endovascular occlusion of vessel,1,1,3977
+5093,Local perfusion liver,Localized perfusion of liver,1,1,5093
+7864,Remov imp dev-metac/carp,"Removal of implanted devices from bone, carpals and metacarpals",1,1,7864
+2373,Apicoectomy,Apicoectomy,1,1,2373
+4496,Lap rev gast restri proc,Laparoscopic revision of gastric restrictive procedure,1,1,4496
+4053,Rad dissect iliac nodes,Radical excision of iliac lymph nodes,1,1,4053
+4902,Perianal incision NEC,Other incision of perianal tissue,1,1,4902
+3148,Oth larynx dx procedure,Other diagnostic procedures on larynx,1,1,3148
+604,Retropubic prostatectomy,Retropubic prostatectomy,1,1,604
+7062,Vaginal reconstruction,Vaginal reconstruction,1,1,7062
+8765,Intestinal x-ray NEC,Other x-ray of intestine,1,1,8765
+2931,Cricopharyngeal myotomy,Cricopharyngeal myotomy,1,1,2931
+3209,Other destruc bronc les,Other local excision or destruction of lesion or tissue of bronchus,1,1,3209
+8574,"DIEP flap, free","Deep inferior epigastric artery perforator (DIEP) flap, free",1,1,8574
+7075,Repair vag fistula NEC,Repair of other fistula of vagina,1,1,7075
+9704,Replace large bowel tube,Replacement of tube or enterostomy device of large intestine,1,1,9704
+8766,Contrast pancreatogram,Contrast pancreatogram,1,1,8766
+3172,Closure of tracheostomy,Closure of external fistula of trachea,1,1,3172
+1651,Radical orbitomaxillect,Exenteration of orbit with removal of adjacent structures,1,1,1651
+121,Cranial sinus i & d,Incision and drainage of cranial sinus,1,1,121
+7702,Humerus sequestrectomy,"Sequestrectomy, humerus",1,1,7702
+8222,Excision hand muscle les,Excision of lesion of muscle of hand,1,1,8222
+9654,Dental scaling & debride,"Dental scaling, polishing, and debridement",1,1,9654
+7669,Facial bone repair NEC,Other facial bone repair,1,1,7669
+4911,Anal fistulotomy,Anal fistulotomy,1,1,4911
+6142,Scrotal fistula repair,Repair of scrotal fistula,1,1,6142
+8155,Revise knee replace NOS,"Revision of knee replacement, not otherwise specified",1,1,8155
+8182,Rep recur shlder disloc,Repair of recurrent dislocation of shoulder,1,1,8182
+10,Implant chemothera agent,Implantation of chemotherapeutic agent,1,1,10
+820,Remove eyelid lesion NOS,"Removal of lesion of eyelid, not otherwise specified",1,1,820
+8046,Knee structure division,"Division of joint capsule, ligament, or cartilage, knee",1,1,8046
+8033,Wrist joint biopsy,"Biopsy of joint structure, wrist",1,1,8033
+9827,Removal FB from arm,"Removal of foreign body without incision from upper limb, except hand",1,1,9827
+1459,Repair retina detach NEC,Other repair of retinal detachment,1,1,1459
+9787,Remov trunk device NEC,Removal of other device from trunk,1,1,9787
+8596,Remov breast tissu expan,Removal of breast tissue expander,1,1,8596
+8525,Excision of nipple,Excision of nipple,1,1,8525
+7982,Open reduc-elbow disloc,Open reduction of dislocation of elbow,1,1,7982
+4663,Lg bowel-abd wall fixat,Fixation of large intestine to abdominal wall,1,1,4663
+4974,Gracilis musc transplan,Gracilis muscle transplant for anal incontinence,1,1,4974
+4695,Local sm bowel perfusion,Local perfusion of small intestine,1,1,4695
+2932,Pharyngeal diverticulec,Pharyngeal diverticulectomy,1,1,2932
+5299,Pancreatic operation NEC,Other operations on pancreas,1,1,5299
+3720,Noninvas elect stimulatn,Noninvasive programmed electrical stimulation [NIPS],1,1,3720
+8459,Insert othr spin device,Insertion of other spinal devices,1,1,8459
+6998,Uterine support op NEC,Other operations on supporting structures of uterus,1,1,6998
+2250,Sinusotomy NOS,"Sinusotomy, not otherwise specified",1,1,2250
+4876,Proctopexy NEC,Other proctopexy,1,1,4876
+5292,Cannulation pancrea duc,Cannulation of pancreatic duct,1,1,5292
+7092,Cul-de-sac operation NEC,Other operations on cul-de-sac,1,1,7092
+9752,Remov small bowel tube,Removal of tube from small intestine,1,1,9752
+4291,Ligation esoph varix,Ligation of esophageal varices,1,1,4291
+6071,Percut semin ves aspirat,Percutaneous aspiration of seminal vesicle,1,1,6071
+8089,Destruct joint les NEC,"Other local excision or destruction of lesion of joint, other specified sites",1,1,8089
+8670,Pedicle graft/flap NOS,"Pedicle or flap graft, not otherwise specified",1,1,8670
+7611,Facial bone biopsy,Biopsy of facial bone,1,1,7611
+3617,Abd-coron artery bypass,Abdominal-coronary artery bypass,1,1,3617
+4552,Lg bowel segment isolat,Isolation of segment of large intestine,1,1,4552
+9926,Inject tranquilizer,Injection of tranquilizer,1,1,9926
+3392,Bronchial ligation,Ligation of bronchus,1,1,3392
+7741,Chest cage bone biopsy,"Biopsy of bone, scapula, clavicle, and thorax [ribs and sternum]",1,1,7741
+6869,Radical abd hyst NEC/NOS,Other and unspecified radical abdominal hysterectomy,1,1,6869
+2122,Nasal biopsy,Biopsy of nose,1,1,2122
+7778,Excis metatar/tar-graft,"Excision of bone for graft, tarsals and metatarsals",1,1,7778
+1424,Chorioret les laser coag,Destruction of chorioretinal lesion by laser photocoagulation,1,1,1424
+8734,Intrathor lymphangiogram,Intrathoracic lymphangiogram,1,1,8734
+4193,Exc of accessory spleen,Excision of accessory spleen,1,1,4193
+5779,Total cystectomy NEC,Other total cystectomy,1,1,5779
+6012,Open prostatic biopsy,Open biopsy of prostate,1,1,6012
+4829,Rect/perirect dx op NEC,"Other diagnostic procedures on rectum, rectosigmoid and perirectal tissue",1,1,4829
+5759,Bladder les destruct NEC,Open excision or destruction of other lesion or tissue of bladder,1,1,5759
+5999,Urinary system op NEC,Other operations on urinary system,1,1,5999
+8804,Abdominal lymphangiogram,Abdominal lymphangiogram,1,1,8804
+4269,Stern esophag anast NEC,Other antesternal anastomosis of esophagus,1,1,4269
+6579,Repair of ovary NEC,Other repair of ovary,1,1,6579
+7978,Cl reduc disloc-foot/toe,Closed reduction of dislocation of foot and toe,1,1,7978
+1473,Anterior mechan vitrect,Mechanical vitrectomy by anterior approach,1,1,1473
+5314,Opn bi dr ing hrn-gr NEC,Other and open bilateral repair of direct inguinal hernia with graft or prosthesis,1,1,5314
+5909,Periren/ureter incis NEC,Other incision of perirenal or periureteral tissue,1,1,5909
+2001,Myringotomy w intubation,Myringotomy with insertion of tube,1,1,2001
+601,Thyroid field aspiration,Aspiration of thyroid field,1,1,601
+9735,Remove dental prosthesis,Removal of dental prosthesis,1,1,9735
+8219,Div soft tissue hand NEC,Other division of soft tissue of hand,1,1,8219
+3222,Lung vol reduction surg,Lung volume reduction surgery,1,1,3222
+4614,Delay opening colostomy,Delayed opening of colostomy,1,1,4614
+3837,Abd vein resect & anast,"Resection of vessel with anastomosis, abdominal veins",1,1,3837
+8571,Latiss dorsi myocut flap,Latissimus dorsi myocutaneous flap,1,1,8571
+8174,Arthroplasty carpal wit,Arthroplasty of carpocarpal or carpometacarpal joint with implant,1,1,8174
+9303,Prosthetic evaluation,Prosthetic evaluation,1,1,9303
+6381,Suture vas & epidid lac,Suture of laceration of vas deferens and epididymis,1,1,6381
+4851,Lap abdperneal resc rec,Laparoscopic abdominoperineal resection of the rectum,1,1,4851
+2722,Uvula and soft palate bx,Biopsy of uvula and soft palate,1,1,2722
+5298,Endosc dil pancreat duct,Endoscopic dilation of pancreatic duct,1,1,5298
+4262,Stern esophagogastrostom,Antesternal esophagogastrostomy,1,1,4262
+1631,Eye evisc w synch implan,Removal of ocular contents with synchronous implant into scleral shell,1,1,1631
+9922,Inject anti-infect NEC,Injection of other anti-infective,1,1,9922
+999,Lacrimal system op NEC,Other operations on lacrimal system,1,1,999
+9614,Vaginal packing,Vaginal packing,1,1,9614
+3710,Incision of heart NOS,"Incision of heart, not otherwise specified",1,1,3710
+7074,Rep vaginoent fistul NEC,Repair of other vaginoenteric fistula,1,1,7074
+5429,Abd region dx proc NEC,Other diagnostic procedures on abdominal region,1,1,5429
+4391,Tot gast w intes interpo,Total gastrectomy with intestinal interposition,1,1,4391
+8694,Ins/repl single pul gen,"Insertion or replacement of single array neurostimulator pulse generator, not specified as rechargeable",1,1,8694
+4563,Total removal sm bowel,Total removal of small intestine,1,1,4563
+7795,Tot ostectomy-femur,"Total ostectomy, femur",1,1,7795
+1741,Open robotic assist proc,Open robotic assisted procedure,1,1,1741
+433,Pyloromyotomy,Pyloromyotomy,1,1,433
+4850,Abdperneal res rectm NOS,"Abdominoperineal resection of the rectum, not otherwise specified",1,1,4850
+7033,Excision vaginal lesion,Excision or destruction of lesion of vagina,1,1,7033
+9732,Remove nasal packing,Removal of nasal packing,1,1,9732
+8840,Contrast arteriogram NOS,"Arteriography using contrast material, unspecified site",1,1,8840
+7693,Clos reduct tm dislocat,Closed reduction of temporomandibular dislocation,1,1,7693
+3173,Trachea fistula clos NEC,Closure of other fistula of trachea,1,1,3173
+8858,Negatve-contr cardiogram,Negative-contrast cardiac roentgenography,1,1,8858
+5295,Pancreatic repair NEC,Other repair of pancreas,1,1,5295
+1149,Destruct cornea les NEC,Other removal or destruction of corneal lesion,1,1,1149
+885,Lid lac rx-ful thic NEC,"Other repair of laceration of eyelid, full-thickness",1,1,885
+4662,Small bowel fixation NEC,Other fixation of small intestine,1,1,4662
+23,IVUS peripheral vessels,Intravascular imaging of peripheral vessels,1,1,23
+3892,Umbilical vein cath,Umbilical vein catheterization,1,1,3892
+9329,Forcib correct defor NEC,Other forcible correction of musculoskeletal deformity,1,1,9329
+5731,Cystoscopy thru stoma,Cystoscopy through artificial stoma,1,1,5731
+6993,Insertion of laminaria,Insertion of laminaria,1,1,6993
+869,Lid reconstr w graft NEC,Other reconstruction of eyelid with flaps or grafts,1,1,869
+1652,Orbit exent w bone remov,Exenteration of orbit with therapeutic removal of orbital bone,1,1,1652
+8157,"Repl joint of foot, toe",Replacement of joint of foot and toe,1,1,8157
+6309,Spermat cord/vas dx NEC,"Other diagnostic procedures on spermatic cord, epididymis, and vas deferens",1,1,6309
+6299,Testicular operation NEC,Other operations on testes,1,1,6299
+5219,Pancreatic dx proc NEC,Other diagnostic procedures on pancreas,1,1,5219
+7709,Sequestrectomy NEC,"Sequestrectomy, other bones",1,1,7709
+620,Incision of testes,Incision of testis,1,1,620
+580,Urethrotomy,Urethrotomy,1,1,580
+643,Amputation of penis,Amputation of penis,1,1,643
+708,Vaginal vault obliterat,Obliteration of vaginal vault,1,1,708
+5094,Hepatic injection NEC,Other injection of therapeutic substance into liver,1,1,5094
+4464,Gastropexy,Gastropexy,1,1,4464
+3598,Other heart septa ops,Other operations on septa of heart,1,1,3598
+8860,Contrast phlebogram NOS,"Phlebography using contrast material, unspecified site",1,1,8860
+7811,Appl ext fix-chest cage,"Application of external fixator device, scapula, clavicle, and thorax [ribs and sternum]",1,1,7811
+8922,Cystometrogram,Cystometrogram,1,1,8922
+7079,Vaginal repair NEC,Other repair of vagina,1,1,7079
+9975,Adm neuroprotective agnt,Administration of neuroprotective agent,1,1,9975
+4419,Gastric diagnos proc NEC,Other diagnostic procedures on stomach,1,1,4419
+9764,Remov urin drainage NEC,Removal of other urinary drainage device,1,1,9764
+3162,Laryngeal fistula clos,Closure of fistula of larynx,1,1,3162
+6095,Trans bal dil pros ureth,Transurethral balloon dilation of the prostatic urethra,1,1,6095
+6497,Ins inflate penis prosth,Insertion or replacement of inflatable penile prosthesis,1,1,6497
+4873,Close rectal fist NEC,Closure of other rectal fistula,1,1,4873
+4503,Large bowel incision,Incision of large intestine,1,1,4503
+9393,Nonmechan resuscitation,Nonmechanical methods of resuscitation,1,1,9393
+399,Spine canal struc op NEC,Other operations on spinal cord and spinal canal structures,1,1,399
+4191,Donor marrow aspiration,Aspiration of bone marrow from donor for transplant,1,1,4191
+7918,Close red-int fix toe fx,"Closed reduction of fracture with internal fixation, phalanges of foot",1,1,7918
+3829,Blood vessel dx proc NEC,Other diagnostic procedures on blood vessels,1,1,3829
+7858,Int fixation-metatar/tar,"Internal fixation of bone without fracture reduction, tarsals and metatarsals",1,1,7858
+5473,Peritoneal repair NEC,Other repair of peritoneum,1,1,5473
+157,Extraoc musc inj repair,Repair of injury of extraocular muscle,1,1,157
+3861,Intracran vessel excis,"Other excision of vessels, intracranial vessels",1,1,3861
+4283,Esophagostomy closure,Closure of esophagostomy,1,1,4283
+1454,Detach retina laser coag,Repair of retinal detachment with laser photocoagulation,1,1,1454
+3542,Create septal defect,Creation of septal defect in heart,1,1,3542
+3921,Caval-pulmon art anastom,Caval-pulmonary artery anastomosis,1,1,3921
+4019,Lymphatic diag proc NEC,Other diagnostic procedures on lymphatic structures,1,1,4019
+5251,Proximal pancreatectomy,Proximal pancreatectomy,1,1,5251
+5213,Endosc retro pancreatog,Endoscopic retrograde pancreatography [ERP],1,1,5213
+4500,Intestinal incision NOS,"Incision of intestine, not otherwise specified",1,1,4500
+5684,Close ureter fistula NEC,Closure of other fistula of ureter,1,1,5684
+3550,Prosth rep hrt septa NOS,Repair of unspecified septal defect of heart with prosthesis,1,1,3550
+9172,Culture-op wound,"Microscopic examination of specimen from operative wound, culture",1,1,9172
+4791,Appendicostomy,Appendicostomy,1,1,4791
+4108,Allo hem stem ct w purg,Allogeneic hematopoietic stem cell transplant with purging,1,1,4108
+5841,Suture urethral lacerat,Suture of laceration of urethra,1,1,5841
+8129,Arthrodesis NEC,Arthrodesis of other specified joints,1,1,8129
+8111,Ankle fusion,Ankle fusion,1,1,8111
+400,Incis lymphatic structur,Incision of lymphatic structures,1,1,400
+8862,Contr phlebogram-pulmon,Phlebography of pulmonary veins using contrast material,1,1,8862
+7782,Partial humerectomy NEC,"Other partial ostectomy, humerus",1,1,7782
+716,Thymus biopsy,Biopsy of thymus,1,1,716
+3595,Heart repair revision,Revision of corrective procedure on heart,1,1,3595
+6062,Perineal prostatectomy,Perineal prostatectomy,1,1,6062
+3349,Lung repair NEC,Other repair and plastic operations on lung,1,1,3349
+3535,Trabecul carneae cord op,Operations on trabeculae carneae cordis,1,1,3535
+3790,Ins left atr append dev,Insertion of left atrial appendage device,1,1,3790
+7843,Oth rad/uln repair/plast,"Other repair or plastic operations on bone, radius and ulna",1,1,7843
+8269,Thumb reconstruction NEC,Other reconstruction of thumb,1,1,8269

@@ -1,0 +1,184 @@
+,ITEMID,AMOUNTUOM,COUNT,LABEL,COEFFICIENT
+0,220995,/hour,6670,Sodium Bicarbonate 8.4%,0
+1,220995,meq,6670,Sodium Bicarbonate 8.4%,0
+2,221289,mcg,6413,Epinephrine,1000
+3,221289,mg,6413,Epinephrine,1
+4,221456,mg,23922,Calcium Gluconate,1000
+5,221456,grams,23922,Calcium Gluconate,1
+6,221468,mcg,8765,Diltiazem,1000
+7,221468,mg,8765,Diltiazem,1
+8,221555,mcg,9334,Cisatracurium,1000
+9,221555,mg,9334,Cisatracurium,1
+10,221744,mg,86340,Fentanyl,1
+11,221744,mcg,86340,Fentanyl,1000
+12,221794,dose,47444,Furosemide (Lasix),0
+13,221794,mg,47444,Furosemide (Lasix),1
+14,221833,mg,32461,Hydromorphone (Dilaudid),1
+15,221833,dose,32461,Hydromorphone (Dilaudid),0
+16,221833,mcg,32461,Hydromorphone (Dilaudid),1000
+17,221906,mcg,89697,Norepinephrine,1000
+18,221906,mg,89697,Norepinephrine,1
+19,222011,grams,25897,Magnesium Sulfate,1
+20,222011,mg,25897,Magnesium Sulfate,1000
+21,222021,mg,306,Naloxone (Narcan),1
+22,222021,mcg,306,Naloxone (Narcan),1000
+23,222062,mcg,664,Vecuronium,1000
+24,222062,mg,664,Vecuronium,1
+25,222168,mg,178819,Propofol,1
+26,222168,mcg,178819,Propofol,1000
+27,225150,mg,15303,Dexmedetomidine (Precedex),1
+28,225150,mcg,15303,Dexmedetomidine (Precedex),1000
+29,225153,mg,9206,Labetalol,1
+30,225153,dose,9206,Labetalol,0
+31,225154,mcg,41064,Morphine Sulfate,1000
+32,225154,mg,41064,Morphine Sulfate,1
+33,225155,mcg,2929,Octreotide,1000
+34,225155,mg,2929,Octreotide,1
+35,225158,l,527855,NaCl 0.9%,1
+36,225158,ml,527855,NaCl 0.9%,1000
+37,225798,mcg,46352,Vancomycin,1
+38,225798,grams,46352,Vancomycin,0
+39,225798,dose,46352,Vancomycin,0
+40,225798,mg,46352,Vancomycin,0
+41,225828,l,50013,LR,1
+42,225828,ml,50013,LR,1000
+43,225832,dose,1686,Folic Acid,0
+44,225832,mg,1686,Folic Acid,1
+45,225833,mg,2602,Thiamine,1
+46,225833,dose,2602,Thiamine,0
+47,225837,grams,4258,Acyclovir,0
+48,225837,mg,4258,Acyclovir,0
+49,225837,mcg,4258,Acyclovir,0
+50,225837,dose,4258,Acyclovir,1
+51,225838,mg,357,Ambisome,0
+52,225838,dose,357,Ambisome,1
+53,225840,dose,209,Amikacin,0
+54,225840,mg,209,Amikacin,1
+55,225842,dose,3791,Ampicillin,1
+56,225842,grams,3791,Ampicillin,0
+57,225842,mg,3791,Ampicillin,0
+58,225843,grams,3572,Ampicillin/Sulbactam (Unasyn),0
+59,225843,dose,3572,Ampicillin/Sulbactam (Unasyn),1
+60,225844,dose,48,Atovaquone,1
+61,225844,mg,48,Atovaquone,0
+62,225845,grams,1475,Azithromycin,0
+63,225845,mg,1475,Azithromycin,0
+64,225845,dose,1475,Azithromycin,1
+65,225847,mg,1733,Aztreonam,0
+66,225847,dose,1733,Aztreonam,1
+67,225848,dose,359,Caspofungin,1
+68,225848,mg,359,Caspofungin,0
+69,225850,mg,12751,Cefazolin,0
+70,225850,dose,12751,Cefazolin,1
+71,225850,grams,12751,Cefazolin,0
+72,225851,dose,14856,Cefepime,1
+73,225851,mg,14856,Cefepime,0
+74,225851,grams,14856,Cefepime,0
+75,225853,grams,1872,Ceftazidime,0
+76,225853,dose,1872,Ceftazidime,1
+77,225855,dose,4749,Ceftriaxone,1
+78,225855,grams,4749,Ceftriaxone,0
+79,225859,dose,11261,Ciprofloxacin,1
+80,225859,mg,11261,Ciprofloxacin,0
+81,225860,mg,2376,Clindamycin,0
+82,225860,dose,2376,Clindamycin,1
+83,225862,mg,268,Colistin,0
+84,225862,dose,268,Colistin,1
+85,225863,dose,930,Daptomycin,1
+86,225863,mg,930,Daptomycin,0
+87,225866,mg,556,Erythromycin,0
+88,225866,dose,556,Erythromycin,1
+89,225869,mg,2079,Fluconazole,0
+90,225869,dose,2079,Fluconazole,1
+91,225871,dose,54,Foscarnet,1
+92,225871,mg,54,Foscarnet,0
+93,225873,mg,241,Gancyclovir,0
+94,225873,dose,241,Gancyclovir,1
+95,225875,mg,1642,Gentamicin,0
+96,225875,dose,1642,Gentamicin,1
+97,225876,dose,133,Imipenem/Cilastatin,1
+98,225876,mg,133,Imipenem/Cilastatin,0
+99,225879,grams,3279,Levofloxacin,0
+100,225879,dose,3279,Levofloxacin,1
+101,225879,mg,3279,Levofloxacin,0
+102,225881,mg,2998,Linezolid,0
+103,225881,dose,2998,Linezolid,1
+104,225883,grams,16892,Meropenem,0
+105,225883,dose,16892,Meropenem,1
+106,225883,mg,16892,Meropenem,0
+107,225884,mg,22222,Metronidazole,0
+108,225884,grams,22222,Metronidazole,0
+109,225884,dose,22222,Metronidazole,1
+110,225885,dose,1625,Micafungin,1
+111,225885,mg,1625,Micafungin,0
+112,225888,dose,5048,Nafcillin,1
+113,225888,mg,5048,Nafcillin,0
+114,225888,grams,5048,Nafcillin,0
+115,225888,mcg,5048,Nafcillin,0
+116,225890,dose,1002,Penicillin G potassium,1
+117,225890,mg,1002,Penicillin G potassium,0
+118,225892,grams,5520,Piperacillin,0
+119,225892,dose,5520,Piperacillin,1
+120,225892,mg,5520,Piperacillin,0
+121,225893,dose,27069,Piperacillin/Tazobactam (Zosyn),1
+122,225893,mg,27069,Piperacillin/Tazobactam (Zosyn),0
+123,225893,grams,27069,Piperacillin/Tazobactam (Zosyn),0
+124,225898,mg,259,Rifampin,0
+125,225898,dose,259,Rifampin,1
+126,225899,dose,1873,Bactrim (SMX/TMP),1
+127,225899,mg,1873,Bactrim (SMX/TMP),0
+128,225902,mg,816,Tobramycin,0
+129,225902,dose,816,Tobramycin,1
+130,225905,mg,873,Voriconazole,0
+131,225905,dose,873,Voriconazole,1
+132,225906,dose,1720,Enoxaparin (Lovenox),1
+133,225906,mg,1720,Enoxaparin (Lovenox),0
+134,225907,mg,22316,Famotidine (Pepcid),0
+135,225907,dose,22316,Famotidine (Pepcid),1
+136,225909,dose,1975,Lansoprazole (Prevacid),1
+137,225909,mg,1975,Lansoprazole (Prevacid),0
+138,225910,dose,27516,Pantoprazole (Protonix),1
+139,225910,mg,27516,Pantoprazole (Protonix),0
+140,225911,dose,3134,Ranitidine (Prophylaxis),1
+141,225911,mg,3134,Ranitidine (Prophylaxis),0
+142,225912,dose,692,Carafate (Sucralfate),1
+143,225912,grams,692,Carafate (Sucralfate),0
+144,225913,grams,997,Coumadin (Warfarin),0
+145,225913,dose,997,Coumadin (Warfarin),1
+146,225913,mg,997,Coumadin (Warfarin),0
+147,225914,mg,109,Factor VIIa,1
+148,225914,pg,109,Factor VIIa,1000000000
+149,225914,mcg,109,Factor VIIa,1000
+150,225914,dose,109,Factor VIIa,0
+151,225942,mg,45866,Fentanyl (Concentrate),1
+152,225942,mcg,45866,Fentanyl (Concentrate),1000
+153,225948,grams,2618,Amino Acids,1
+154,225948,dose,2618,Amino Acids,0
+155,225974,mg,31160,Metoprolol,1
+156,225974,mcg,31160,Metoprolol,1000
+157,225975,mcg,77518,Heparin Sodium (Prophylaxis),0
+158,225975,mg,77518,Heparin Sodium (Prophylaxis),0
+159,225975,dose,77518,Heparin Sodium (Prophylaxis),1
+160,226361,l,6786,Pre-Admission Intake,1
+161,226361,ml,6786,Pre-Admission Intake,1000
+162,226364,l,7052,OR Crystalloid Intake,1
+163,226364,ml,7052,OR Crystalloid Intake,1000
+164,226367,ul,998,OR FFP Intake,1000
+165,226367,ml,998,OR FFP Intake,1
+166,227531,grams,1138,Mannitol,1
+167,227531,mg,1138,Mannitol,1000
+168,227536,meq.,26606,KCl (CRRT),0
+169,227536,ml/hr,26606,KCl (CRRT),0
+170,227689,mg,5233,Dilantin,1000
+171,227689,grams,5233,Dilantin,1
+172,227690,grams,1083,Fosphenytoin,1
+173,227690,mg,1083,Fosphenytoin,1000
+174,227691,dose,94,Keflex,1
+175,227691,mg,94,Keflex,0
+176,227694,dose,1383,Omeprazole (Prilosec),1
+177,227694,mg,1383,Omeprazole (Prilosec),0
+178,228003,dose,73,Tamiflu,1
+179,228003,mg,73,Tamiflu,0
+180,228315,mg,4523,Acetaminophen-IV,1000
+181,228315,dose,4523,Acetaminophen-IV,0
+182,228315,grams,4523,Acetaminophen-IV,1

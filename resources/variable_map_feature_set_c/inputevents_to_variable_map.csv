@@ -1,0 +1,55 @@
+ITEMID,COUNT,USE,VARIABLE
+30008,,1,Albumin 5%
+30005,,1,Fresh Frozen Plasma
+221385,,1,Lorazepam (Ativan)
+30023,,1,Calcium Gluconate
+45520,,1,Midazolam (Versed)
+220864,,1,Albumin 5%
+220970,,1,Fresh Frozen Plasma
+3492,,1,Lorazepam (Ativan)
+221456,,1,Calcium Gluconate
+221668,,1,Midazolam (Versed)
+221749,,1,Phenylephrine
+221794,,1,Furosemide (Lasix)
+221828,,1,Hydralazine
+221906,,1,Norepinephrine
+30027,,1,Magnesium Sulfate
+30049,,1,Nitroglycerin
+30100,,1,Insulin - Regular
+30126,,1,Morphine Sulfate
+30297,,1,Potassium Chloride
+222011,,1,Magnesium Sulfate
+222056,,1,Nitroglycerin
+223258,,1,Insulin - Regular
+225154,,1,Morphine Sulfate
+225166,,1,Potassium Chloride
+225168,,1,Packed Red Blood Cells
+30144,,1,Gastric Meds
+225799,,1,Gastric Meds
+225823,,1,D5 1/2NS
+44367,,1,LR
+30065,,1,Sterile Water
+30063,,1,Piggyback
+30056,,1,PO Intake
+30059,,1,GT Flush
+42623,,1,KCL (Bolus)
+30044,,1,epinephrine
+30051,,1,vasopressin
+30043,,1,dopamine
+30124,,1,midazolam
+30118,,1,fentanyl
+30131,,1,propofol
+225828,,1,LR
+225943,,1,Solution
+225944,,1,Sterile Water
+226089,,1,Piggyback
+226364,,1,OR Crystalloid Intake
+226452,,1,PO Intake
+226453,,1,GT Flush
+227522,,1,KCL (Bolus)
+227523,,1,Magnesium Sulfate (Bolus)
+221289,,1,epinephrine
+222315,,1,vasopressin
+221662,,1,dopamine
+221744,,1,fentanyl
+222168,,1,propofol

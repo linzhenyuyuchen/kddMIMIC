@@ -1,0 +1,78 @@
+,ITEMID,AMOUNTUOM,COUNT,LABEL,COEFFICIENT
+0,30022,mg,510,Calcium Chloride,100
+1,30022,ml,510,Calcium Chloride,1
+2,30023,cc,35913,Calcium Gluconate,0
+3,30023,gm,35913,Calcium Gluconate,0
+4,30023,mg,35913,Calcium Gluconate,500
+5,30023,ml,35913,Calcium Gluconate,1
+6,30025,u,286628,Heparin,0
+7,30025,ml,286628,Heparin,1
+8,30026,meq,258219,KCL,0
+9,30026,ml,258219,KCL,1
+10,30027,ml,872,Magnesium Sulfate,0
+11,30027,gm,872,Magnesium Sulfate,1
+12,30029,meq,18868,Potassium Phosphate,0
+13,30029,ml,18868,Potassium Phosphate,1
+14,30030,meq,20660,Sodium Bicarbonate,150
+15,30030,ml,20660,Sodium Bicarbonate,1000
+16,30046,mg,117,Isuprel,0
+17,30046,ml,117,Isuprel,1
+18,30051,u,61847,Vasopressin,0
+19,30051,ml,61847,Vasopressin,1
+20,30052,ml,2548,Procainamide,0
+21,30052,gm,2548,Procainamide,1
+22,30067,ml,805,HCL,0
+23,30067,meq,805,HCL,1
+24,30069,ml,2174,Solumedrol,0
+25,30069,mg,2174,Solumedrol,1
+26,30073,ml,143573,Impact w/fiber,1
+27,30073,str,143573,Impact w/fiber,0
+28,30077,str,91730,Nepro,0
+29,30077,ml,91730,Nepro,1
+30,30088,str,51294,Replete w/fiber,0
+31,30088,ml,51294,Replete w/fiber,0
+32,30089,tsp,47166,Promod,1
+33,30089,gm,47166,Promod,0
+34,30111,ml,822,Amicar,0
+35,30111,gm,822,Amicar,1
+36,30114,ml,26869,Cisatracurium,0
+37,30114,mg,26869,Cisatracurium,1
+38,30117,ml,10987,Esmolol,1
+39,30117,mcg,10987,Esmolol,10000
+40,30126,ml,38550,Morphine Sulfate,0
+41,30126,mg,38550,Morphine Sulfate,1
+42,30135,mg,1342,TPA,1
+43,30135,ml,1342,TPA,0
+44,30138,mg,2001,Vecuronium,1
+45,30138,ml,2001,Vecuronium,1
+46,30148,ml,308,Narcan,0
+47,30148,mg,308,Narcan,1
+48,30151,mg,1394,Ketamine,1
+49,30151,ml,1394,Ketamine,0
+50,30163,mg,16622,Dilaudid,1
+51,30163,ml,16622,Dilaudid,0
+52,30166,ml,163074,Promote w/fiber,1
+53,30166,str,163074,Promote w/fiber,0
+54,30167,mcg,11025,Precedex,1
+55,30167,ml,11025,Precedex,0
+56,30172,mg,22549,Natrecor,1
+57,30172,ml,22549,Natrecor,0
+58,30173,mg,11669,Argatroban,1
+59,30173,ml,11669,Argatroban,0
+60,30174,ml,316,Bivalirudin,1
+61,30174,mg,316,Bivalirudin,0
+62,30177,ml,3477,Lepirudin,0
+63,30177,mg,3477,Lepirudin,1
+64,30178,mg,13284,Nicardipine,1
+65,30178,ml,13284,Nicardipine,0
+66,30296,u,26299,Sodium Chloride,0
+67,30296,meq,26299,Sodium Chloride,1
+68,30297,meq,21785,Potassium Chloride,0
+69,30297,ml,21785,Potassium Chloride,1
+70,30298,u,2958,Sodium Acetate,0
+71,30298,ml,2958,Sodium Acetate,1
+72,30298,meq,2958,Sodium Acetate,2
+73,30384,ml,2939,Xigris,1
+74,30384,mg,2939,Xigris,0
+75,30403,ml,22574,Nutren Renal,1
+76,30403,str,22574,Nutren Renal,0
