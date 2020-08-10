@@ -25,8 +25,7 @@ def read_admissions_table(mimic3_path):
     admits.ADMITTIME = pd.to_datetime(admits.ADMITTIME)
     admits.DISCHTIME = pd.to_datetime(admits.DISCHTIME)
     admits.DEATHTIME = pd.to_datetime(admits.DEATHTIME)
-    return admits
-
+    return admits[admits.ADMITTIME.notnull()]
 
 def read_icustays_table(mimic3_path):
     stays = dataframe_from_csv(os.path.join(mimic3_path, 'ICUSTAYS.csv'))

@@ -158,7 +158,6 @@ def main():
     cfg = yaml.load(open("./config.yaml","r"), Loader=yaml.FullLoader)
     mimic3_path = cfg["mimic3_path"]
     output_path = cfg["output_path"]
-    res_path = cfg["res_path"]
     variable_map_path = cfg["variable_map"]
     tables = cfg["event_tables"]
     if not os.path.isdir(output_path):
@@ -168,7 +167,6 @@ def main():
     for table in tables:
         if table in  [ "inputevents_cv", "inputevents_mv", "outputevents", "labevents", "chartevents"]:
             extract_itemids_events(mimic3_path, output_path, variable_map_path, table)
-
 
 if __name__ == "__main__":
     main()
