@@ -2,4 +2,7 @@
 *.csv
 *.pyc
 *.npy
+*.npz
 *.ipynb
+*.pth
+/output/
