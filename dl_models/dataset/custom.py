@@ -5,9 +5,16 @@ import pandas as pd
 import torch
 from torch.utils.data import Dataset
 
-class customDataset(Dataset):
-    # 'icd9'
-    def __init__(self, data_file_pathname, idxs, tsf, task_id, task_name, model_type):
+def list_with_index(X, idx=None):
+    if type(X) is np.ndarray:
+        if idx is None:
+            return X
+        else:
+            return X[idx]
+    return [list_with_index(x, idx) for x in X]
+
+class standDataset(Dataset):
+    def __init__(self, data_file_pathname, idxs, tsf, label_type, task_name):
         data_file = np.load(data_file_pathname)
         ###############################################
         self.X_s = data_file['adm_features_all']
@@ -19,7 +26,7 @@ class customDataset(Dataset):
         ###############################################
         # Set tasks
         if task_name == 'icd9':
-            self.y = data_file['y_icd9'][:,task_id]
+            self.y = data_file['y_icd9'][:,label_type]
             self.y = (self.y > 0).astype("float")
         elif task_name == 'mor':
             adm_labels = data_file['adm_labels_all']
@@ -45,8 +52,49 @@ class customDataset(Dataset):
         X_s = torch.Tensor(self.X_s[index])
         X_t = torch.Tensor(self.X_t[index])
         Y = torch.Tensor(self.y[index])
-        return X_s, Y
+        return X_s, X_t, Y
 
     def __len__(self):
         return self.len
 
+
+class customDataset(Dataset):
+    def __init__(self, data_file_pathname, idxs, label_type, task_name):
+        data_file = np.load(data_file_pathname)
+        ###############################################
+        self.X_s = data_file['adm_features_all']
+        self.X_t = data_file['ep_tdata']
+        ###############################################
+        # Imputation
+        self.X_s[np.isinf(self.X_s)] = 0
+        self.X_s[np.isnan(self.X_s)] = 0
+        self.X_t[np.isinf(self.X_t)] = 0
+        self.X_t[np.isnan(self.X_t)] = 0
+        ###############################################
+        # Set tasks
+        if task_name == 'icd9':
+            self.y = data_file['y_icd9'][:, label_type]
+            self.y = (self.y > 0).astype("float")
+        elif task_name == 'mor':
+            adm_labels = data_file['adm_labels_all']
+            self.y = adm_labels[:, label_type]
+            self.y = (self.y > 0).astype("float")
+        elif task_name == 'los':
+            # convert minute to hour
+            self.y = data_file['y_los'] / 60.0
+        ###############################################
+        # Get subset
+        self.X_s = self.X_s[idxs]
+        self.X_t = self.X_t[idxs]
+        self.y = self.y[idxs]
+        ###############################################
+        self.len = len(self.y)
+
+    def __getitem__(self, index):
+        X_s = torch.Tensor(self.X_s[index])
+        X_t = torch.Tensor(self.X_t[index])
+        Y = torch.Tensor([self.y[index]])
+        return X_s, X_t, Y
+
+    def __len__(self):
+        return self.len

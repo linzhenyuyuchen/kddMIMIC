@@ -43,7 +43,7 @@ class FeedForwardNetwork(nn.Module):
         self.type_MMDL = 1
         self.random_str = ''.join(choice(ascii_uppercase) for i in range(12))
         self.ffn_depth = ffn_depth
-        self.batch_normalization = batch_normalization
+        self.batch_normalization = batch_normalization == 'True'
 
         # input n_features
         self.linear1 = nn.Sequential(nn.Linear(self.n_features, self.hidden_dim),
@@ -94,17 +94,17 @@ class SimpleLSTMNetwork(nn.Module):
 
 class HierarchicalMultimodal(nn.Module):
     def __init__(self, static = True, size_Xs= 5, dropout = 0.1, batch_normalization = 'False',
-                 time_step = 48, n_features = 15, fit_parameters = [2,1,0]):
+                 time_step = 48, n_features = 136, fit_parameters = [2,1,0]):
         super(HierarchicalMultimodal, self).__init__()
 
         self.static = static
         self.size_Xs = size_Xs
         self.dropout = dropout
-        self.batch_normalization = batch_normalization
+        self.batch_normalization = batch_normalization == 'True'
         self.n_features = n_features
         self.time_step = time_step
         self.output_dim,self.static_depth, self.merge_depth = fit_parameters
-        self.y_tasks = 1
+        self.y_tasks = 2
         ########################################################################
         if self.static:
             # FFN model
@@ -149,7 +149,7 @@ class HierarchicalMultimodal(nn.Module):
 
             if self.batch_normalization:
                 self.model_merge.add_module("bn", nn.BatchNorm1d(self.y_tasks))
-            self.model_merge.add_module("sg_last", nn.Sigmoid())
+            #self.model_merge.add_module("sg_last", nn.Sigmoid())
 
         else:
             self.len_combine = self.n_features * self.output_dim
@@ -157,7 +157,7 @@ class HierarchicalMultimodal(nn.Module):
             self.model_merge.add_module("mlinear_last", nn.Linear(self.len_combine, self.y_tasks))
             if self.batch_normalization:
                 self.model_merge.add_module("bn", nn.BatchNorm1d(self.y_tasks))
-            self.model_merge.add_module("sg_last", nn.Sigmoid())
+            #self.model_merge.add_module("sg_last", nn.Sigmoid())
 
 
     def forward(self, x):
@@ -169,11 +169,32 @@ class HierarchicalMultimodal(nn.Module):
             x = torch.cat([x0, x1], dim=1)
             x = self.model_merge(x)
         else:
+            x = x[1]
             x = self.GRUmodel(x)
             x = self.model_merge(x)
 
         return x
 
+    def predict0(self, x):
+        pred = F.softmax(self.forward(x))
+        ans = []
+        for t in pred:
+            ans.append(t[1])
+        return torch.tensor(ans)
 
+    def predict(self, x):
+        pred = F.softmax(self.forward(x))
+        ans = []
+        for t in pred:
+            if t[0]>t[1]:
+                ans.append(0)
+            else:
+                ans.append(1)
+        return torch.tensor(ans)
 
-
+if __name__ == '__main__':
+    input0 = torch.rand(4, 5)
+    input1 = torch.rand(4, 48, 136)
+    model = HierarchicalMultimodal()
+    output = model([input0, input1])
+    print(output)

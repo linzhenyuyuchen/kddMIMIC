@@ -1,11 +1,17 @@
 # Table pre-processing
 
+## Create tables and change units
+
+Events tables : "inputevents_cv", "inputevents_mv", "chartevents", "labevents", "outputevents" , "prescriptions" 
+
+Run `./create_tables.py` in which we change units to be consistent,
+ and drop records whose units we cannot change by rules.
+
 ## Create event tables for useful itemids
 
 Events tables : "inputevents_cv", "inputevents_mv", "chartevents", "labevents", "outputevents" 
 
-Run `./extract_tables.py` in which we filter useful itemids and drugs by `variable_map` and change their units to be consistent,
- and drop records whose units we cannot change by rules for further extration.
+Run `./extract_tables.py` in which we filter useful itemids for further extration.
 
 ## Break up by subject
 

@@ -91,7 +91,8 @@ def main():
             map_itemid_index[ai].append(index)
         index += 1
     ##########################################################
-    nb_rows_dict = {'inputevents_cv':17527936,'inputevents_mv':3618992, 'outputevents': 4349219, 'labevents': 27854056, 'chartevents': 330712484}
+    nb_rows_dict = {'inputevents_cv':17527936,'inputevents_mv':3618992, 'outputevents': 4349219,
+                    'prescriptions': 4156450, 'labevents': 27854056, 'chartevents': 330712484}
     obs_header = ['SUBJECT_ID', 'HADM_ID', 'ICUSTAY_ID', 'ITEMID', 'CHARTTIME', 'VALUENUM', 'VALUEUOM']
     ##########################################################
     ################      inputevents_mv      ################
@@ -341,6 +342,7 @@ def main():
     ##########################################################
     ################      labevents      ################
     ##########################################################
+    """
     table = "labevents"
     nb_rows = nb_rows_dict[table.lower()]
     print("creating ", table)
@@ -392,7 +394,11 @@ def main():
             if value is None or value == '':
                 print('no value: ', row_no)
                 continue
-            value = catedict[itemid][value]
+            try:
+                value = catedict[itemid][str(value)]
+            except:
+                print("error key!")
+                continue
             if value is None:
                 continue
             c += 1
@@ -455,6 +461,7 @@ def main():
             w.writerows(data_stats)
 
     print("create ", table, " done!")
+    """
     ##########################################################
     ################       prescriptions        ###############
     ##########################################################
@@ -480,6 +487,8 @@ def main():
             continue
         ###############################################
         # formatting the value
+        if not itemid in valid_prescript:
+            continue
         dose = value
         dose = dose.replace(',', '').replace('<', '').replace('>', '').replace('=', '').replace(' ', '')
         numVal = None
@@ -491,10 +500,10 @@ def main():
                 try:
                     numVal = (float(strs[0]) + float(strs[1])) / 2.0
                 except:
-                    print('not parsed: ', pe)
+                    print('not parsed: ', row_no)
                     continue
             else:
-                print('not parsed: ', pe)
+                print('not parsed: ', row_no)
                 continue
 
         # discard none value
@@ -522,10 +531,11 @@ def main():
         c += 1
         pbar.set_description("C-%s"%c)
         data_stats = [{'SUBJECT_ID': row["SUBJECT_ID"], 'HADM_ID': row["HADM_ID"], 'ICUSTAY_ID': row["ICUSTAY_ID"], \
-                       'ITEMID': row["ITEMID"], 'CHARTTIME': row["CHARTTIME"],\
+                       'ITEMID': itemid, 'CHARTTIME': starttime,\
                        'VALUENUM': dst_value, 'VALUEUOM': valueuom}]
         w.writerows(data_stats)
     print("create ", table, " done!")
+
 
 
 
