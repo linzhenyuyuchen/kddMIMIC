@@ -6,3 +6,4 @@
 *.ipynb
 *.pth
 /output/
+/ipynb/
