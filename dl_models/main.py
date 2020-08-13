@@ -2,6 +2,8 @@ import os, yaml, pickle, argparse
 import random, logging, json
 import numpy as np
 import pandas as pd
+from sklearn.model_selection import KFold
+
 import torch
 from torch.utils.data import DataLoader, Dataset, SequentialSampler, RandomSampler, TensorDataset
 from torch.utils.data.distributed import DistributedSampler
@@ -39,6 +41,7 @@ def get_arg():
     arg_parser.add_argument('--label_type', type=int, default=0)
     arg_parser.add_argument('--working_path', '-p', type=str, default='../')
     arg_parser.add_argument('--random_seed', type=int, default=12321)
+    arg_parser.add_argument('--nb_samples', type=int, default=16993)
     # training
     arg_parser.add_argument('--batch_size', type=int, default=100)
     arg_parser.add_argument('--nb_epoch', type=int, default=250)
@@ -58,6 +61,7 @@ def get_arg():
     return arg_parser.parse_args()
 
 def run_folds(args, model):
+    n_samples = args.nb_samples
     task_name = args.task_name
     data_file_pathname = args.data_file_name
     label_type = args.label_type
@@ -81,26 +85,29 @@ def run_folds(args, model):
     #############################################################
     # make folds
     logger.info(f"making folds..")
-    idxs = np.array(list(range(16993)))
-    idx_te = np.random.choice(idxs, size=4248, replace=False)
-    idx_trva = list(set(idxs) - set(idx_te))
+    X = list(range(n_samples))
+    kf = KFold(n_splits=5, random_state=1, shuffle=True)
+    n_fold = 0
+    for idx_trva, idx_te in kf.split(X):
+        # Build Dataset
+        n_fold += 1
+        logger.info(f"loading dataset of fold - {n_fold}..")
+        train_dataset = customDataset(data_file_pathname, idx_trva, label_type, task_name)
+        dev_dataset = customDataset(data_file_pathname, idx_te, label_type, task_name)
+        # Train the model
+        train(args, n_fold, train_dataset, dev_dataset, model)
     #############################################################
-    # Build Dataset
-    logger.info(f"loading dataset..")
-    train_dataset = customDataset(data_file_pathname, idx_trva, label_type, task_name)
-    dev_dataset = customDataset(data_file_pathname, idx_te, label_type, task_name)
-    # Train the model
-    train(args, train_dataset, dev_dataset, model)
 
 
-def train(args, train_dataset, test_dataset, model):
+def train(args, n_fold, train_dataset, test_dataset, model):
     random_seed = args.random_seed
     batch_size = args.batch_size
     learning_rate = args.learning_rate
     nb_epoch = args.nb_epoch
     ##############################################
     # Settings for task, model, path, etc
-    result_path = os.path.join(args.working_path, 'output', args.data_name, str(args.label_type))
+    result_path = os.path.join(args.working_path, 'output', args.data_name,
+                               "model"+str(args.model_type), "labeltype"+str(args.label_type), "fold_"+str(n_fold))
     result_log_path = os.path.join(result_path, 'log')
     model_path = os.path.join(result_path, 'model')
     for required_path in [result_path, result_log_path, model_path]:
@@ -129,6 +136,9 @@ def train(args, train_dataset, test_dataset, model):
                  log_dir=result_log_path, log_level=logging.INFO,
                  checkpoint_dir=model_path, echo=False,
                  device=device, use_tensorboard=False, use_amp=False, seed=123, n_gpus=1)
+    if args.task_name == "los":
+        bot.set_label_type(1)
+        bot.set_loss_function("MSELoss")
     bot.train(n_epoch=nb_epoch)
     # save model
     bot.save_model()
@@ -138,13 +148,13 @@ def train(args, train_dataset, test_dataset, model):
 def main():
     args = get_arg()
     DATA_NAME = args.data_name
+    task_name = args.task_name
     model_type = args.model_type
     working_path = args.working_path
     data_file_name = args.data_file_name
     # folds_file_name = args.folds_file_name
     # folds_stat_file_name = args.folds_stat_file_name
     # static_features_path = args.static_features_path
-    label_type = args.label_type
     fit_parameters = [args.output_dim, args.ffn_depth, args.merge_depth]
     batch_normalization = args.batch_normalization
     dropout = args.dropout
@@ -180,6 +190,15 @@ def main():
     # for serial, non_serial in folds_stat[0]:
     #     tsfstds.append(FoldsStandardizer(serial, non_serial))
     ##############################################
+    # Set tasks
+    if task_name == 'icd9':
+        y_tasks = 2
+    elif task_name == 'mor':
+        y_tasks = 2
+    elif task_name == 'los':
+        y_tasks = 1
+    ##############################################
+
     # Set model
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if model_type == 1:
@@ -188,7 +207,7 @@ def main():
         #     n_features -= (114-99)
         logger.info(f"model type: HMM, without_static: {without_static}, time_step: {time_step}")
         model = HierarchicalMultimodal(static = not without_static, size_Xs= 5, dropout = dropout, batch_normalization = batch_normalization,
-                                       time_step = time_step, n_features = n_features, fit_parameters = fit_parameters)
+                                       time_step = time_step, n_features = n_features, fit_parameters = fit_parameters, y_tasks = y_tasks)
         model.to(device)
         run_folds(args, model)
     elif model_type == 2:

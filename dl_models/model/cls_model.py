@@ -72,17 +72,18 @@ class FeedForwardNetwork(nn.Module):
 # Activation: sigmoid for all layers
 # Objective: binary cross entropy for prediction
 class SimpleLSTMNetwork(nn.Module):
-    def __init__(self, n_features=200, time_step = 24, lstm_layers=1):
+    def __init__(self, n_features=200, time_step = 24, lstm_layers=1, y_tasks=2):
         super(SimpleLSTMNetwork, self).__init__()
         self.n_features = n_features
         self.lstm_layers = lstm_layers
         self.time_step = time_step
+        self.y_tasks = y_tasks
         self.lstm = nn.LSTM(input_size = self.n_features, hidden_size = self.n_features, num_layers=self.lstm_layers, batch_first=True)
         self.model = nn.Sequential(
             nn.Sigmoid(),
             nn.Flatten(),
             nn.Dropout(0.2),
-            nn.Linear(self.n_features * self.time_step , 1),
+            nn.Linear(self.n_features * self.time_step, self.y_tasks),
             nn.Sigmoid()
         )
     def forward(self, x):
@@ -94,7 +95,7 @@ class SimpleLSTMNetwork(nn.Module):
 
 class HierarchicalMultimodal(nn.Module):
     def __init__(self, static = True, size_Xs= 5, dropout = 0.1, batch_normalization = 'False',
-                 time_step = 48, n_features = 136, fit_parameters = [2,1,0]):
+                 time_step = 48, n_features = 136, fit_parameters = [2,1,0], y_tasks = 2):
         super(HierarchicalMultimodal, self).__init__()
 
         self.static = static
@@ -104,7 +105,7 @@ class HierarchicalMultimodal(nn.Module):
         self.n_features = n_features
         self.time_step = time_step
         self.output_dim,self.static_depth, self.merge_depth = fit_parameters
-        self.y_tasks = 2
+        self.y_tasks = y_tasks
         ########################################################################
         if self.static:
             # FFN model
@@ -176,11 +177,18 @@ class HierarchicalMultimodal(nn.Module):
         return x
 
     def predict0(self, x):
-        pred = F.softmax(self.forward(x))
-        ans = []
-        for t in pred:
-            ans.append(t[1])
-        return torch.tensor(ans)
+        if self.y_tasks == 1:
+            pred = self.forward(x)
+            ans = []
+            for t in pred:
+                ans.append(t)
+            return torch.tensor(ans)
+        elif self.y_tasks == 2:
+            pred = F.softmax(self.forward(x))
+            ans = []
+            for t in pred:
+                ans.append(t[1])
+            return torch.tensor(ans)
 
     def predict(self, x):
         pred = F.softmax(self.forward(x))

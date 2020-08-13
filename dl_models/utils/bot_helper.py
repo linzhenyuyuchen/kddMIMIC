@@ -33,6 +33,7 @@ class BaseBot():
         self.gradient_accumulation_steps = 1
         self.clip_grad = 0
         self.batch_dim = 0
+        self.y_task = 2
         ###########################################################
         for path in [self.log_dir, self.checkpoint_dir]:
             if not os.path.exists(path) or not os.path.isdir(path):
@@ -73,6 +74,19 @@ class BaseBot():
                 np.sum(list(p.numel() for p in self.model.parameters() if p.requires_grad))))
 
     ##################################
+    def set_label_type(self, y_task):
+        self.y_task = y_task
+    ##################################
+    def set_loss_function(self, loss_name):
+        if loss_name == "CrossEntropyLoss":
+            self.logger.info("set loss function :" + loss_name)
+            self.criterion = torch.nn.CrossEntropyLoss()
+        elif loss_name == "MSELoss":
+            self.logger.info("set loss function :" + loss_name)
+            self.criterion = torch.nn.MSELoss()
+        else:
+            self.logger.info("no such loss!")
+    ##################################
     def load_model(self, target_path):
         self.model.load_state_dict(torch.load(target_path)["model"])
     ##################################
@@ -93,6 +107,16 @@ class BaseBot():
                 return batch[0][key].size(batch_dim)
         else:
             return batch[0].size(batch_dim)
+
+
+    ##################################
+    def mse(self, pred, y):
+        pred = np.array(pred)
+        y = np.array(y)
+        mse = metrics.mean_squared_error(y, pred)
+        self.logger.info(
+            "=" * 20 + "MSE %f" + "=" * 20, mse)
+        return mse
 
     ##################################
     def metric_auc(self, pred, y):
@@ -128,7 +152,10 @@ class BaseBot():
 
     ##################################
     def label_to_device(self, label):
-        return label.to(self.device, dtype=torch.long).squeeze(1)
+        if self.y_task == 1:
+            return label.to(self.device, dtype=torch.float32).squeeze(1)
+        else:
+            return label.to(self.device, dtype=torch.long).squeeze(1)
 
     ##################################
     def train_one_step_clip(self, input_tensors, input_tensors2, target):
@@ -177,21 +204,22 @@ class BaseBot():
         ###########################################################
         # Train starts
         totol_step = len(self.train_loader) * n_epoch
-        epoch = 0
-        while self.step < totol_step:
-            epoch += 1
-            self.logger.info(
-                "=" * 20 + "Epoch %d" + "=" * 20, epoch)
-            for input_tensors, input_tensors2, targets in self.train_loader:
-                input_tensors = input_tensors.to(self.device)
-                input_tensors2 = input_tensors2.to(self.device)
-                targets = self.label_to_device(targets)
-                train_loss, train_weight = self.train_one_step(input_tensors, input_tensors2, targets)
-                if self.step % 100 == 0:
-                    self.logger.info("train_loss: %8f" %train_loss)
-                if self.step > totol_step:
-                    break
-                self.step += 1
+        #while self.step < totol_step:
+        with tqdm(range(totol_step)) as pbar:
+            for e in range(n_epoch):
+                #self.logger.info("=" * 20 + "Epoch %d" + "=" * 20, epoch)
+                for input_tensors, input_tensors2, targets in self.train_loader:
+                    input_tensors = input_tensors.to(self.device)
+                    input_tensors2 = input_tensors2.to(self.device)
+                    targets = self.label_to_device(targets)
+                    train_loss, train_weight = self.train_one_step(input_tensors, input_tensors2, targets)
+                    # if self.step % 100 == 0:
+                    #     self.logger.info("train_loss: %8f" %train_loss)
+                    if self.step > totol_step:
+                        break
+                    self.step += 1
+                    pbar.set_description("Loss-%8f" % train_loss)
+                    pbar.update(1)
         self.logger.info("finishing training..")
 
     ##################################
@@ -238,8 +266,12 @@ class BaseBot():
                 outputs1.append(output.cpu())
                 y_global1.append(y_local.cpu())
         ###########################################################
-        result = self.metric_auc(outputs0, y_global0)
-        np.savez(os.path.join(self.log_dir, "results.npz"), result=result)
+        if self.y_task == 2:
+            result = self.metric_auc(outputs0, y_global0)
+            np.savez(os.path.join(self.log_dir, "results.npz"), result=result)
+        else:
+            result = self.mse(outputs0, y_global0)
+            np.savez(os.path.join(self.log_dir, "results.npz"), result=result)
         ###########################################################
         if return_y:
             return outputs1, y_global1
