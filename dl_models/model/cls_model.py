@@ -34,12 +34,12 @@ class newLayer(nn.Module):
 # Activation: sigmoid for all layers
 # Objective: binary cross entropy for prediction
 class FeedForwardNetwork(nn.Module):
-    def __init__(self, n_features=5, hidden_dim=10, patience=20, ffn_depth=2,batch_normalization='False'):
+    def __init__(self, n_features=5, hidden_dim=10, y_tasks=2, ffn_depth=2,batch_normalization='False'):
         super(FeedForwardNetwork, self).__init__()
 
         self.n_features = n_features
         self.hidden_dim = hidden_dim
-        self.patience = patience
+        self.y_tasks = y_tasks
         self.type_MMDL = 1
         self.random_str = ''.join(choice(ascii_uppercase) for i in range(12))
         self.ffn_depth = ffn_depth
@@ -52,9 +52,9 @@ class FeedForwardNetwork(nn.Module):
         self.layers = nn.Sequential()
         for t in range(self.ffn_depth - 1):
             self.layers.add_module(f"layer{t}",newLayer(self.hidden_dim, self.hidden_dim))
-        self.linear2 = nn.Linear(self.hidden_dim, 1)
-        self.bn = nn.BatchNorm1d(1)
-        self.sigmoid = nn.Sigmoid()
+        self.linear2 = nn.Linear(self.hidden_dim, self.y_tasks)
+        self.bn = nn.BatchNorm1d(self.y_tasks)
+        #self.sigmoid = nn.Sigmoid()
 
     def forward(self, x):
         x = self.linear1(x)
@@ -62,8 +62,22 @@ class FeedForwardNetwork(nn.Module):
         x = self.linear2(x)
         if self.batch_normalization:
             x = self.bn(x)
-        x = self.sigmoid(x)
+        #x = self.sigmoid(x)
         return x
+
+    def predict0(self, x):
+        if self.y_tasks == 1:
+            pred = self.forward(x)
+            ans = []
+            for t in pred:
+                ans.append(t)
+            return torch.tensor(ans)
+        elif self.y_tasks == 2:
+            pred = F.softmax(self.forward(x))
+            ans = []
+            for t in pred:
+                ans.append(t[1])
+            return torch.tensor(ans)
 
 # Simple LSTM network with a overall prediction layer
 # Input: 0-mean, 1-std, 3-dimension array (n_samples, n_timesteps, n_dimensions)
@@ -153,8 +167,8 @@ class HierarchicalMultimodal(nn.Module):
             #self.model_merge.add_module("sg_last", nn.Sigmoid())
 
         else:
-            self.len_combine = self.n_features * self.output_dim
-            self.model_merge = Sequential()
+            self.len_combine = self.n_features * self.output_dim * self.time_step
+            self.model_merge = nn.Sequential()
             self.model_merge.add_module("mlinear_last", nn.Linear(self.len_combine, self.y_tasks))
             if self.batch_normalization:
                 self.model_merge.add_module("bn", nn.BatchNorm1d(self.y_tasks))
@@ -171,7 +185,8 @@ class HierarchicalMultimodal(nn.Module):
             x = self.model_merge(x)
         else:
             x = x[1]
-            x = self.GRUmodel(x)
+            x,_ = self.GRUmodel(x)
+            x = self.GRUlast(x)
             x = self.model_merge(x)
 
         return x

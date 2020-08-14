@@ -158,31 +158,6 @@ class BaseBot():
             return label.to(self.device, dtype=torch.long).squeeze(1)
 
     ##################################
-    def train_one_step_clip(self, input_tensors, input_tensors2, target):
-        self.model.train()
-        output = self.model([input_tensors, input_tensors2])
-        batch_loss = self.criterion(output, target) / self.gradient_accumulation_steps
-        if self.use_amp:
-            with amp.scale_loss(
-                batch_loss, self.optimizer,
-                delay_unscale=self.step % self.gradient_accumulation_steps != 0
-            ) as scaled_loss:
-                scaled_loss.backward()
-        else:
-            batch_loss.backward()
-        if self.step % self.gradient_accumulation_steps == 0:
-            if self.clip_grad > 0:
-                if not self.use_amp:
-                    for param_group in self.optimizer.param_groups:
-                        clip_grad_norm_(param_group["params"], self.clip_grad)
-                else:
-                    clip_grad_norm_(amp.master_params(
-                        self.optimizer), self.clip_grad)
-            self.optimizer.step()
-            self.optimizer.zero_grad()
-        return batch_loss.data.cpu().item() * self.gradient_accumulation_steps,\
-               self.get_batch_size(input_tensors, self.batch_dim)
-
     def train_one_step(self, input_tensors, input_tensors2, target):
         self.model.train()
         output = self.model([input_tensors, input_tensors2])
@@ -218,6 +193,40 @@ class BaseBot():
                     if self.step > totol_step:
                         break
                     self.step += 1
+                    pbar.set_description("Loss-%8f" % train_loss)
+                    pbar.update(1)
+        self.logger.info("finishing training..")
+
+    ##################################
+    def train_ffn(self, n_epoch=None):
+        ###########################################################
+        self.optimizer.zero_grad()
+        self.logger.info(
+            "Optimizer {}".format(str(self.optimizer)))
+        self.logger.info("Batches per epoch: {}".format(
+            len(self.train_loader)))
+        ###########################################################
+        # Train starts
+        self.model.train()
+        totol_step = len(self.train_loader) * n_epoch
+        #while self.step < totol_step:
+        with tqdm(range(totol_step)) as pbar:
+            for e in range(n_epoch):
+                #self.logger.info("=" * 20 + "Epoch %d" + "=" * 20, epoch)
+                for input_tensors, targets in self.train_loader:
+                    input_tensors = input_tensors.to(self.device)
+                    targets = self.label_to_device(targets)
+                    output = self.model(input_tensors)
+                    batch_loss = self.criterion(output, targets)
+                    batch_loss.backward()
+                    self.optimizer.step()
+                    self.optimizer.zero_grad()
+                    # if self.step % 100 == 0:
+                    #     self.logger.info("train_loss: %8f" %train_loss)
+                    if self.step > totol_step:
+                        break
+                    self.step += 1
+                    train_loss = batch_loss.data.cpu().item()
                     pbar.set_description("Loss-%8f" % train_loss)
                     pbar.update(1)
         self.logger.info("finishing training..")
@@ -260,6 +269,33 @@ class BaseBot():
                 y_local = self.label_to_device(y_local)
                 output = self.model.predict0([input_tensors, input_tensors2])
 
+                [outputs0.append(o) for o in output.cpu().numpy()]
+                [y_global0.append(o) for o in y_local.cpu().numpy()]
+
+                outputs1.append(output.cpu())
+                y_global1.append(y_local.cpu())
+        ###########################################################
+        if self.y_task == 2:
+            result = self.metric_auc(outputs0, y_global0)
+            np.savez(os.path.join(self.log_dir, "results.npz"), result=result)
+        else:
+            result = self.mse(outputs0, y_global0)
+            np.savez(os.path.join(self.log_dir, "results.npz"), result=result)
+        ###########################################################
+        if return_y:
+            return outputs1, y_global1
+        return outputs1
+
+    ##################################
+    def predict_ffn(self, loader, return_y=False):
+        self.model.eval()
+        outputs1, y_global1 = [], []
+        outputs0, y_global0 = [], []
+        with torch.no_grad():
+            for input_tensors, y_local in tqdm(loader, ncols=100):
+                input_tensors = input_tensors.to(self.device)
+                y_local = self.label_to_device(y_local)
+                output = self.model.predict0(input_tensors)
                 [outputs0.append(o) for o in output.cpu().numpy()]
                 [y_global0.append(o) for o in y_local.cpu().numpy()]
 

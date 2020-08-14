@@ -37,7 +37,7 @@ def get_arg():
     arg_parser.add_argument('--data_file_name', type=str, default="/data3/Data/admdata_99p/24hrs_raw/series/imputed-normed-ep_1_24.npz")
     # arg_parser.add_argument('--folds_file_name', type=str, default="..")
     # arg_parser.add_argument('--folds_stat_file_name', type=str, default="..")
-    # arg_parser.add_argument('--static_features_path', type=str, default="..")
+    arg_parser.add_argument('--static_features_path', type=str, default="/data3/Data/admdata_99p/24hrs_raw/non_series/tsmean_24hrs.npz")
     arg_parser.add_argument('--label_type', type=int, default=0)
     arg_parser.add_argument('--working_path', '-p', type=str, default='../')
     arg_parser.add_argument('--random_seed', type=int, default=12321)
@@ -65,6 +65,8 @@ def run_folds(args, model):
     task_name = args.task_name
     data_file_pathname = args.data_file_name
     label_type = args.label_type
+    model_type = args.model_type
+    static_features_path = args.static_features_path
     #############################################################
     # n_reps = min(len(splits), 5)
     # for rep in range(n_reps):
@@ -88,14 +90,24 @@ def run_folds(args, model):
     X = list(range(n_samples))
     kf = KFold(n_splits=5, random_state=1, shuffle=True)
     n_fold = 0
-    for idx_trva, idx_te in kf.split(X):
-        # Build Dataset
-        n_fold += 1
-        logger.info(f"loading dataset of fold - {n_fold}..")
-        train_dataset = customDataset(data_file_pathname, idx_trva, label_type, task_name)
-        dev_dataset = customDataset(data_file_pathname, idx_te, label_type, task_name)
-        # Train the model
-        train(args, n_fold, train_dataset, dev_dataset, model)
+    if model_type == 1:
+        for idx_trva, idx_te in kf.split(X):
+            # Build Dataset
+            n_fold += 1
+            logger.info(f"loading dataset of fold - {n_fold}..")
+            train_dataset = customDataset(data_file_pathname, idx_trva, label_type, task_name)
+            dev_dataset = customDataset(data_file_pathname, idx_te, label_type, task_name)
+            # Train the model
+            train(args, n_fold, train_dataset, dev_dataset, model)
+    else:
+        for idx_trva, idx_te in kf.split(X):
+            # Build Dataset
+            n_fold += 1
+            logger.info(f"loading dataset of fold - {n_fold}..")
+            train_dataset = staticDataset(data_file_pathname, static_features_path, idx_trva, label_type, task_name)
+            dev_dataset = staticDataset(data_file_pathname, static_features_path, idx_te, label_type, task_name)
+            # Train the model
+            train(args, n_fold, train_dataset, dev_dataset, model)
     #############################################################
 
 
@@ -139,11 +151,19 @@ def train(args, n_fold, train_dataset, test_dataset, model):
     if args.task_name == "los":
         bot.set_label_type(1)
         bot.set_loss_function("MSELoss")
-    bot.train(n_epoch=nb_epoch)
-    # save model
-    bot.save_model()
-    # test
-    bot.predict(test_dataloader)
+    if args.model_type == 1:
+        bot.train(n_epoch=nb_epoch)
+        # save model
+        bot.save_model()
+        # test
+        bot.predict(test_dataloader)
+    else:
+        bot.train_ffn(n_epoch=nb_epoch)
+        # save model
+        bot.save_model()
+        # test
+        bot.predict_ffn(test_dataloader)
+
 
 def main():
     args = get_arg()
@@ -222,7 +242,7 @@ def main():
         # if remove_sapsii:
         #     n_features -= (114-99)
         logger.info(f"model type: FFN")
-        model = FeedForwardNetwork(n_features=n_features, hidden_dim=static_hidden_dim, ffn_depth=static_ffn_depth, batch_normalization=batch_normalization)
+        model = FeedForwardNetwork(n_features=n_features, hidden_dim=static_hidden_dim, y_tasks = y_tasks, ffn_depth=static_ffn_depth, batch_normalization=batch_normalization)
         model.to(device)
         run_folds(args, model)
     ##############################################
