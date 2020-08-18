@@ -5,6 +5,7 @@
 *.npz
 *.ipynb
 *.pth
+output
 dl_models/ipynb
 mimic_codes/ipynb
 mimic_codes/resources
