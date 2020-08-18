@@ -18,6 +18,16 @@ from utils.bot_helper import *
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
+# handler = logging.FileHandler("log.txt")
+# handler.setLevel(logging.INFO)
+# formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+# handler.setFormatter(formatter)
+# logger.addHandler(handler)
+#
+# console = logging.StreamHandler()
+# console.setLevel(logging.INFO)
+# logger.addHandler(console)
+
 def set_seed(seed):
     random.seed(seed)
     np.random.seed(seed)
@@ -36,14 +46,13 @@ def get_arg():
     arg_parser.add_argument('data_name', type=str, default="mor")
     arg_parser.add_argument('task_name', type=str, default="mor")
     arg_parser.add_argument('model_type', type=int, default=1)
-    arg_parser.add_argument('--data_file_name', type=str, default="/data3/Data/admdata_99p/24hrs_raw/series/imputed-normed-ep_1_24.npz")
+    arg_parser.add_argument('--data_file_name', type=str, default="/data3/Benchmarking_DL_MIMICIII/Data/admdata_99p/24hrs_raw/series/imputed-normed-ep_1_24.npz")
     # arg_parser.add_argument('--folds_file_name', type=str, default="..")
     # arg_parser.add_argument('--folds_stat_file_name', type=str, default="..")
-    arg_parser.add_argument('--static_features_path', type=str, default="/data3/Data/admdata_99p/24hrs_raw/non_series/tsmean_24hrs.npz")
+    arg_parser.add_argument('--static_features_path', type=str, default="/data3/Benchmarking_DL_MIMICIII/Data/admdata_99p/24hrs_raw/non_series/tsmean_24hrs.npz")
     arg_parser.add_argument('--label_type', type=int, default=0)
     arg_parser.add_argument('--working_path', '-p', type=str, default='../')
     arg_parser.add_argument('--random_seed', type=int, default=12321)
-    arg_parser.add_argument('--nb_samples', type=int, default=16993)
     # training
     arg_parser.add_argument('--batch_size', type=int, default=100)
     arg_parser.add_argument('--nb_epoch', type=int, default=250)
@@ -101,12 +110,16 @@ def mse(pred, y):
     mse = metrics.mean_squared_error(y, pred)
     return mse
 
-def metric_auc(pred, y):
+def metric_auroc_auprc(pred, y):
     pred = np.array(pred)
     y = np.array(y)
+
     fpr, tpr, thresholds = metrics.roc_curve(y, pred, pos_label=1)
-    auc_score = metrics.auc(fpr, tpr)
-    return auc_score
+    auroc_score = metrics.auc(fpr, tpr)
+
+    auprc_score = metrics.average_precision_score(y, pred)
+
+    return auroc_score, auprc_score
 
 def run_folds(args):
     task_name = args.task_name
@@ -114,6 +127,9 @@ def run_folds(args):
     label_type = args.label_type
     model_type = args.model_type
     static_features_path = args.static_features_path
+    result_score_path = os.path.join(args.working_path, 'output', args.data_name,
+                               "model" + str(args.model_type), "labeltype" + str(args.label_type),
+                               "result_score.txt")
     #############################################################
     # load data
     data_file = np.load(data_file_pathname)
@@ -122,15 +138,12 @@ def run_folds(args):
     if task_name == 'icd9':
         y = data_file['y_icd9'][:, label_type]
         y = (y > 0).astype("float")
-        metric_method = metric_auc
     elif task_name == 'mor':
         y = data_file['adm_labels_all'][:, label_type]
         y = (y > 0).astype("float")
-        metric_method = metric_auc
     elif task_name == 'los':
-        # convert minute to hour
-        y = data_file['y_los'] / 60.0
-        metric_method = mse
+        y = data_file['adm_labels_all'][:, 0]
+        y = (y > 0).astype("float")
     #############################################################
     # make folds
     logger.info(f"making folds..")
@@ -143,7 +156,7 @@ def run_folds(args):
             # Build Dataset
             n_fold += 1
             logger.info(f"loading dataset of fold - {n_fold}..")
-            stats, nsstats = get_standardize_stats_for_training(X_t, X_s)
+            stats, nsstats = get_standardize_stats_for_training(X_t[idx_trva], X_s[idx_trva])
             tranformer = FoldsStandardizer(stats, nsstats)
             train_dataset = customDataset(data_file_pathname, idx_trva, label_type, task_name, tranformer)
             dev_dataset = customDataset(data_file_pathname, idx_te, label_type, task_name, tranformer)
@@ -158,8 +171,8 @@ def run_folds(args):
             # Build Dataset
             n_fold += 1
             logger.info(f"loading dataset of fold - {n_fold}..")
-            tmean = np.nanmean(X_s, axis=0)
-            tstd = np.nanstd(X_s, axis=0)
+            tmean = np.nanmean(X_s[idx_trva], axis=0)
+            tstd = np.nanstd(X_s[idx_trva], axis=0)
             tranformer = StaticFeaturesStandardizer(tmean, tstd)
             train_dataset = staticDataset(data_file_pathname, static_features_path, idx_trva, label_type, task_name, tranformer)
             dev_dataset = staticDataset(data_file_pathname, static_features_path, idx_te, label_type, task_name, tranformer)
@@ -167,8 +180,19 @@ def run_folds(args):
             pred_y, global_y = train(args, n_fold, train_dataset, dev_dataset)
             [pred_y_all.append(o) for o in pred_y]
             [global_y_all.append(o) for o in global_y]
-    result = metric_method(pred_y_all, global_y_all)
-    logger.info("=" * 25 + "Result %f" + "=" * 25, result)
+    if task_name == 'los':
+        mse_score = mse(pred_y_all, global_y_all)
+        logger.info("=" * 25 + "MSE %f" + "=" * 25, mse_score)
+        with open(result_score_path, "w") as f:
+            f.write("MSE: " + str(mse_score))
+            f.close()
+    else:
+        auroc_score, auprc_score = metric_auroc_auprc(pred_y_all, global_y_all)
+        logger.info("=" * 25 + "AUROC %f" + "=" * 25, auroc_score)
+        logger.info("=" * 25 + "AUPRC %f" + "=" * 25, auprc_score)
+        with open(result_score_path, "w") as f:
+            f.write("AUROC: " + str(auroc_score) + " / AUPRC: " + str(auprc_score))
+            f.close()
     #############################################################
 
 
