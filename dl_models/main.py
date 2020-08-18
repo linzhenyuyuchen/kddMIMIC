@@ -2,7 +2,7 @@ import os, yaml, pickle, argparse
 import random, logging, json
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import KFold
+from sklearn.model_selection import KFold, StratifiedShuffleSplit, StratifiedKFold
 
 import torch
 from torch.utils.data import DataLoader, Dataset, SequentialSampler, RandomSampler, TensorDataset
@@ -26,6 +26,8 @@ def set_seed(seed):
     if os.environ.get("DETERMINISTIC", None):
         torch.backends.cudnn.deterministic = True
         torch.backends.cudnn.benchmark = False
+
+set_seed(12321)
 
 def get_arg():
     #### Start here for the common configs ####
@@ -60,59 +62,117 @@ def get_arg():
 
     return arg_parser.parse_args()
 
-def run_folds(args, model):
-    n_samples = args.nb_samples
+def get_model(args):
+    task_name = args.task_name
+    model_type = args.model_type
+    fit_parameters = [args.output_dim, args.ffn_depth, args.merge_depth]
+    batch_normalization = args.batch_normalization
+    dropout = args.dropout
+    without_static = args.without_static
+    static_ffn_depth = args.static_ffn_depth
+    static_hidden_dim = args.static_hidden_dim
+    ##############################################
+    time_step = args.time_step
+    n_features = args.n_features
+    ##############################################
+    # Set tasks
+    if task_name == 'icd9':
+        y_tasks = 2
+    elif task_name == 'mor':
+        y_tasks = 2
+    elif task_name == 'los':
+        y_tasks = 1
+    # Set model
+    if model_type == 1:
+        # build model
+        logger.info(f"model type: HMM, without_static: {without_static}, time_step: {time_step}")
+        model = HierarchicalMultimodal(static = not without_static, size_Xs= 5, dropout = dropout, batch_normalization = batch_normalization,
+                                       time_step = time_step, n_features = n_features, fit_parameters = fit_parameters, y_tasks = y_tasks)
+    elif model_type == 2:
+        # build model
+        logger.info(f"model type: FFN")
+        model = FeedForwardNetwork(n_features=n_features, hidden_dim=static_hidden_dim, y_tasks = y_tasks, ffn_depth=static_ffn_depth, batch_normalization=batch_normalization)
+
+    return model
+
+def mse(pred, y):
+    pred = np.array(pred)
+    y = np.array(y)
+    mse = metrics.mean_squared_error(y, pred)
+    return mse
+
+def metric_auc(pred, y):
+    pred = np.array(pred)
+    y = np.array(y)
+    fpr, tpr, thresholds = metrics.roc_curve(y, pred, pos_label=1)
+    auc_score = metrics.auc(fpr, tpr)
+    return auc_score
+
+def run_folds(args):
     task_name = args.task_name
     data_file_pathname = args.data_file_name
     label_type = args.label_type
     model_type = args.model_type
     static_features_path = args.static_features_path
     #############################################################
-    # n_reps = min(len(splits), 5)
-    # for rep in range(n_reps):
-    #     fold_idxs = splits[rep]
-    #     # n folds in each repeat
-    #     for i_fold, fold_idx in enumerate(fold_idxs):
-    #         # train/validation/test set or train/test set
-    #         if len(fold_idx) == 2:
-    #             idx_trva, idx_te = fold_idx
-    #         elif len(fold_idx) == 3:
-    #             idx_tr, idx_va, idx_te = fold_idx
-    #             idx_trva = np.concatenate((idx_tr, idx_va))
-    #         # Build Dataset
-    #         train_dataset = customDataset(data_file_pathname, idx_trva, tsf, label_type, task_name, model_type)
-    #         dev_dataset = customDataset(data_file_pathname, idx_te, tsf, label_type, task_name, model_type)
-    #         # Train the model
-    #         train(args, train_dataset, dev_dataset, model)
+    # load data
+    data_file = np.load(data_file_pathname)
+    X_s = data_file['adm_features_all']
+    X_t = data_file['ep_tdata']
+    if task_name == 'icd9':
+        y = data_file['y_icd9'][:, label_type]
+        y = (y > 0).astype("float")
+        metric_method = metric_auc
+    elif task_name == 'mor':
+        y = data_file['adm_labels_all'][:, label_type]
+        y = (y > 0).astype("float")
+        metric_method = metric_auc
+    elif task_name == 'los':
+        # convert minute to hour
+        y = data_file['y_los'] / 60.0
+        metric_method = mse
     #############################################################
     # make folds
     logger.info(f"making folds..")
-    X = list(range(n_samples))
-    kf = KFold(n_splits=5, random_state=1, shuffle=True)
+    kf = StratifiedKFold(n_splits=5)
     n_fold = 0
+    pred_y_all = []
+    global_y_all = []
     if model_type == 1:
-        for idx_trva, idx_te in kf.split(X):
+        for idx_trva, idx_te in kf.split(X_t, y):
             # Build Dataset
             n_fold += 1
             logger.info(f"loading dataset of fold - {n_fold}..")
-            train_dataset = customDataset(data_file_pathname, idx_trva, label_type, task_name)
-            dev_dataset = customDataset(data_file_pathname, idx_te, label_type, task_name)
+            stats, nsstats = get_standardize_stats_for_training(X_t, X_s)
+            tranformer = FoldsStandardizer(stats, nsstats)
+            train_dataset = customDataset(data_file_pathname, idx_trva, label_type, task_name, tranformer)
+            dev_dataset = customDataset(data_file_pathname, idx_te, label_type, task_name, tranformer)
             # Train the model
-            train(args, n_fold, train_dataset, dev_dataset, model)
+            pred_y, global_y = train(args, n_fold, train_dataset, dev_dataset)
+            [pred_y_all.append(o) for o in pred_y]
+            [global_y_all.append(o) for o in global_y]
     else:
-        for idx_trva, idx_te in kf.split(X):
+        data_file2 = np.load(static_features_path)
+        X_s = data_file2["hrs_mean_array"]
+        for idx_trva, idx_te in kf.split(X_s, y):
             # Build Dataset
             n_fold += 1
             logger.info(f"loading dataset of fold - {n_fold}..")
-            train_dataset = staticDataset(data_file_pathname, static_features_path, idx_trva, label_type, task_name)
-            dev_dataset = staticDataset(data_file_pathname, static_features_path, idx_te, label_type, task_name)
+            tmean = np.nanmean(X_s, axis=0)
+            tstd = np.nanstd(X_s, axis=0)
+            tranformer = StaticFeaturesStandardizer(tmean, tstd)
+            train_dataset = staticDataset(data_file_pathname, static_features_path, idx_trva, label_type, task_name, tranformer)
+            dev_dataset = staticDataset(data_file_pathname, static_features_path, idx_te, label_type, task_name, tranformer)
             # Train the model
-            train(args, n_fold, train_dataset, dev_dataset, model)
+            pred_y, global_y = train(args, n_fold, train_dataset, dev_dataset)
+            [pred_y_all.append(o) for o in pred_y]
+            [global_y_all.append(o) for o in global_y]
+    result = metric_method(pred_y_all, global_y_all)
+    logger.info("=" * 25 + "Result %f" + "=" * 25, result)
     #############################################################
 
 
-def train(args, n_fold, train_dataset, test_dataset, model):
-    random_seed = args.random_seed
+def train(args, n_fold, train_dataset, test_dataset):
     batch_size = args.batch_size
     learning_rate = args.learning_rate
     nb_epoch = args.nb_epoch
@@ -130,20 +190,21 @@ def train(args, n_fold, train_dataset, test_dataset, model):
     train_batch_size = batch_size
     test_batch_size = batch_size
     #################################################################
-    set_seed(random_seed)
-    #################################################################
     # dataloader
     train_sampler = RandomSampler(train_dataset)
     train_dataloader = DataLoader(train_dataset, sampler=train_sampler, batch_size=train_batch_size,num_workers=4)
     test_sampler = RandomSampler(test_dataset)
     test_dataloader = DataLoader(test_dataset, sampler=test_sampler, batch_size=test_batch_size,num_workers=4)
+    ##############################################
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model = get_model(args)
+    model.to(device)
     #################################################################
     # optimizer
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
     #################################################################
     # train
     logger.info(f"training..")
-    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     bot = BaseBot(model, train_dataloader, test_dataloader, optimizer,
                  log_dir=result_log_path, log_level=logging.INFO,
                  checkpoint_dir=model_path, echo=False,
@@ -156,96 +217,19 @@ def train(args, n_fold, train_dataset, test_dataset, model):
         # save model
         bot.save_model()
         # test
-        bot.predict(test_dataloader)
+        pred_y, global_y = bot.predict(test_dataloader)
     else:
         bot.train_ffn(n_epoch=nb_epoch)
         # save model
         bot.save_model()
         # test
-        bot.predict_ffn(test_dataloader)
-
+        pred_y, global_y = bot.predict_ffn(test_dataloader)
+    return pred_y, global_y
 
 def main():
+    ##############################################
     args = get_arg()
-    DATA_NAME = args.data_name
-    task_name = args.task_name
-    model_type = args.model_type
-    working_path = args.working_path
-    data_file_name = args.data_file_name
-    # folds_file_name = args.folds_file_name
-    # folds_stat_file_name = args.folds_stat_file_name
-    # static_features_path = args.static_features_path
-    fit_parameters = [args.output_dim, args.ffn_depth, args.merge_depth]
-    batch_normalization = args.batch_normalization
-    dropout = args.dropout
-    without_static = args.without_static
-    static_ffn_depth = args.static_ffn_depth
-    static_hidden_dim = args.static_hidden_dim
-    ##############################################
-    time_step = args.time_step
-    n_features = args.n_features
-    ##############################################
-    # folds_file_pathname = os.path.join(data_path, folds_file_name)
-    # folds_stat_file_pathname = os.path.join(data_path, folds_stat_file_name)
-    ##############################################
-    # Load folds
-    # folds_file = np.load(folds_file_pathname)
-    # folds_stat_file = np.load(folds_stat_file_pathname)
-    ##############################################
-    # Set tasks
-    # if TASK_NAME == 'icd9':
-    #     folds = folds_file['folds_ep_icd9_multi'][0]
-    #     folds_stat = folds_stat_file['folds_ep_icd9_multi'][0]
-    # elif TASK_NAME == 'mor':
-    #     folds = folds_file['folds_ep_mor'][label_type]
-    #     folds_stat = folds_stat_file['folds_ep_mor'][label_type]
-    # elif TASK_NAME == 'los':
-    #     folds = folds_file['folds_ep_mor'][0]
-    #     folds_stat = folds_stat_file['folds_ep_mor'][0]
-    # tsfstds = []
-    # if use_sapsii_scores:
-    #     for tr, va, ts in folds[0]:
-    #         tsfstds.append(SAPSIITransformer(np.concatenate((tr, va))))
-    # else:
-    # for serial, non_serial in folds_stat[0]:
-    #     tsfstds.append(FoldsStandardizer(serial, non_serial))
-    ##############################################
-    # Set tasks
-    if task_name == 'icd9':
-        y_tasks = 2
-    elif task_name == 'mor':
-        y_tasks = 2
-    elif task_name == 'los':
-        y_tasks = 1
-    ##############################################
-
-    # Set model
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    if model_type == 1:
-        # build model
-        # if remove_sapsii:
-        #     n_features -= (114-99)
-        logger.info(f"model type: HMM, without_static: {without_static}, time_step: {time_step}")
-        model = HierarchicalMultimodal(static = not without_static, size_Xs= 5, dropout = dropout, batch_normalization = batch_normalization,
-                                       time_step = time_step, n_features = n_features, fit_parameters = fit_parameters, y_tasks = y_tasks)
-        model.to(device)
-        run_folds(args, model)
-    elif model_type == 2:
-        # X_static = np.genfromtxt(os.path.join(static_features_path), delimiter=',')
-        # sftsflist = []
-        # for trainidx, valididx, testidx in folds[0]:
-        #     X_static_train = X_static[np.concatenate([trainidx, valididx]).astype(np.int).flatten(), :]
-        #     tmean = np.nanmean(X_static_train, axis=0)
-        #     tstd = np.nanstd(X_static_train, axis=0)
-        #     sftsflist.append(StaticFeaturesStandardizer(train_mean=tmean, train_std=tstd))
-        # build model
-        # if remove_sapsii:
-        #     n_features -= (114-99)
-        logger.info(f"model type: FFN")
-        model = FeedForwardNetwork(n_features=n_features, hidden_dim=static_hidden_dim, y_tasks = y_tasks, ffn_depth=static_ffn_depth, batch_normalization=batch_normalization)
-        model.to(device)
-        run_folds(args, model)
-    ##############################################
+    run_folds(args)
 
 if __name__ == "__main__":
     main()

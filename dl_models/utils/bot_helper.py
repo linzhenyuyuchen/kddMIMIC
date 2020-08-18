@@ -62,7 +62,6 @@ class BaseBot():
         self.count_model_parameters()
         ###########################################################
         self.set_seed(self.seed)
-        ###########################################################
 
     ##################################
     def count_model_parameters(self):
@@ -258,9 +257,8 @@ class BaseBot():
         return metrics
 
     ##################################
-    def predict(self, loader, return_y=False):
+    def predict(self, loader, return_y=True):
         self.model.eval()
-        outputs1, y_global1 = [], []
         outputs0, y_global0 = [], []
         with torch.no_grad():
             for input_tensors, input_tensors2, y_local in tqdm(loader, ncols=100):
@@ -272,8 +270,6 @@ class BaseBot():
                 [outputs0.append(o) for o in output.cpu().numpy()]
                 [y_global0.append(o) for o in y_local.cpu().numpy()]
 
-                outputs1.append(output.cpu())
-                y_global1.append(y_local.cpu())
         ###########################################################
         if self.y_task == 2:
             result = self.metric_auc(outputs0, y_global0)
@@ -283,13 +279,13 @@ class BaseBot():
             np.savez(os.path.join(self.log_dir, "results.npz"), result=result)
         ###########################################################
         if return_y:
-            return outputs1, y_global1
-        return outputs1
+            return outputs0, y_global0
+        return outputs0
+
 
     ##################################
-    def predict_ffn(self, loader, return_y=False):
+    def predict_ffn(self, loader, return_y=True):
         self.model.eval()
-        outputs1, y_global1 = [], []
         outputs0, y_global0 = [], []
         with torch.no_grad():
             for input_tensors, y_local in tqdm(loader, ncols=100):
@@ -299,8 +295,6 @@ class BaseBot():
                 [outputs0.append(o) for o in output.cpu().numpy()]
                 [y_global0.append(o) for o in y_local.cpu().numpy()]
 
-                outputs1.append(output.cpu())
-                y_global1.append(y_local.cpu())
         ###########################################################
         if self.y_task == 2:
             result = self.metric_auc(outputs0, y_global0)
@@ -310,7 +304,7 @@ class BaseBot():
             np.savez(os.path.join(self.log_dir, "results.npz"), result=result)
         ###########################################################
         if return_y:
-            return outputs1, y_global1
-        return outputs1
+            return outputs0, y_global0
+        return outputs0
 
 

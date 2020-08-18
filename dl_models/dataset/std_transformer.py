@@ -4,32 +4,57 @@ import warnings
 import numpy as np
 warnings.filterwarnings('ignore')
 
+def get_standardize_stats_for_training(ep_tdata, adm_features_all):
+    #trainset = ep_tdata[training_ids]
+    #train_admfeatures = adm_features_all[training_ids]
+    trainset = ep_tdata
+    train_admfeatures = adm_features_all
+    dim = trainset.shape[2]
+    stats = np.empty((dim, 2)) * np.nan
+    for d in range(dim):
+        dim_values = trainset[:, :, d].flatten()
+        dim_mean = np.nanmean(dim_values)
+        dim_std = np.nanstd(dim_values)
+        stats[d, :] = np.array([dim_mean, dim_std])
+    nsdim = adm_features_all.shape[1]
+    nsstats = np.empty((nsdim, 2)) * np.nan
+    for d in range(nsdim):
+        dim_values = train_admfeatures[:, d].flatten()
+        dim_mean = np.nanmean(dim_values)
+        dim_std = np.nanstd(dim_values)
+        nsstats[d, :] = np.array([dim_mean, dim_std])
+    return stats, nsstats
+
 # standardizer for folds
 class FoldsStandardizer(object):
     def __init__(self, serial_series, non_serial_series):
-        self.serial_mean = serial_series[0]
-        self.serial_std = serial_series[1]
-        self.non_serial_mean = non_serial_series[0]
-        self.non_serial_std = non_serial_series[1]
+        self.serial_mean = serial_series[:,0]
+        self.serial_std = serial_series[:,1]
+        self.non_serial_mean = non_serial_series[:,0]
+        self.non_serial_std = non_serial_series[:,1]
 
     def transform(self, X):
-        print(X[0].shape)
-        print(X[1].shape)
+        # print(X[0].shape)
+        # print(X[1].shape)
         assert len(X) == 2
         assert len(X[1].shape) == 3 # (id, time, feature)
         assert len(X[0].shape) == 2 # (id, feature)
+        # print(X[1].shape[2])
+        # print(self.serial_mean.shape[0])
+        # print(X[0].shape[1])
+        # print(self.non_serial_mean.shape[0])
         assert X[1].shape[2] == self.serial_mean.shape[0]
         assert X[1].shape[2] == self.serial_std.shape[0]
         assert X[0].shape[1] == self.non_serial_mean.shape[0]
         assert X[0].shape[1] == self.non_serial_std.shape[0]
         non_serial = np.copy(X[0])
-        for id in xrange(non_serial.shape[0]):
+        for id in range(non_serial.shape[0]):
             non_serial[id, :] = (non_serial[id, :] - self.non_serial_mean) / self.non_serial_std
         non_serial[np.isinf(non_serial)] = 0
         non_serial[np.isnan(non_serial)] = 0
         serial = np.copy(X[1])
-        for id in xrange(serial.shape[0]):
-            for t in xrange(serial.shape[1]):
+        for id in range(serial.shape[0]):
+            for t in range(serial.shape[1]):
                 serial[id, t, :] = (serial[id, t, :] - self.serial_mean) / self.serial_std
         serial[np.isinf(serial)] = 0
         serial[np.isnan(serial)] = 0

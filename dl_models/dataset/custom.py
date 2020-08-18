@@ -59,17 +59,11 @@ class standDataset(Dataset):
 """
 
 class customDataset(Dataset):
-    def __init__(self, data_file_pathname, idxs, label_type, task_name):
+    def __init__(self, data_file_pathname, idxs, label_type, task_name, tranformer):
         data_file = np.load(data_file_pathname)
         ###############################################
         self.X_s = data_file['adm_features_all']
         self.X_t = data_file['ep_tdata']
-        ###############################################
-        # Imputation
-        self.X_s[np.isinf(self.X_s)] = 0
-        self.X_s[np.isnan(self.X_s)] = 0
-        self.X_t[np.isinf(self.X_t)] = 0
-        self.X_t[np.isnan(self.X_t)] = 0
         ###############################################
         # Set tasks
         if task_name == 'icd9':
@@ -88,6 +82,9 @@ class customDataset(Dataset):
         self.X_t = self.X_t[idxs]
         self.y = self.y[idxs]
         ###############################################
+        # Standardization
+        self.X_s, self.X_t = tranformer.transform([self.X_s, self.X_t])
+        ###############################################
         self.len = len(self.y)
 
     def __getitem__(self, index):
@@ -100,15 +97,11 @@ class customDataset(Dataset):
         return self.len
 
 class staticDataset(Dataset):
-    def __init__(self, data_file_pathname, static_features_path, idxs, label_type, task_name):
+    def __init__(self, data_file_pathname, static_features_path, idxs, label_type, task_name, tranformer):
         data_file = np.load(data_file_pathname)
         data_file2 = np.load(static_features_path)
         ###############################################
         self.X_s = data_file2["hrs_mean_array"]
-        ###############################################
-        # Imputation
-        self.X_s[np.isinf(self.X_s)] = 0
-        self.X_s[np.isnan(self.X_s)] = 0
         ###############################################
         # Set tasks
         if task_name == 'icd9':
@@ -125,6 +118,9 @@ class staticDataset(Dataset):
         # Get subset
         self.X_s = self.X_s[idxs]
         self.y = self.y[idxs]
+        ###############################################
+        # Standardization
+        self.X_s = tranformer.transform(self.X_s)
         ###############################################
         self.len = len(self.y)
 
