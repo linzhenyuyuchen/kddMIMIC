@@ -92,12 +92,12 @@ def get_model(args):
     elif task_name == 'los':
         y_tasks = 1
     # Set model
-    if model_type == 1:
+    if args.model_type == 1:
         # build model
         logger.info(f"model type: HMM, without_static: {without_static}, time_step: {time_step}")
         model = HierarchicalMultimodal(static = not without_static, size_Xs= 5, dropout = dropout, batch_normalization = batch_normalization,
                                        time_step = time_step, n_features = n_features, fit_parameters = fit_parameters, y_tasks = y_tasks)
-    elif model_type == 2:
+    elif args.model_type == 2:
         # build model
         logger.info(f"model type: FFN")
         model = FeedForwardNetwork(n_features=n_features, hidden_dim=static_hidden_dim, y_tasks = y_tasks, ffn_depth=static_ffn_depth, batch_normalization=batch_normalization)
@@ -127,8 +127,12 @@ def run_folds(args):
     label_type = args.label_type
     model_type = args.model_type
     static_features_path = args.static_features_path
+    if without_static:
+        model_type = str(model_type) + "_without_static"
+    else:
+        model_type = str(model_type)
     result_score_path = os.path.join(args.working_path, 'output', args.data_name,
-                               "model" + str(args.model_type), "labeltype" + str(args.label_type),
+                               "model" + model_type, "labeltype" + str(args.label_type),
                                "result_score.txt")
     #############################################################
     # load data
@@ -151,7 +155,7 @@ def run_folds(args):
     n_fold = 0
     pred_y_all = []
     global_y_all = []
-    if model_type == 1:
+    if args.model_type == 1:
         for idx_trva, idx_te in kf.split(X_t, y):
             # Build Dataset
             n_fold += 1
@@ -200,10 +204,15 @@ def train(args, n_fold, train_dataset, test_dataset):
     batch_size = args.batch_size
     learning_rate = args.learning_rate
     nb_epoch = args.nb_epoch
+    model_type = args.model_type
     ##############################################
     # Settings for task, model, path, etc
+    if without_static:
+        model_type = str(model_type) + "_without_static"
+    else:
+        model_type = str(model_type)
     result_path = os.path.join(args.working_path, 'output', args.data_name,
-                               "model"+str(args.model_type), "labeltype"+str(args.label_type), "fold_"+str(n_fold))
+                               "model"+model_type, "labeltype"+str(args.label_type), "fold_"+str(n_fold))
     result_log_path = os.path.join(result_path, 'log')
     model_path = os.path.join(result_path, 'model')
     for required_path in [result_path, result_log_path, model_path]:

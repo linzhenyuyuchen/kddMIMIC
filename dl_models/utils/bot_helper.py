@@ -3,6 +3,7 @@ import random, logging, json
 import numpy as np
 import pandas as pd
 from tqdm import tqdm
+from math import cos, pi
 from sklearn import metrics
 
 import torch
@@ -20,6 +21,7 @@ class BaseBot():
         self.train_loader = train_loader
         self.val_loader = val_loader
         self.optimizer = optimizer
+        self.lr = self.optimizer.param_groups[0]['lr']
         self.log_dir = log_dir
         self.log_level = log_level
         self.checkpoint_dir = checkpoint_dir
@@ -88,6 +90,7 @@ class BaseBot():
     ##################################
     def load_model(self, target_path):
         self.model.load_state_dict(torch.load(target_path)["model"])
+
     ##################################
     def save_model(self):
         paths = os.path.join(self.checkpoint_dir,str(self.step)+".pth")
@@ -107,7 +110,6 @@ class BaseBot():
         else:
             return batch[0].size(batch_dim)
 
-
     ##################################
     def mse(self, pred, y):
         pred = np.array(pred)
@@ -115,7 +117,8 @@ class BaseBot():
         mse = metrics.mean_squared_error(y, pred)
         self.logger.info(
             "=" * 20 + "MSE %f" + "=" * 20, mse)
-        return mse
+        res = {"mse": mse}
+        return res
 
     ##################################
     def metric_auc(self, pred, y):
@@ -123,21 +126,11 @@ class BaseBot():
         y = np.array(y)
         fpr, tpr, thresholds = metrics.roc_curve(y, pred, pos_label=1)
         auc_score = metrics.auc(fpr, tpr)
+        auprc_score = metrics.average_precision_score(y, pred)
         self.logger.info(
-            "=" * 20 + "Auc %f" + "=" * 20, auc_score)
-        return auc_score
-        # f1 = metrics.f1_score(y, pred)
-        # acc = metrics.accuracy_score(y, y_pred)
-        # prec = metrics.precision_score(y, y_pred)
-        # rec = metrics.recall_score(y, y_pred)
-        # result = {
-        #     "accuracy: ": acc,
-        #     "precision: ": prec,
-        #     "recall: ": rec,
-        #     "f1_score: ": f1,
-        #     "auc: ": auc_score
-        # }
-        # self.logger.info("Result: ", result)
+            "=" * 20 + "Auc %f / Prc %f" + "=" * 20, (auc_score, auprc_score))
+        res = {"auroc": auc_score, "auprc":auprc_score}
+        return res
 
     ##################################
     def set_seed(self, seed):
@@ -177,12 +170,14 @@ class BaseBot():
             len(self.train_loader)))
         ###########################################################
         # Train starts
-        totol_step = len(self.train_loader) * n_epoch
+        num_iter = len(self.train_loader)
+        totol_step = num_iter * n_epoch
         #while self.step < totol_step:
         with tqdm(range(totol_step)) as pbar:
             for e in range(n_epoch):
                 #self.logger.info("=" * 20 + "Epoch %d" + "=" * 20, epoch)
-                for input_tensors, input_tensors2, targets in self.train_loader:
+                for i, (input_tensors, input_tensors2, targets) in enumerate(self.train_loader):
+                    adjust_learning_rate(e, n_epoch, i, num_iter)
                     input_tensors = input_tensors.to(self.device)
                     input_tensors2 = input_tensors2.to(self.device)
                     targets = self.label_to_device(targets)
@@ -307,4 +302,36 @@ class BaseBot():
             return outputs0, y_global0
         return outputs0
 
+
+    def adjust_learning_rate(self, epoch, n_epochs, iteration, num_iter, lr_decay = 'cos', warmup = True):
+
+        # original learning rate
+        origin_lr = self.lr
+        # learning rate is multiplied by gamma on schedule
+        gamma  = 0.1
+        # decrease learning rate at these epochs
+        schedule = [100, 150, 200]
+
+        warmup_epoch = 5 if warmup else 0
+        warmup_iter = warmup_epoch * num_iter
+        current_iter = iteration + epoch * num_iter
+        max_iter = n_epochs * num_iter
+
+        if lr_decay == 'step':
+            lr = origin_lr * (gamma ** ((current_iter - warmup_iter) // (max_iter - warmup_iter)))
+        elif lr_decay == 'cos':
+            lr = origin_lr * (1 + cos(pi * (current_iter - warmup_iter) / (max_iter - warmup_iter))) / 2
+        elif lr_decay == 'linear':
+            lr = origin_lr * (1 - (current_iter - warmup_iter) / (max_iter - warmup_iter))
+        elif lr_decay == 'schedule':
+            count = sum([1 for s in schedule if s <= epoch])
+            lr = origin_lr * pow(gamma, count)
+        else:
+            raise ValueError('Unknown lr mode {}'.format(lr_decay))
+
+        if epoch < warmup_epoch:
+            lr = origin_lr * current_iter / warmup_iter
+
+        for param_group in self.optimizer.param_groups:
+            param_group['lr'] = lr
 

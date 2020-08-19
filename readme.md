@@ -2,6 +2,7 @@
 
 ## Models
 
+Run `./main.sh` to train and test models with multiple parameters.
 
 ## Datasets
  

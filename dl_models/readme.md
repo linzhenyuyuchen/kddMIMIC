@@ -1,18 +1,8 @@
-# deep learning models
-
-[name of dataset] : mimic3_99p_raw_24h mimic3_99p_raw_48h
+# Deep learning models
 
 [task name] : mor icd9 los
 
 [model type] : 1 => MMDL 2 -> FFN
-
-
-[label type] : 
-
-0 1 2 3 4 5 => ('mor_inhosp', mor24', 'mor48', 'mor72', 'mor30d', 'mor1y')
-
-0 ... 19 => ('icd_group1', ... , 'icd_group20')       
-
 
 ## FFN: Feedforward Network
 
@@ -25,18 +15,10 @@ python [path to the main program('main.py')]
 --n_features 414
 ```
 
-```
-python main.py mimic3_99p_raw_24h mor 2 
---data_file_name imputed-normed-ep_1_24.npz
---label_type 0
---static_features_path ./Data/admdata_99p/24hrs_raw/non_series/input.npz
---n_features 414
-```
 
+## MMDL
 
-
-## MMDL: Feedforward Network + LSTM
-
+### Feedforward Network + LSTM
 ```
 python [path to the main program('main.py')]
 [name of dataset] [task name] 1
@@ -47,22 +29,60 @@ python [path to the main program('main.py')]
 --nb_epoch 200
 ```
 
-```
-python main.py 
-mimic3_99p_raw_24h mor 1 
---data_file_name imputed-normed-ep_1_24.npz
---label_type 0
---time_step 24
---learning_rate 0.001
---nb_epoch 200
-```
-
-```
-python main.py icd9 icd9 1 --label_type 2  --time_step 24  --nb_epoch 20 --without_static
-```
-
----
-
 ### LSTM: LSTM only
 
 add `--without_static`
+
+# Training commands
+
+time_step: 24, 48
+
+data_file_name: imputed-normed-ep_1_24.npz imputed-normed-ep_1_48.npz
+
+static_features_path: tsmean_24hrs.npz tsmean_48hrs.npz
+
+## Task 1: length of stay
+
+### Model: MMDL
+
+```
+python main.py los los 1 --learning_rate 0.005 --time_step 24 --data_file_name imputed-normed-ep_1_24.npz
+```
+
+### Model: FFN
+
+```
+python main.py los los 2 --learning_rate 0.005 --time_step 24 --static_features_path tsmean_24hrs.npz
+```
+
+## Task 2: icd-9 group
+
+label_type: 0, 1, 2, ..., 19 => ('icd_group1', ... , 'icd_group20')   
+ 
+### Model: MMDL
+
+```
+python main.py icd9 icd9 1 --label_type 0 --time_step 24 --data_file_name imputed-normed-ep_1_24.npz
+```
+
+### Model: FFN
+
+```
+python main.py icd9 icd9 2 --label_type 0 --time_step 24 --static_features_path tsmean_24hrs.npz
+```
+
+## Task 3: mortality
+
+label_type: 0, 1, 2, 3, 4 => ('mor_inhosp', mor24', 'mor48', 'mor72', 'mor30d', 'mor1y')
+
+### Model: MMDL
+
+```
+python main.py mor mor 1 --label_type 0 --time_step 24 --data_file_name imputed-normed-ep_1_24.npz
+```
+
+### Model: FFN
+
+```
+python main.py mor mor 2 --label_type 0 --time_step 24 --static_features_path tsmean_24hrs.npz
+```
