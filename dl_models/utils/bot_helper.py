@@ -8,23 +8,28 @@ from sklearn import metrics
 
 import torch
 from torch.nn.utils.clip_grad import clip_grad_norm_
+from torch.optim import lr_scheduler
+
+from .pytorchtools import EarlyStopping
 
 class BaseBot():
     ##################################
     def __init__(self, model, train_loader, val_loader, optimizer,
                  log_dir="./cache/logs/", log_level=logging.INFO,
                  checkpoint_dir="./cache/model_cache/", echo=False,
-                 device="cuda:0", use_tensorboard=False, use_amp=False, seed=123, n_gpus=1):
+                 device="cuda:0", use_tensorboard=False, use_amp=False, seed=12321, n_gpus=1, patience=20):
         super(BaseBot, self).__init__()
         self.criterion = torch.nn.CrossEntropyLoss()
         self.model = model
         self.train_loader = train_loader
         self.val_loader = val_loader
+        self.patience = patience
         self.optimizer = optimizer
         self.lr = self.optimizer.param_groups[0]['lr']
         self.log_dir = log_dir
         self.log_level = log_level
         self.checkpoint_dir = checkpoint_dir
+        self.checkpoint_path = os.path.join(self.checkpoint_dir, "checkpoint.pt")
         self.echo = echo
         self.device = device
         self.use_tensorboard = use_tensorboard
@@ -36,6 +41,8 @@ class BaseBot():
         self.clip_grad = 0
         self.batch_dim = 0
         self.y_task = 2
+        ###########################################################
+        self.scheduler = lr_scheduler.ReduceLROnPlateau(self.optimizer, factor=0.1, patience=int(self.patience/2), verbose=True)
         ###########################################################
         for path in [self.log_dir, self.checkpoint_dir]:
             if not os.path.exists(path) or not os.path.isdir(path):
@@ -126,9 +133,10 @@ class BaseBot():
         y = np.array(y)
         fpr, tpr, thresholds = metrics.roc_curve(y, pred, pos_label=1)
         auc_score = metrics.auc(fpr, tpr)
+        auc_score = metrics.roc_auc_score(y, pred)
         auprc_score = metrics.average_precision_score(y, pred)
         self.logger.info(
-            "=" * 20 + "Auc %f / Prc %f" + "=" * 20, (auc_score, auprc_score))
+            "=" * 20 + "Auc %f / Prc %f" + "=" * 20, auc_score, auprc_score)
         res = {"auroc": auc_score, "auprc":auprc_score}
         return res
 
@@ -155,9 +163,9 @@ class BaseBot():
         output = self.model([input_tensors, input_tensors2])
         batch_loss = self.criterion(output, target)
         batch_loss.backward()
+        #self.scheduler.step(batch_loss)
         self.optimizer.step()
         self.optimizer.zero_grad()
-        # self.logger.info(f"output: {output}, target: {target}.")
         return batch_loss.data.cpu().item(), 0
 
     ##################################
@@ -169,27 +177,74 @@ class BaseBot():
         self.logger.info("Batches per epoch: {}".format(
             len(self.train_loader)))
         ###########################################################
-        # Train starts
+        # to track the training loss as the model trains
+        train_losses = []
+        # to track the validation loss as the model trains
+        valid_losses = []
+        # to track the average training loss per epoch as the model trains
+        avg_train_losses = []
+        # to track the average validation loss per epoch as the model trains
+        avg_valid_losses = []
+        # initialize the early_stopping object
+        early_stopping = EarlyStopping(patience=self.patience, verbose=True, path=self.checkpoint_path)
+        ###########################################################
         num_iter = len(self.train_loader)
         totol_step = num_iter * n_epoch
-        #while self.step < totol_step:
         with tqdm(range(totol_step)) as pbar:
             for e in range(n_epoch):
+                ###################
+                # train the model #
+                ###################
+                self.model.train()
                 #self.logger.info("=" * 20 + "Epoch %d" + "=" * 20, epoch)
                 for i, (input_tensors, input_tensors2, targets) in enumerate(self.train_loader):
-                    adjust_learning_rate(e, n_epoch, i, num_iter)
+                    #self.adjust_learning_rate(e, n_epoch, i, num_iter)
                     input_tensors = input_tensors.to(self.device)
                     input_tensors2 = input_tensors2.to(self.device)
                     targets = self.label_to_device(targets)
                     train_loss, train_weight = self.train_one_step(input_tensors, input_tensors2, targets)
-                    # if self.step % 100 == 0:
-                    #     self.logger.info("train_loss: %8f" %train_loss)
+                    train_losses.append(train_loss)
                     if self.step > totol_step:
                         break
                     self.step += 1
                     pbar.set_description("Loss-%8f" % train_loss)
                     pbar.update(1)
+                ####################
+                #validate the model#
+                ####################
+                self.model.eval()
+                valid_loss_list = self.eval(self.val_loader)
+                valid_losses.extend(valid_loss_list)
+                ####################
+                #  early stopping  #
+                ####################
+                # print training/validation statistics
+                # calculate average loss over an epoch
+                train_loss = np.mean(train_losses)
+                valid_loss = np.mean(valid_losses)
+                avg_train_losses.append(train_loss)
+                avg_valid_losses.append(valid_loss)
+
+                epoch_len = len(str(n_epoch))
+                print_msg = (f'[{e:>{epoch_len}}/{n_epoch:>{epoch_len}}] ' +
+                             f'train_loss: {train_loss:.5f} ' +
+                             f'valid_loss: {valid_loss:.5f}')
+                self.logger.info(print_msg)
+
+                # clear lists to track next epoch
+                train_losses = []
+                valid_losses = []
+
+                # early_stopping needs the validation loss to check if it has decresed,
+                # and if it has, it will make a checkpoint of the current model
+                early_stopping(valid_loss, self.model)
+
+                if early_stopping.early_stop:
+                    print("Early stopping")
+                    break
         self.logger.info("finishing training..")
+        # load the last checkpoint with the best model
+        self.model.load_state_dict(torch.load(self.checkpoint_path))
 
     ##################################
     def train_ffn(self, n_epoch=None):
@@ -200,13 +255,25 @@ class BaseBot():
         self.logger.info("Batches per epoch: {}".format(
             len(self.train_loader)))
         ###########################################################
+        # to track the training loss as the model trains
+        train_losses = []
+        # to track the validation loss as the model trains
+        valid_losses = []
+        # to track the average training loss per epoch as the model trains
+        avg_train_losses = []
+        # to track the average validation loss per epoch as the model trains
+        avg_valid_losses = []
+        # initialize the early_stopping object
+        early_stopping = EarlyStopping(patience=self.patience, verbose=True, path=self.checkpoint_path)
+        ###########################################################
         # Train starts
-        self.model.train()
         totol_step = len(self.train_loader) * n_epoch
-        #while self.step < totol_step:
         with tqdm(range(totol_step)) as pbar:
             for e in range(n_epoch):
-                #self.logger.info("=" * 20 + "Epoch %d" + "=" * 20, epoch)
+                ###################
+                # train the model #
+                ###################
+                self.model.train()
                 for input_tensors, targets in self.train_loader:
                     input_tensors = input_tensors.to(self.device)
                     targets = self.label_to_device(targets)
@@ -221,35 +288,73 @@ class BaseBot():
                         break
                     self.step += 1
                     train_loss = batch_loss.data.cpu().item()
+                    train_losses.append(train_loss)
                     pbar.set_description("Loss-%8f" % train_loss)
                     pbar.update(1)
+                ####################
+                #validate the model#
+                ####################
+                self.model.eval()
+                valid_loss_list = self.eval_ffn(self.val_loader)
+                valid_losses.extend(valid_loss_list)
+                ####################
+                #  early stopping  #
+                ####################
+                # print training/validation statistics
+                # calculate average loss over an epoch
+                train_loss = np.mean(train_losses)
+                valid_loss = np.mean(valid_losses)
+                avg_train_losses.append(train_loss)
+                avg_valid_losses.append(valid_loss)
+
+                epoch_len = len(str(n_epoch))
+                print_msg = (f'[{e:>{epoch_len}}/{n_epoch:>{epoch_len}}] ' +
+                             f'train_loss: {train_loss:.5f} ' +
+                             f'valid_loss: {valid_loss:.5f}')
+                self.logger.info(print_msg)
+
+                # clear lists to track next epoch
+                train_losses = []
+                valid_losses = []
+
+                # early_stopping needs the validation loss to check if it has decresed,
+                # and if it has, it will make a checkpoint of the current model
+                early_stopping(valid_loss, self.model)
+
+                if early_stopping.early_stop:
+                    print("Early stopping")
+                    break
         self.logger.info("finishing training..")
+        self.logger.info("final learning rate: %f", self.optimizer.param_groups[0]['lr'])
+        # load the last checkpoint with the best model
+        self.model.load_state_dict(torch.load(self.checkpoint_path))
 
     ##################################
     def eval(self, loader):
         self.model.eval()
-        preds, ys = [], []
-        losses, weights = [], []
-        self.logger.debug("Evaluating...")
+        valid_loss_list = []
         with torch.no_grad():
-            for input_tensors, input_tensors2, y_local in tqdm(loader, ncols=100):
+            for input_tensors, input_tensors2, y_local in loader:
                 input_tensors = input_tensors.to(self.device)
                 input_tensors2 = input_tensors2.to(self.device)
                 y_local = self.label_to_device(y_local)
                 output = self.model([input_tensors, input_tensors2])
-                batch_loss, weights = self.criterion(output, y_local)
-                losses.append(batch_loss.data.cpu().item())
-                # Save batch labels and predictions
-                preds.append(output.cpu())
-                ys.append(y_local.cpu())
-        loss = np.average(losses, weights=weights)
-        metrics = {"loss": (loss, self.loss_format % loss),
-                   "predict_y": preds,
-                   "gt_y": ys
-                   }
+                batch_loss = self.criterion(output, y_local)
+                valid_loss_list.append(batch_loss.data.cpu().item())
+        return valid_loss_list
 
-        self.logger.info("Eval results: {}".format(metrics))
-        return metrics
+    ##################################
+    def eval_ffn(self, loader):
+        self.model.eval()
+        valid_loss_list = []
+        with torch.no_grad():
+            for input_tensors, y_local in loader:
+                input_tensors = input_tensors.to(self.device)
+                y_local = self.label_to_device(y_local)
+                output = self.model(input_tensors)
+                batch_loss = self.criterion(output, y_local)
+                valid_loss_list.append(batch_loss.data.cpu().item())
+        return valid_loss_list
 
     ##################################
     def predict(self, loader, return_y=True):

@@ -123,7 +123,7 @@ y_los: list [n_times, int()]
 ep_tdata : list [ N_samples, array(24Hours, 136) ]
 adm_features_all: list [ N_samples, array(5) ]
 y_icd9: list [ N_samples, array(20) ]
-adm_labels_all: list [ N_samples, array(5) ]
+adm_labels_all: list [ N_samples, array(6) ]
 y_los: list [N_samples, int()]
 ```
 

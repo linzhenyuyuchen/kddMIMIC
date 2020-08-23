@@ -4,6 +4,8 @@ import numpy as np
 import pandas as pd
 from sklearn.model_selection import KFold, StratifiedShuffleSplit, StratifiedKFold
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+
 import torch
 from torch.utils.data import DataLoader, Dataset, SequentialSampler, RandomSampler, TensorDataset
 from torch.utils.data.distributed import DistributedSampler
@@ -51,13 +53,14 @@ def get_arg():
     # arg_parser.add_argument('--folds_stat_file_name', type=str, default="..")
     arg_parser.add_argument('--static_features_path', type=str, default="/data3/Benchmarking_DL_MIMICIII/Data/admdata_99p/24hrs_raw/non_series/tsmean_24hrs.npz")
     arg_parser.add_argument('--label_type', type=int, default=0)
-    arg_parser.add_argument('--working_path', '-p', type=str, default='../')
+    arg_parser.add_argument('--working_path', '-p', type=str, default='/data3/lzylzy/kdd-mimic/')
     arg_parser.add_argument('--random_seed', type=int, default=12321)
     # training
-    arg_parser.add_argument('--batch_size', type=int, default=100)
-    arg_parser.add_argument('--nb_epoch', type=int, default=250)
+    arg_parser.add_argument('--batch_size', type=int, default=48)
+    arg_parser.add_argument('--nb_epoch', type=int, default=500)
     arg_parser.add_argument('--batch_normalization', type=str, default='True')
-    arg_parser.add_argument('--learning_rate', type=float, default=0.001)
+    arg_parser.add_argument('--learning_rate', type=float, default=0.0001)
+    arg_parser.add_argument('--early_stopping_patience', type=float, default=20)
     # models
     arg_parser.add_argument('--without_static', action='store_true')
     arg_parser.add_argument('--ffn_depth', type=int, default=1)
@@ -114,9 +117,21 @@ def metric_auroc_auprc(pred, y):
     pred = np.array(pred)
     y = np.array(y)
 
-    fpr, tpr, thresholds = metrics.roc_curve(y, pred, pos_label=1)
-    auroc_score = metrics.auc(fpr, tpr)
+    pred01 = (pred > 0.5).astype(int)
 
+    cv_acc_score = metrics.accuracy_score(y, pred01)
+    cv_prec_score = metrics.precision_score(y, pred01)
+    cv_rec_score = metrics.recall_score(y, pred01)
+    cv_f1_score = metrics.f1_score(y, pred01)
+    logger.info("=" * 25 + "Accuracy  %f" + "=" * 25, cv_acc_score)
+    logger.info("=" * 25 + "Precision %f" + "=" * 25, cv_prec_score)
+    logger.info("=" * 25 + "Recall    %f" + "=" * 25, cv_rec_score)
+    logger.info("=" * 25 + "F1 score  %f" + "=" * 25, cv_f1_score)
+
+    # fpr, tpr, thresholds = metrics.roc_curve(y, pred, pos_label=1)
+    # auroc_score = metrics.auc(fpr, tpr)
+
+    auroc_score = metrics.roc_auc_score(y, pred)
     auprc_score = metrics.average_precision_score(y, pred)
 
     return auroc_score, auprc_score
@@ -127,11 +142,11 @@ def run_folds(args):
     label_type = args.label_type
     model_type = args.model_type
     static_features_path = args.static_features_path
-    if without_static:
+    if args.without_static:
         model_type = str(model_type) + "_without_static"
     else:
         model_type = str(model_type)
-    result_score_path = os.path.join(args.working_path, 'output', args.data_name,
+    result_score_path = os.path.join(args.working_path, 'output', args.data_name, 'time_step'+str(args.time_step),
                                "model" + model_type, "labeltype" + str(args.label_type),
                                "result_score.txt")
     #############################################################
@@ -151,37 +166,67 @@ def run_folds(args):
     #############################################################
     # make folds
     logger.info(f"making folds..")
-    kf = StratifiedKFold(n_splits=5)
+    nfold = 5
+    # kf = StratifiedKFold(n_splits=nfold)
+    kf = StratifiedShuffleSplit(n_splits=nfold, test_size=0.2, random_state=0)
     n_fold = 0
     pred_y_all = []
     global_y_all = []
     if args.model_type == 1:
-        for idx_trva, idx_te in kf.split(X_t, y):
+
+        idx_trva_list = []
+        idx_te_list = []
+        for idx_tr, idx_te in kf.split(X_t, y):
+            idx_trva_list.append(idx_tr)
+            idx_te_list.append(idx_te)
+        idx_list = np.empty([nfold, 3], dtype=object)
+        for i in range(nfold):
+            idx_list[i][0] = np.setdiff1d(idx_trva_list[i], idx_te_list[(i + 1) % nfold], True)
+            idx_list[i][1] = idx_te_list[(i + 1) % nfold]
+            idx_list[i][2] = idx_te_list[i]
+
+        for idx_tr, idx_va, idx_te in idx_list:
             # Build Dataset
             n_fold += 1
             logger.info(f"loading dataset of fold - {n_fold}..")
+            idx_trva = np.concatenate([idx_tr, idx_va])
             stats, nsstats = get_standardize_stats_for_training(X_t[idx_trva], X_s[idx_trva])
             tranformer = FoldsStandardizer(stats, nsstats)
-            train_dataset = customDataset(data_file_pathname, idx_trva, label_type, task_name, tranformer)
-            dev_dataset = customDataset(data_file_pathname, idx_te, label_type, task_name, tranformer)
+            train_dataset = customDataset(data_file_pathname, idx_tr, label_type, task_name, tranformer)
+            val_dataset = customDataset(data_file_pathname, idx_va, label_type, task_name, tranformer)
+            test_dataset = customDataset(data_file_pathname, idx_te, label_type, task_name, tranformer)
             # Train the model
-            pred_y, global_y = train(args, n_fold, train_dataset, dev_dataset)
+            pred_y, global_y = train(args, n_fold, train_dataset, val_dataset, test_dataset)
             [pred_y_all.append(o) for o in pred_y]
             [global_y_all.append(o) for o in global_y]
     else:
         data_file2 = np.load(static_features_path)
         X_s = data_file2["hrs_mean_array"]
-        for idx_trva, idx_te in kf.split(X_s, y):
+
+        idx_trva_list = []
+        idx_te_list = []
+        for idx_tr, idx_te in kf.split(X_s, y):
+            idx_trva_list.append(idx_tr)
+            idx_te_list.append(idx_te)
+        idx_list = np.empty([nfold, 3], dtype=object)
+        for i in range(nfold):
+            idx_list[i][0] = np.setdiff1d(idx_trva_list[i], idx_te_list[(i + 1) % nfold], True)
+            idx_list[i][1] = idx_te_list[(i + 1) % nfold]
+            idx_list[i][2] = idx_te_list[i]
+
+        for idx_tr, idx_va, idx_te in idx_list:
             # Build Dataset
             n_fold += 1
             logger.info(f"loading dataset of fold - {n_fold}..")
+            idx_trva = np.concatenate([idx_tr, idx_va])
             tmean = np.nanmean(X_s[idx_trva], axis=0)
             tstd = np.nanstd(X_s[idx_trva], axis=0)
             tranformer = StaticFeaturesStandardizer(tmean, tstd)
-            train_dataset = staticDataset(data_file_pathname, static_features_path, idx_trva, label_type, task_name, tranformer)
-            dev_dataset = staticDataset(data_file_pathname, static_features_path, idx_te, label_type, task_name, tranformer)
+            train_dataset = staticDataset(data_file_pathname, static_features_path, idx_tr, label_type, task_name, tranformer)
+            val_dataset = staticDataset(data_file_pathname, static_features_path, idx_va, label_type, task_name, tranformer)
+            test_dataset = staticDataset(data_file_pathname, static_features_path, idx_te, label_type, task_name, tranformer)
             # Train the model
-            pred_y, global_y = train(args, n_fold, train_dataset, dev_dataset)
+            pred_y, global_y = train(args, n_fold, train_dataset, val_dataset, test_dataset)
             [pred_y_all.append(o) for o in pred_y]
             [global_y_all.append(o) for o in global_y]
     if task_name == 'los':
@@ -200,18 +245,20 @@ def run_folds(args):
     #############################################################
 
 
-def train(args, n_fold, train_dataset, test_dataset):
+def train(args, n_fold, train_dataset, val_dataset, test_dataset):
     batch_size = args.batch_size
     learning_rate = args.learning_rate
     nb_epoch = args.nb_epoch
     model_type = args.model_type
+    random_seed = args.random_seed
+    early_stopping_patience = args.early_stopping_patience
     ##############################################
     # Settings for task, model, path, etc
-    if without_static:
+    if args.without_static:
         model_type = str(model_type) + "_without_static"
     else:
         model_type = str(model_type)
-    result_path = os.path.join(args.working_path, 'output', args.data_name,
+    result_path = os.path.join(args.working_path, 'output', args.data_name, 'time_step'+str(args.time_step),
                                "model"+model_type, "labeltype"+str(args.label_type), "fold_"+str(n_fold))
     result_log_path = os.path.join(result_path, 'log')
     model_path = os.path.join(result_path, 'model')
@@ -221,11 +268,14 @@ def train(args, n_fold, train_dataset, test_dataset):
     logger.info(f"output dir: {result_path}")
     #################################################################
     train_batch_size = batch_size
+    val_batch_size = batch_size
     test_batch_size = batch_size
     #################################################################
     # dataloader
     train_sampler = RandomSampler(train_dataset)
     train_dataloader = DataLoader(train_dataset, sampler=train_sampler, batch_size=train_batch_size,num_workers=4)
+    val_sampler = RandomSampler(val_dataset)
+    val_dataloader = DataLoader(val_dataset, sampler=val_sampler, batch_size=val_batch_size,num_workers=4)
     test_sampler = RandomSampler(test_dataset)
     test_dataloader = DataLoader(test_dataset, sampler=test_sampler, batch_size=test_batch_size,num_workers=4)
     ##############################################
@@ -234,14 +284,15 @@ def train(args, n_fold, train_dataset, test_dataset):
     model.to(device)
     #################################################################
     # optimizer
-    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+    # optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+    optimizer = torch.optim.RMSprop(model.parameters(), lr=learning_rate)
     #################################################################
     # train
     logger.info(f"training..")
-    bot = BaseBot(model, train_dataloader, test_dataloader, optimizer,
+    bot = BaseBot(model, train_dataloader, val_dataloader, optimizer,
                  log_dir=result_log_path, log_level=logging.INFO,
                  checkpoint_dir=model_path, echo=False,
-                 device=device, use_tensorboard=False, use_amp=False, seed=123, n_gpus=1)
+                 device=device, use_tensorboard=False, use_amp=False, seed=random_seed, n_gpus=1, patience=early_stopping_patience)
     if args.task_name == "los":
         bot.set_label_type(1)
         bot.set_loss_function("MSELoss")

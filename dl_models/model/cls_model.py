@@ -11,9 +11,20 @@ import torch
 import torch.nn.functional as F
 import torch.nn as nn
 import torch.optim as optim
+import torch.nn.init as init
 from torch.utils.data import DataLoader
 
 warnings.filterwarnings('ignore')
+
+def kaiming_init(m):
+    if isinstance(m, (nn.Linear, nn.Conv2d)):
+        init.kaiming_normal_(m.weight)
+        if m.bias is not None:
+            m.bias.data.fill_(0)
+    elif isinstance(m, (nn.BatchNorm1d, nn.BatchNorm2d)):
+        m.weight.data.fill_(1)
+        if m.bias is not None:
+            m.bias.data.fill_(0)
 
 class newLayer(nn.Module):
     def __init__(self, in_features, out_features):
@@ -23,6 +34,13 @@ class newLayer(nn.Module):
         self.layer = nn.Sequential(nn.Linear(self.in_features, self.out_features),
                                    nn.Sigmoid(),
                                    nn.Dropout(0.2))
+
+        self.weight_init()
+
+    def weight_init(self):
+        for m in self.layer.modules():
+            kaiming_init(m)
+
     def forward(self, x):
         out = self.layer(x)
         return out
@@ -55,6 +73,16 @@ class FeedForwardNetwork(nn.Module):
         self.linear2 = nn.Linear(self.hidden_dim, self.y_tasks)
         self.bn = nn.BatchNorm1d(self.y_tasks)
         #self.sigmoid = nn.Sigmoid()
+
+        self.weight_init()
+
+    def weight_init(self):
+        for m in self.linear1.modules():
+            kaiming_init(m)
+        for m in self.linear2.modules():
+            kaiming_init(m)
+        for m in self.bn.modules():
+            kaiming_init(m)
 
     def forward(self, x):
         x = self.linear1(x)
@@ -108,7 +136,7 @@ class SimpleLSTMNetwork(nn.Module):
 
 
 class HierarchicalMultimodal(nn.Module):
-    def __init__(self, static = True, size_Xs= 5, dropout = 0.1, batch_normalization = 'False',
+    def __init__(self, static = True, size_Xs= 5, dropout = 0.1, batch_normalization = 'True',
                  time_step = 48, n_features = 136, fit_parameters = [2,1,0], y_tasks = 2):
         super(HierarchicalMultimodal, self).__init__()
 
@@ -174,6 +202,14 @@ class HierarchicalMultimodal(nn.Module):
                 self.model_merge.add_module("bn", nn.BatchNorm1d(self.y_tasks))
             #self.model_merge.add_module("sg_last", nn.Sigmoid())
 
+        self.weight_init()
+
+    def weight_init(self):
+        if self.static:
+            for m in self.FFNmodel.modules():
+                kaiming_init(m)
+        for m in self.model_merge.modules():
+            kaiming_init(m)
 
     def forward(self, x):
         if self.static:
@@ -216,8 +252,12 @@ class HierarchicalMultimodal(nn.Module):
         return torch.tensor(ans)
 
 if __name__ == '__main__':
-    input0 = torch.rand(4, 5)
-    input1 = torch.rand(4, 48, 136)
+    # input0 = torch.rand(4, 5)
+    # input1 = torch.rand(4, 48, 136)
     model = HierarchicalMultimodal()
-    output = model([input0, input1])
-    print(output)
+    print(model)
+    # output = model([input0, input1])
+    # print(output)
+    print("======================================")
+    model2 = FeedForwardNetwork()
+    print(model2)

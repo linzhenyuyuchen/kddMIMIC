@@ -83,7 +83,8 @@ class customDataset(Dataset):
         self.y = self.y[idxs]
         ###############################################
         # Standardization
-        self.X_s, self.X_t = tranformer.transform([self.X_s, self.X_t])
+        if tranformer is not None:
+            self.X_s, self.X_t = tranformer.transform([self.X_s, self.X_t])
         ###############################################
         self.len = len(self.y)
 
@@ -120,7 +121,8 @@ class staticDataset(Dataset):
         self.y = self.y[idxs]
         ###############################################
         # Standardization
-        self.X_s = tranformer.transform(self.X_s)
+        if tranformer is not None:
+            self.X_s = tranformer.transform(self.X_s)
         ###############################################
         self.len = len(self.y)
 

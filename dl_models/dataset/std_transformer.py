@@ -50,12 +50,23 @@ class FoldsStandardizer(object):
         non_serial = np.copy(X[0])
         for id in range(non_serial.shape[0]):
             non_serial[id, :] = (non_serial[id, :] - self.non_serial_mean) / self.non_serial_std
+
+        # for id in range(non_serial.shape[1]):
+        #     flag = np.isinf(non_serial[:, id])
+        #     flag2 = np.isnan(non_serial[:, id])
+        #     non_serial[:, id][flag] = self.non_serial_mean[id]
+        #     non_serial[:, id][flag2] = self.non_serial_mean[id]
         non_serial[np.isinf(non_serial)] = 0
         non_serial[np.isnan(non_serial)] = 0
         serial = np.copy(X[1])
         for id in range(serial.shape[0]):
             for t in range(serial.shape[1]):
                 serial[id, t, :] = (serial[id, t, :] - self.serial_mean) / self.serial_std
+        # for id in range(serial.shape[1]):
+        #     flag = np.isinf(serial[:, id])
+        #     flag2 = np.isnan(serial[:, id])
+        #     serial[:, id][flag] = self.serial_mean[id]
+        #     serial[:, id][flag2] = self.serial_mean[id]
         serial[np.isinf(serial)] = 0
         serial[np.isnan(serial)] = 0
         return [non_serial, serial]
@@ -69,6 +80,11 @@ class StaticFeaturesStandardizer(object):
         Xtrans = (X - self.train_mean) / self.train_std
         Xtrans[np.isinf(Xtrans)] = 0.0
         Xtrans[np.isnan(Xtrans)] = 0.0
+        # for id in range(Xtrans.shape[1]):
+        #     flag = np.isinf(Xtrans[:, id])
+        #     flag2 = np.isnan(Xtrans[:, id])
+        #     Xtrans[:, id][flag] = self.train_mean[id]
+        #     Xtrans[:, id][flag2] = self.train_mean[id]
         return Xtrans
 
 class SAPSIITransformer(object):
