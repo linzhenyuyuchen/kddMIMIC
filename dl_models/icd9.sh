@@ -14,7 +14,7 @@ func_run(){
     echo "==========================================================================="
     python main.py icd9 icd9 1 --label_type $num --time_step $time_step --data_file_name $data_file_name --without_static
     echo "==========================================================================="
-    python main.py icd9 icd9 2 --label_type $num --n_features 414 --time_step $time_step --static_features_path $static_features_path
+    python main.py icd9 icd9 2 --label_type $num --n_features 414 --time_step $time_step --static_features_path $static_features_path --data_file_name $data_file_name
   done
 }
 # 24 hours

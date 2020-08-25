@@ -119,10 +119,13 @@ def metric_auroc_auprc(pred, y):
 
     pred01 = (pred > 0.5).astype(int)
 
+    cm = metrics.confusion_matrix(y, pred01)
     cv_acc_score = metrics.accuracy_score(y, pred01)
     cv_prec_score = metrics.precision_score(y, pred01)
     cv_rec_score = metrics.recall_score(y, pred01)
     cv_f1_score = metrics.f1_score(y, pred01)
+    logger.info("=" * 25 + "Confusion Matrix" + "=" * 25)
+    logger.info(cm)
     logger.info("=" * 25 + "Accuracy  %f" + "=" * 25, cv_acc_score)
     logger.info("=" * 25 + "Precision %f" + "=" * 25, cv_prec_score)
     logger.info("=" * 25 + "Recall    %f" + "=" * 25, cv_rec_score)

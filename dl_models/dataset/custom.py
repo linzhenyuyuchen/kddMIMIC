@@ -76,6 +76,8 @@ class customDataset(Dataset):
         elif task_name == 'los':
             # convert minute to hour
             self.y = data_file['y_los'] / 60.0
+            # convert minute to years
+            #self.y = data_file['y_los'] / 60.0 / 24.0 / 365.0
         ###############################################
         # Get subset
         self.X_s = self.X_s[idxs]
@@ -115,6 +117,8 @@ class staticDataset(Dataset):
         elif task_name == 'los':
             # convert minute to hour
             self.y = data_file['y_los'] / 60.0
+            # convert minute to years
+            #self.y = data_file['y_los'] / 60.0 / 24.0 / 365.0
         ###############################################
         # Get subset
         self.X_s = self.X_s[idxs]
