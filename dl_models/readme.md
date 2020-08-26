@@ -140,9 +140,9 @@ python main.py mor mor 2 --label_type 0 --time_step 24 --static_features_path ts
 
 | label | AUROC | AUPRC |
 | ----  | ----  | ----  |
-|inhsp	|0.865 	|0.567 |
+|inhsp	|0.899 	|0.576 |
 |2days	|0.691 	|0.116 |
-|3days	|0.739 	|0.233 |
+|3days	|0.895 	|0.252 |
 |30days	|0.870 	|0.602 |
 |1year	|0.848 	|0.664 |
 
@@ -151,7 +151,7 @@ python main.py mor mor 2 --label_type 0 --time_step 24 --static_features_path ts
 
 | label | AUROC | AUPRC |
 | ----  | ----  | ----  |
-|inhsp	|0.854 	|0.559 |
-|3days	|0.690 	|0.162 |
-|30days	|0.850 	|0.590 |
-|1year	|0.842 	|0.653 |
+|inhsp	|0.903 	|0.568 |
+|3days	|0.881 	|0.177 |
+|30days	|0.879 	|0.580 |
+|1year	|0.845 	|0.644 |

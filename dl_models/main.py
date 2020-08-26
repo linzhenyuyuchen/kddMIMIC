@@ -15,6 +15,7 @@ from transformers import (WEIGHTS_NAME, AdamW, get_linear_schedule_with_warmup,
 from model.cls_model import *
 from dataset.custom import *
 from dataset.std_transformer import *
+from dataset.torchsampler import *
 from utils.bot_helper import *
 
 logger = logging.getLogger(__name__)
@@ -124,20 +125,29 @@ def metric_auroc_auprc(pred, y):
     cv_prec_score = metrics.precision_score(y, pred01)
     cv_rec_score = metrics.recall_score(y, pred01)
     cv_f1_score = metrics.f1_score(y, pred01)
+    auroc_score = metrics.roc_auc_score(y, pred)
+    auprc_score = metrics.average_precision_score(y, pred)
+
     logger.info("=" * 25 + "Confusion Matrix" + "=" * 25)
     logger.info(cm)
     logger.info("=" * 25 + "Accuracy  %f" + "=" * 25, cv_acc_score)
     logger.info("=" * 25 + "Precision %f" + "=" * 25, cv_prec_score)
     logger.info("=" * 25 + "Recall    %f" + "=" * 25, cv_rec_score)
     logger.info("=" * 25 + "F1 score  %f" + "=" * 25, cv_f1_score)
+    logger.info("=" * 25 + "Auroc     %f" + "=" * 25, auroc_score)
+    logger.info("=" * 25 + "Auprc     %f" + "=" * 25, auprc_score)
 
-    # fpr, tpr, thresholds = metrics.roc_curve(y, pred, pos_label=1)
-    # auroc_score = metrics.auc(fpr, tpr)
+    result = {
+        "Confusion Matrix" : cm,
+        'Accuracy' : cv_acc_score,
+        'Precision' : cv_prec_score,
+        'Recall' : cv_rec_score,
+        'F1 score' : cv_f1_score,
+        'Auroc' : auroc_score,
+        'Auprc' : auprc_score,
+    }
 
-    auroc_score = metrics.roc_auc_score(y, pred)
-    auprc_score = metrics.average_precision_score(y, pred)
-
-    return auroc_score, auprc_score
+    return result
 
 def run_folds(args):
     task_name = args.task_name
@@ -239,14 +249,11 @@ def run_folds(args):
             f.write("MSE: " + str(mse_score))
             f.close()
     else:
-        auroc_score, auprc_score = metric_auroc_auprc(pred_y_all, global_y_all)
-        logger.info("=" * 25 + "AUROC %f" + "=" * 25, auroc_score)
-        logger.info("=" * 25 + "AUPRC %f" + "=" * 25, auprc_score)
+        result = metric_auroc_auprc(pred_y_all, global_y_all)
         with open(result_score_path, "w") as f:
-            f.write("AUROC: " + str(auroc_score) + " / AUPRC: " + str(auprc_score))
+            f.write(str(result))
             f.close()
     #############################################################
-
 
 def train(args, n_fold, train_dataset, val_dataset, test_dataset):
     batch_size = args.batch_size
@@ -275,9 +282,11 @@ def train(args, n_fold, train_dataset, val_dataset, test_dataset):
     test_batch_size = batch_size
     #################################################################
     # dataloader
-    train_sampler = RandomSampler(train_dataset)
-    train_dataloader = DataLoader(train_dataset, sampler=train_sampler, batch_size=train_batch_size,num_workers=4)
-    val_sampler = RandomSampler(val_dataset)
+    # train_sampler = RandomSampler(train_dataset)
+    train_sampler = ImbalancedDatasetSampler(train_dataset, callback_get_label=callback_get_label)
+    train_dataloader = DataLoader(train_dataset, sampler=train_sampler, batch_size=train_batch_size,num_workers=4,drop_last=True)
+    # val_sampler = RandomSampler(val_dataset)
+    val_sampler = ImbalancedDatasetSampler(val_dataset, callback_get_label=callback_get_label)
     val_dataloader = DataLoader(val_dataset, sampler=val_sampler, batch_size=val_batch_size,num_workers=4)
     test_sampler = RandomSampler(test_dataset)
     test_dataloader = DataLoader(test_dataset, sampler=test_sampler, batch_size=test_batch_size,num_workers=4)

@@ -58,6 +58,9 @@ class standDataset(Dataset):
         return self.len
 """
 
+def callback_get_label(dataset, idx):
+    return int(dataset[idx][-1])
+
 class customDataset(Dataset):
     def __init__(self, data_file_pathname, idxs, label_type, task_name, tranformer):
         data_file = np.load(data_file_pathname)
