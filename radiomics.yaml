@@ -1,0 +1,25 @@
+# https://github.com/Radiomics/pyradiomics/blob/master/examples/exampleSettings/exampleMR_NoResampling.yaml
+# https://github.com/Radiomics/pyradiomics/blob/master/examples/exampleSettings/MR_2D_extraction.yaml
+imageType:
+  Original: {}
+  LoG:
+    # If the in-plane spacing is large (> 2mm), consider removing sigma value 1.
+    sigma: [ 1.0, 3.0, 5.0 ]
+  Wavelet: {}
+
+setting:
+  label: 1
+#  interpolator: 'sitkBSpline'
+#  resampledPixelSpacing: [2, 2, 2]
+
+#  normalize: true
+#  normalizeScale: 100  # This allows you to use more or less the same bin width.
+
+featureClass:
+  firstorder:
+  shape:
+  glcm:
+  glrlm:
+  glszm:
+  gldm:
+  ngtdm:
